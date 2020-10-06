@@ -122,3 +122,48 @@ kubectl apply -f ./service-nginx.yaml
 kubectl get service nginx
 ```
 
+
+# 5.카나리아 배포 수행
+
+nginx-canary.yaml
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-canary
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+        track: canary
+        Version: 1.9.1
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.9.1
+        ports:
+        - containerPort: 80
+```
+
+카나리아 배포
+
+```bash
+kubectl apply -f nginx-canary.yaml
+kubectl get deployments
+```
+
+이전 배포했던 버전을 replica를 0으로 설정
+
+```bash
+kubectl scale --replicas=0 deployment nginx-deployment
+kubectl get deployments
+```
+
