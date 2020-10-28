@@ -1,10 +1,15 @@
-# 1.배포 매니페스트 생성 및 배포
+# Creating Google Kubernetes Engine Deployments
+
+## 1.배포 매니페스트 생성 및 배포
 
 ```bash
 export my_zone=us-central1-a
 export my_cluster=standard-cluster-1
+
 source <(kubectl completion bash)
+
 gcloud container clusters get-credentials $my_cluster --zone $my_zone
+
 git clone https://github.com/GoogleCloudPlatform/training-data-analyst
 ln -s ~/training-data-analyst/courses/ak8s/v1.1 ~/ak8s
 cd ~/ak8s/Deployments/
@@ -49,7 +54,7 @@ kubectl get deployments
 kubectl get deployments
 ```
 
-# 2.수동으로 스케일업 & 다운
+## 2.수동으로 스케일업 & 다운
 
 replica의 수를 조정하고 다시 확인
 
@@ -58,7 +63,7 @@ kubectl scale --replicas=3 deployment nginx-deployment
 ```
 
 
-# 3.배포 롤아웃 및 배포 롤백
+## 3.배포 롤아웃 및 배포 롤백
 
 배포 롤아웃
 
@@ -91,7 +96,7 @@ kubectl rollout history deployment nginx-deployment
 kubectl rollout history deployment/nginx-deployment --revision=3
 ```
 
-# 4.매니페스트에 서비스 타입 설정
+## 4.매니페스트에 서비스 타입 설정
 
 service-nginx.yaml
 
@@ -123,7 +128,7 @@ kubectl get service nginx
 ```
 
 
-# 5.카나리아 배포 수행
+## 5.카나리아 배포 수행
 
 nginx-canary.yaml
 
