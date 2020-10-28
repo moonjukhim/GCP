@@ -4,6 +4,10 @@
 
 ## Task2. GKE 클러스터 수정
 
+## Task3. 샘플 워크로드 배포
+
+Configuration YAML
+
 ```yaml
 apiVersion: "apps/v1"
 kind: "Deployment"
@@ -46,6 +50,7 @@ spec:
       name: "cpu"
       targetAverageUtilization: 80
 ```
+## Task4. 워크로드 상세 정보 확인
 
 ---
 
