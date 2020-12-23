@@ -67,8 +67,8 @@ kubectl scale --replicas=3 deployment nginx-deployment
 ## 3.배포 롤아웃 및 배포 롤백
 
 배포 롤아웃
-처음에 nginx: nginx:1.7.9의 revision 1
-나중에 nginx: nginx:1.9.1의 revision 2
+ - 처음에 nginx: nginx:1.7.9의 revision 1
+ - 나중에 nginx: nginx:1.9.1의 revision 2
 
 ```bash
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1 --record
