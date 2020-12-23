@@ -1,19 +1,8 @@
+# Google Kubernetes Engine (GKE) 네트워킹 구성
 
-두번째 클러스터 생성
-```bash
-export my_zone=us-central1-a
-export my_cluster=standard-cluster-1
-source <(kubectl completion bash)
+### 작업1. 비공개 클러스터 생성
 
-gcloud container clusters create $my_cluster --num-nodes 3 --enable-ip-alias --zone $my_zone --enable-network-policy
+### 작업2. 클러스터 마스터 액세스를 위한 승인된 네트워크 추가
 
-gcloud container clusters get-credentials $my_cluster --zone $my_zone
-```
-
-단순한 웹 서버 애플리케이션 배포
-
-```
-kubectl create deployment hello-web --labels app=hello \
-  --image=gcr.io/google-samples/hello-app:1.0 --port 8080 --expose
-```
+### 작업3. 클러스터 네트워크 정책 만들기
 
