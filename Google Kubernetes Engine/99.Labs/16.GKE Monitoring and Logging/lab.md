@@ -1,4 +1,4 @@
-# Lab15 : Configuring Kubernetes Engine native Monitoring and Logging
+# Lab16 : Configuring Kubernetes Engine native Monitoring and Logging
 
 
 ### Task 1. Using Kubernetes Engine Monitoring
