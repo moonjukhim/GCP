@@ -2,7 +2,7 @@
 
 ### Deploying GKE Cluster
 
-```
+```bash
 export my_zone=us-central1-a
 export my_cluster=standard-cluster-1
 
@@ -37,5 +37,31 @@ curl http://[EXTERNAL_IP]/test.html
 kubectl top pods
 ```
 
+### Creating GKE Deployments
 
+```bash
+kubectl apply -f ./nginx-deployment.yaml
+kubectl get deployments
+
+#  update the version of nginx
+kubectl rollout status deployment.v1.apps/nginx-deployment
+kubectl get deployments
+
+kubectl rollout history deployment nginx-deployment
+
+# Trigger a deployment rollback
+kubectl rollout undo deployments nginx-deployment
+kubectl rollout history deployment nginx-deployment
+kubectl rollout history deployment/nginx-deployment --revision=3
+
+# LoadBalancer creation
+kubectl apply -f ./service-nginx.yaml
+kubectl get service nginx
+
+# Perform a canary deployment
+kubectl apply -f nginx-canary.yaml
+kubectl get deployments
+kubectl scale --replicas=0 deployment nginx-deployment
+kubectl get deployments
+```
 
