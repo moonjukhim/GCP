@@ -1,5 +1,15 @@
 # Deploying Google Kubernetes Engine
 
+### Task1. Deploy GKE clusters
+
+### Task2. Modify GKE clusters
+
+### Task3. Deploy a sample workload
+
+### Task4. view details about workloads in the Google Cloud Console
+
+---
+
 ## Task1. Deploy GKE clusters
 
 ```bash
