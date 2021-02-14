@@ -1,6 +1,18 @@
 # Creating Google Kubernetes Engine Deployments
 
-## 1.배포 매니페스트 생성 및 배포
+### Task1. Deployment 매니페스트 생성 및 배포
+
+### Task2. Deployment에서 수동으로 Pod 스케일업 & 다운
+
+### Task3. Deployment rollout 과 rollback
+
+### Task4. 매니페스트에 서비스 타입(service type) 정의
+
+### Task5. 카나리아 배포 수행
+
+---
+
+## 1.Deployments 매니페스트 생성 및 배포
 
 ```bash
 export my_zone=us-central1-a
