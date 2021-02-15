@@ -27,7 +27,7 @@ ln -s ~/training-data-analyst/courses/ak8s/v1.1 ~/ak8s
 cd ~/ak8s/Deployments/
 ```
 
-매니페스트 파일 생성
+1.1 매니페스트 파일 생성
 
 ```yaml
 apiVersion: apps/v1
@@ -53,14 +53,14 @@ spec:
         - containerPort: 80
 ```
 
-배포하기
+1.2 배포하기
 
 ```bash
 kubectl apply -f ./nginx-deployment.yaml
 kubectl get deployments
 ```
 
-배포 확인
+1.3 배포 확인
 
 ```bash
 kubectl get deployments
