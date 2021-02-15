@@ -1,5 +1,7 @@
 # Creating Services and Ingress Resources
 
+---
+
 ## Task1. Connect to the GKE cluster and test DNS
 
 ```bash
