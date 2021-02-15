@@ -1,6 +1,18 @@
 # Creating Google Kubernetes Engine Deployments
 
-## 1.배포 매니페스트 생성 및 배포
+### Task1. Deployment 매니페스트 생성 및 배포
+
+### Task2. Deployment에서 수동으로 Pod 스케일업 & 다운
+
+### Task3. Deployment rollout 과 rollback
+
+### Task4. 매니페스트에 서비스 타입(service type) 정의
+
+### Task5. 카나리아 배포 수행
+
+---
+
+## 1.Deployments 매니페스트 생성 및 배포
 
 ```bash
 export my_zone=us-central1-a
@@ -59,6 +71,7 @@ kubectl get deployments
 replica의 수를 조정하고 다시 확인
 
 ```bash
+kubectl scale --replicas=1 deployment nginx-deployment
 kubectl scale --replicas=3 deployment nginx-deployment
 ```
 
@@ -66,6 +79,8 @@ kubectl scale --replicas=3 deployment nginx-deployment
 ## 3.배포 롤아웃 및 배포 롤백
 
 배포 롤아웃
+ - 처음에 nginx: nginx:1.7.9의 revision 1
+ - 나중에 nginx: nginx:1.9.1의 revision 2
 
 ```bash
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1 --record
