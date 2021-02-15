@@ -1,10 +1,13 @@
 # Deploying Jobs on Google Kubernetes Engine
 
+### Task1. Job 매니페스트 생성과 배포
+
+### Task2. CronJob 매니페스트 정의 및 배포
 ---
 
-# Task1. Define and deploy a Job manifest
+### Task1. Define and deploy a Job manifest
 
-GKE에 접속
+1.1 GKE에 접속
 
 ```bash
 export my_zone=us-central1-a
