@@ -30,7 +30,7 @@ cd ~/ak8s/Deployments/
 1.1 매니페스트 파일 생성
 
 ```yaml
-apiVersion: apps/v1
+apiVersion: apps/v1 
 kind: Deployment
 metadata:
   name: nginx-deployment
@@ -68,7 +68,7 @@ kubectl get deployments
 
 ## 2.수동으로 스케일업 & 다운
 
-replica의 수를 조정하고 다시 확인
+2.1 replica의 수를 조정하고 다시 확인
 
 ```bash
 kubectl scale --replicas=1 deployment nginx-deployment
@@ -78,7 +78,7 @@ kubectl scale --replicas=3 deployment nginx-deployment
 
 ## 3.배포 롤아웃 및 배포 롤백
 
-배포 롤아웃
+3.1 배포 롤아웃
  - 처음에 nginx: nginx:1.7.9의 revision 1
  - 나중에 nginx: nginx:1.9.1의 revision 2
 
@@ -86,26 +86,26 @@ kubectl scale --replicas=3 deployment nginx-deployment
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1 --record
 ```
 
-롤아웃 상태 확인
+3.2 롤아웃 상태 확인
 
 ```bash
 kubectl rollout status deployment.v1.apps/nginx-deployment
 ```
 
-롤아웃 이력 확인
+3.3 롤아웃 이력 확인
 
 ```bash
 kubectl rollout history deployment nginx-deployment
 ```
 
-롤백 수행
+3.4 롤백 수행
 
 ```bash
 kubectl rollout undo deployments nginx-deployment
 kubectl rollout history deployment nginx-deployment
 ```
 
-가장 최근에 배포된 리비전 정보 확인
+3.5 가장 최근에 배포된 리비전 정보 확인
 
 ```bash
 kubectl rollout history deployment/nginx-deployment --revision=3
@@ -113,7 +113,7 @@ kubectl rollout history deployment/nginx-deployment --revision=3
 
 ## 4.매니페스트에 서비스 타입 설정
 
-service-nginx.yaml
+4.1 service-nginx.yaml
 
 ```yaml
 apiVersion: v1
