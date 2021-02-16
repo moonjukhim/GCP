@@ -159,7 +159,7 @@ curl hello-svc.default.svc.cluster.local
 ```
 
 
-## Task4. Convert the service to use NodePort
+### Task4. Convert the service to use NodePort
 
 hello-nodeport-svc.yaml
 
@@ -190,11 +190,11 @@ kubectl get service hello-svc
 curl hello-svc.default.svc.cluster.local
 ```
 
-## Task5. Create static public IP addresses using Google Cloud Networking
+### Task5. Create static public IP addresses using Google Cloud Networking
 
 
 
-## Task6. Deploy a new set of Pods and a LoadBalancer service
+### Task6. Deploy a new set of Pods and a LoadBalancer service
 
 hello-v2.yaml
 
@@ -261,7 +261,7 @@ curl [external_IP]
 curl hello-lb-svc.default.svc.cluster.local
 ```
 
-## Task7. Deploy and Ingress resource
+### Task7. Deploy and Ingress resource
 
 hello-ingress.yaml
 
