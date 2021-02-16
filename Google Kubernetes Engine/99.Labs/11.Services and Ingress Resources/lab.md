@@ -1,8 +1,22 @@
 # Creating Services and Ingress Resources
 
+### 작업1. GKE 클러스터에 연결
+
+### 작업2. Pod와 DNS 해석을 위한 서비스 생성
+
+### 작업3. 샘플 워크로드와 ClusterIp 서비스 배포
+
+### 작업4. NodePort 서비스 배포
+
+### 작업5. Google Cloud Network를 사용한 정적 고정 IP 생성
+
+### 작업6. 새 파드와 로드밸랜서 서비스 배포
+
+### 작업7. 인그레스(Ingress) 배포
+
 ---
 
-## Task1. Connect to the GKE cluster and test DNS
+### Task1. Connect to the GKE cluster and test DNS
 
 ```bash
 export my_zone=us-central1-a
@@ -14,7 +28,7 @@ gcloud container clusters get-credentials $my_cluster --zone $my_zone
 ```
 
 
-## Task2. Create Pods and services to test DNS resolution
+### Task2. Create Pods and services to test DNS resolution
 
 dns-demo.yaml
 
