@@ -1,5 +1,10 @@
 # Configuring Persistent Storage for Google Kubernetes Engine
 
+### 작업1 : PV 및 PVC 생성
+
+
+---
+
 ### Task1 : PV 및 PVC 생성
 
 - Google Cloud 영구 디스크 (동적으로 생성되거나 기존) 용 PersistentVolume (PV) 및 PersistentVolumeClaims (PVC)에 대한 매니페스트를 만듭니다.
