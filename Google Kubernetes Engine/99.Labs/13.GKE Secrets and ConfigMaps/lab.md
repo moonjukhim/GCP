@@ -1,5 +1,10 @@
 # Working with Google Kubernetes Engine Secrets and ConfigMaps
 
+### 작업1. Secret 사용
+
+###
+
+---
 
 ### Task1. Work with Secrets
 
@@ -81,7 +86,7 @@ spec:
           mountPath: /var/secrets/google
         env:
         - name: GOOGLE_APPLICATION_CREDENTIALS
-          value: /var/secrets/google/key.json
+          value: /var/secrets/google/key.json  ##
 ```
 
 Cloud Pub/Sub 메시지 수신 테스트
