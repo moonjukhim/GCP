@@ -4,7 +4,8 @@
 
   - PV
   - PVC
-  
+
+### 
 
 ---
 
@@ -24,7 +25,7 @@ pvc-demo.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: hello-web-disk
+  name: hello-web-disk  ## 
 spec:
   accessModes:
     - ReadWriteOnce
@@ -56,7 +57,7 @@ spec:
   volumes:
     - name: pvc-demo-volume
       persistentVolumeClaim:
-        claimName: hello-web-disk
+        claimName: hello-web-disk ## 
 ```
 
 ```bash
