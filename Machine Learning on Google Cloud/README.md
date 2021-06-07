@@ -4,7 +4,7 @@
 
 Index
 
-###### Day 1 How Google does Machine Learning
+#### Day 1 How Google does Machine Learning
 - 1.1 Introduction
 - 1.2 What it Means to be AI-first
 - 1.3 How Google does ML
@@ -12,7 +12,7 @@ Index
 - 1.5 Python Notebooks in the Cloud
 - 1.6 Summary
 
-###### Day 2 Launching into ML
+#### Day 2 Launching into ML
 - 2.1 Introduction
 - 2.2 Improve Data Quality
 - 2.3 Exploratory Data Analysis
@@ -21,12 +21,18 @@ Index
 - 2.6 Optimization
 - 2.7 Summary
 
-###### Day 3 Introduction to TensorFlow
+#### Day 3 Introduction to TensorFlow
+- 3.1 Introduction to Tensorflow
+- 3.2 Creating Input Pipelines and Training on Large Datasets and 
+- 3.3 Feature Columns
+- 3.4 Activation Functions
+- 3.5 DNNs with Tensorflow 2 and Keras
+- 3.6 Regularization
+- 3.7 Deploy models for scaled serving
 
+#### Day 4 Feature Engineering
 
-###### Day 4 Feature Engineering
-
-###### Day 5 The Art and Science of ML
+#### Day 5 The Art and Science of ML
 
 ---
 
