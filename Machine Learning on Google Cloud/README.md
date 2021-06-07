@@ -31,6 +31,11 @@ Index
 - 3.7 Deploy models for scaled serving
 
 #### Day 4 Feature Engineering
+- 4.1 An Overview of Feature Engineering
+- 4.2 Raw Data and  Features
+- 4.3 Feature Engineering 
+- 4.4 Feature Crosses
+- 4.5 tf.transform
 
 #### Day 5 The Art and Science of ML
 
