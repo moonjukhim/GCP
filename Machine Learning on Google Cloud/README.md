@@ -5,21 +5,21 @@
 Index
 
 ###### Day 1 How Google does Machine Learning
-- Introduction
-- What it Means to be AI-first
-- How Google does ML
-- Inclusive ML
-- Python Notebooks in the Cloud
-- Summary
+- 1.1 Introduction
+- 1.2 What it Means to be AI-first
+- 1.3 How Google does ML
+- 1.4 Inclusive ML
+- 1.5 Python Notebooks in the Cloud
+- 1.6 Summary
 
 ###### Day 2 Launching into ML
-- Introduction
-- Improve Data Quality
-- Exploratory Data Analysis
-- ML in Practice
-- Generalization and Sampling
-- Optimization
-- Summary
+- 2.1 Introduction
+- 2.2 Improve Data Quality
+- 2.3 Exploratory Data Analysis
+- 2.4 ML in Practice
+- 2.5 Generalization and Sampling
+- 2.6 Optimization
+- 2.7 Summary
 
 ###### Day 3 Introduction to TensorFlow
 
