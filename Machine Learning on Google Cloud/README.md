@@ -4,13 +4,36 @@
 
 Index
 
+###### Day 1 How Google does Machine Learning
+- Introduction
+- What it Means to be AI-first
+- How Google does ML
+- Inclusive ML
+- Python Notebooks in the Cloud
+- Summary
+
+###### Day 2 Launching into ML
+- Introduction
+- Improve Data Quality
+- Exploratory Data Analysis
+- ML in Practice
+- Generalization and Sampling
+- Optimization
+- Summary
+
+###### Day 3 Introduction to TensorFlow
+
+###### Day 4 Feature Engineering
+
+###### Day 5 The Art and Science of ML
 
 ---
 
 ### Labs
 
-[ML on GCP C1] Analyzing data using AI Platform Notebooks and BigQuery
-Invoking Machine Learning APIs
+1. Analyzing data using AI Platform Notebooks and BigQuery
+2. Invoking Machine Learning APIs
+
 [ML on GCP C2] Improving Data Quality
 [ML on GCP C2] Exploratory Data Analysis Using Python and BigQuery
 [ML on GCP C2] Introduction to Linear Regression
