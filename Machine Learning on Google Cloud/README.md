@@ -35,9 +35,11 @@ Index
 - 4.2 Raw Data and  Features
 - 4.3 Feature Engineering 
 - 4.4 Feature Crosses
-- 4.5 tf.transform
 
 #### Day 5 The Art and Science of ML
+- 5.1 The Art of ML 
+- 5.2 Distributed Training (33)
+- 5.3 Hyperparameter Tuning (51)
 
 ---
 
