@@ -2,7 +2,7 @@
 ---
 1. Introduction to Google Cloud Platform 
 2. Analyzing Large Datasets with BigQuery
-Lab: BigQuery Basics
+- Lab: BigQuery Basics
 3. 
 
 ---
