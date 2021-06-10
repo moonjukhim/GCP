@@ -1,8 +1,7 @@
 ### Table of Contents
 ---
 1. Introduction to Google Cloud Platform 
-2. Analyzing Large Datasets with BigQuery
-- Lab: BigQuery Basics
+2. Analyzing Large Datasets with BigQuery (Lab: BigQuery Basics)
 3. 
 
 ---
