@@ -1,7 +1,13 @@
 ### Table of Contents
 ---
+1. Introduction to Google Cloud Platform 
+2. Analyzing Large Datasets with BigQuery
+Lab: BigQuery Basics
+3. 
+
+---
 #### Exploring, Transforming, and Visualizing Data
-###### 1. Lab: BigQuery Basics
+###### 1. 
 ###### 2. Lab: Explore your Ecommerce Dataset with SQL in Google BigQuery
 ###### 3. Lab: Creating a Data Transformation Pipeline with Cloud Dataprep
 ###### 4. Lab: How to Build a BI Dashboard Using Google Data Studio and BigQuery
