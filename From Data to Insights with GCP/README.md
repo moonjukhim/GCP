@@ -5,11 +5,12 @@
 2. Analyzing Large Datasets with BigQuery (Lab: BigQuery Basics)
 3. Exploring your Public Dataset with SQL (Lab: Explore your Ecommerce Dataset with SQL in Google BigQuery)
 4. Cleaning and Transforming your Data with Cloud Dataprep (Lab: Creating a Data Transformation Pipeline with Cloud Dataprep)
----
-###### 3. 
-###### 4. Lab: How to Build a BI Dashboard Using Google Data Studio and BigQuery
+5. Visualizing Insights and Creating Scheduled Queries (Lab: How to Build a BI Dashboard Using Google Data Studio and BigQuery)
 ---
 #### Creating and Optimizing your Data Warehouse
+6. Storing and Ingesting new Datasets
+
+lab
 ###### 5. Lab: Ingesting New Datasets into BigQuery
 ###### 6. Lab: Troubleshooting and Solving Data Join Pitfalls
 ###### 7. Lab: Creating Date-Partitioned Tables in BigQuery
