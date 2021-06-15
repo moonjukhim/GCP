@@ -15,7 +15,7 @@
 - 2.2 Exploratory Data Analysis
 - 2.3 ML in Practice
 - 2.4 BigQuery Machine Learning
-- 2.5 Generalization and Sampling
+- 2.5 Generalization and Sampling 
 - 2.6 Optimization
 - 2.7 Summary
 
