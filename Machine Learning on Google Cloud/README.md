@@ -1,8 +1,6 @@
-# Machine Learning on Google Cloud
+### Machine Learning on Google Cloud
 
----
-
-Index
+###### Index
 
 #### Day 1 How Google does Machine Learning
 - 1.1 Introduction
@@ -13,10 +11,10 @@ Index
 - 1.6 Summary
 
 #### Day 2 Launching into ML
-- 2.1 Introduction
-- 2.2 Improve Data Quality
-- 2.3 Exploratory Data Analysis
-- 2.4 ML in Practice
+- 2.1 Improve Data Quality
+- 2.2 Exploratory Data Analysis
+- 2.3 ML in Practice
+- 2.4 BigQuery Machine Learning
 - 2.5 Generalization and Sampling
 - 2.6 Optimization
 - 2.7 Summary
