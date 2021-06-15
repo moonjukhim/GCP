@@ -20,13 +20,14 @@
 - 2.7 Summary
 
 #### Day 3 Introduction to TensorFlow
-- 3.1 Introduction to Tensorflow
-- 3.2 Creating Input Pipelines and Training on Large Datasets and 
-- 3.3 Feature Columns
-- 3.4 Activation Functions
-- 3.5 DNNs with Tensorflow 2 and Keras
-- 3.6 Regularization
-- 3.7 Deploy models for scaled serving
+- 3.1 Introduction to Tensorflow 
+- 3.2 TensorFlow API Hierarchy 
+- 3.3 Components of TensorFlow: Tensors and Variables 
+- 3.4 Design and Build an Input Data Pipeline. 
+- 3.5 Training on Large Datasets with tf.data 
+- 3.6 Activation Functions, Neural Networks, and Regularization 
+- 3.7 DNNs with the Keras Functional API 
+- 3.8 Scaling TensorFlow with Cloud AI Platform 
 
 #### Day 4 Feature Engineering
 - 4.1 An Overview of Feature Engineering
@@ -36,8 +37,8 @@
 
 #### Day 5 The Art and Science of ML
 - 5.1 The Art of ML 
-- 5.2 Distributed Training (33)
-- 5.3 Hyperparameter Tuning (51)
+- 5.2 Distributed Training 
+- 5.3 Hyperparameter Tuning 
 
 ---
 
