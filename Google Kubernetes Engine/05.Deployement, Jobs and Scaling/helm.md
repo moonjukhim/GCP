@@ -28,13 +28,27 @@ helm version
 helm repo update
 helm install stable/mysql
 # root 비밀번호 가져오기
-kubectl get secret --namespace default giddy-rodent-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo
-kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
+MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default lanky-terrier-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
 ```
 
 4. MySQL 데이터베이스에 연결
 
 ```bash
-apt-get update && apt-get install mysql-client -y
-mysql -h giddy-rodent-mysql -p
+kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
 ```
+
+5. 컨테이너에서 작업
+
+```bash
+apt-get update && apt-get install mysql-client -y
+mysql -h lanky-terrier-mysql -p
+```
+
+6. helm 차트 삭제
+
+```bash
+helm delete lanky-terrier
+```
+
+---
+
