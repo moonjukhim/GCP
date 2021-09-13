@@ -52,4 +52,13 @@ helm delete lanky-terrier
 ```
 
 --- 
+별도의 차트 생성하기
 
+```bash
+helm create gcp-gke
+ls gcp-gke
+helm package gcp-gke
+cd gcp-gke
+helm lint
+helm install gcp-gke .
+```
