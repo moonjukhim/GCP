@@ -50,5 +50,5 @@ mysql -h lanky-terrier-mysql -p
 helm delete lanky-terrier
 ```
 
----
+--- 
 
