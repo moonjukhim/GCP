@@ -61,4 +61,5 @@ helm package gcp-gke
 cd gcp-gke
 helm lint
 helm install gcp-gke .
+helm uninstall gcp-gke
 ```
