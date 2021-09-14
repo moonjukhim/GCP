@@ -12,6 +12,12 @@ gcloud container clusters create $my_cluster --num-nodes 3 --zone $my_zone --ena
 gcloud container clusters get-credentials $my_cluster --zone $my_zone
 ```
 
+3. Deploy Pods
+
+```bash
+kubectl create deployment --image nginx nginx-1
+```
+
 ---
 
 ```bash
