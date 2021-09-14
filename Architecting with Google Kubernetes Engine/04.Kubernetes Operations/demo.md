@@ -12,6 +12,7 @@ gcloud container clusters create $my_cluster --num-nodes 3 --zone $my_zone --ena
 gcloud container clusters get-credentials $my_cluster --zone $my_zone
 ```
 
+---
 
 ```bash
 git clone https://github.com/GoogleCloudPlatform/training-data-analyst
