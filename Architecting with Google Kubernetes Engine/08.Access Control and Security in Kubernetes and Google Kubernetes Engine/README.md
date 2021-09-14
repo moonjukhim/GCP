@@ -15,7 +15,7 @@ gsutil mb gs://${GCS_BUCKET_NAME}/
 3. 서비스 계정 생성
 
 ```bash
-gcloud iam service-accounts create ${SERVICE_ACCOUNT_NAME} --display-name="my-app-gcs-service-account"
+gcloud iam service-accounts create ${SERVICE_ACCOUNT_NAME}  --display-name="my-app-gcs-service-account"
 gcloud iam service-accounts list
 gsutil iam ch serviceAccount:${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com:objectAdmin gs://${GCS_BUCKET_NAME}/
 gcloud iam service-accounts keys create --iam-account "${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com" service-account.json
@@ -23,10 +23,10 @@ gcloud iam service-accounts keys create --iam-account "${SERVICE_ACCOUNT_NAME}@$
 
 4. 쿠버네티스 시크릿 생성
 
- ```bash
- kubectl create secret generic my-app-sa-key --from-file service-account.json
- kubectl get secret
- ```
+```bash
+kubectl create secret generic my-app-sa-key --from-file service-account.json
+kubectl get secret
+```
 
 5. 애플리케이션 배포
 
@@ -50,10 +50,10 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: IMAGE_URL
+          image: nginx:1.7.9
           env:
             - name: "BUCKET_NAME"
-              value: my-app
+              value: "my-data-disk"
             - name: "GOOGLE_APPLICATION_CREDENTIALS"
               value: "/var/run/secret/cloud.google.com/service-account.json"
           volumeMounts:
