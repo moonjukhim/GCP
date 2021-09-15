@@ -1,6 +1,8 @@
 0. Google Service Account 생성
 
+```bash
 
+```
 
 1. enable Workload Identity 
 
