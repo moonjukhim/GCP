@@ -1,37 +1,41 @@
+0. Google Service Account 생성
+
+
 
 1. enable Workload Identity 
 
 ```bash
-gcloud container clusters update cluster-1 \
-  --workload-pool=fluent-optics-321005.svc.id.goog \
-  --zone us-central1-c
+export my_zone=us-central1-a
+export my_cluster=standard-cluster-1
+export PROJECT_ID=$(gcloud config get-value core/project) 
+# gcloud container clusters create $my_cluster --num-nodes 3 --zone $my_zone
 
-# gcloud container clusters update [CLUSTER-NAME] \
-#   --workload-pool=[PROJECT ID].svc.id.goog \
-#   --zone us-central1-c
+gcloud container clusters update ${my_cluster} \
+  --workload-pool=${PROJECT_ID}.svc.id.goog \
+  --zone ${my_zone}
 ```
 
 2. Kubernetes Service Account 생성
 
-gke-access-gcs.ksa.yaml 파일
-```yaml
+```bash
+cat <<'EOF' >> gke-access-gcs.ksa.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: gke-access-gcs
-```
-
-```bash
+EOF
 kubectl apply -f gke-access-gcs.ksa.yaml
 ```
 
 3. KSA와 GSA 연결
 
 ```bash
+export KSA="gke-access-gcs"
+export GSA="gcp-gsa"
 gcloud iam service-accounts add-iam-policy-binding \
   --role roles/iam.workloadIdentityUser \
-  --member "serviceAccount:fluent-optics-321005.svc.id.goog[default/gke-access-gcs]" \
-  gcp-gsa@fluent-optics-321005.iam.gserviceaccount.com
+  --member "serviceAccount:${PROJECT_ID}.svc.id.goog[default/${KSA}]" \
+  ${GSA}@${PROJECT_ID}.iam.gserviceaccount.com
 
 # gcloud iam service-accounts add-iam-policy-binding \
 #   --role roles/iam.workloadIdentityUser \
