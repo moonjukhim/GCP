@@ -8,3 +8,7 @@
 6. Securing Network Traffic with Anthos Service Mesh (Lab)
 7. Managing Multiple Clusters with Anthos Config Managment (Lab)
 8. Networking Multiple Clusters (Lab: Configuring a Multi-cluster Mesh)
+
+---
+
+git clone -b workshop-v1 https://github.com/GoogleCloudPlatform/anthos-workshop.git anthos-workshop
