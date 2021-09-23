@@ -5,11 +5,11 @@
 #### Day 1 How Google does Machine Learning
 - 1.1 Introduction
 - 1.2 What it Means to be AI-first
--   1.2.1 What is ML?
--   1.2.2 What kinds of problems can it solve?
--   1.2.3 Infuse your apps with ML
--   1.2.4 Build a data strategy around ML
--   1.2.5 Use ML creatively, to delight your users
+    - 1.2.1 What is ML?
+    - 1.2.2 What kinds of problems can it solve?
+    - 1.2.3 Infuse your apps with ML
+    - 1.2.4 Build a data strategy around ML
+    - 1.2.5 Use ML creatively, to delight your users
 - 1.3 How Google does ML
 - 1.4 Inclusive ML
 - 1.5 Python Notebooks in the Cloud
