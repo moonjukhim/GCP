@@ -30,10 +30,10 @@
 
 #### Day 2 Launching into ML
 - 2.1 Improve Data Quality
-- 2.2 Exploratory Data Analysis
-- 2.3 ML in Practice
+- 2.2 Exploratory Data Analysis (Lab : Improve the quality of data , Explore the data using Python and BigQuery)
+- 2.3 ML in Practice (Lab : Build and train a linear regression model)
 - 2.4 BigQuery Machine Learning
-- 2.5 Generalization and Sampling 
+- 2.5 Generalization and Sampling (Lab : Maintaining Consistency in Training with Repeatable Datasets )
 - 2.6 Optimization
 - 2.7 Summary
 
