@@ -6,12 +6,21 @@
 - 1.1 Introduction
 - 1.2 What it Means to be AI-first
     - 1.2.1 What is ML?
-    - 1.2.2 What kinds of problems can it solve?
+    - 1.2.2 What kinds of problems can it solve? (Lab: Framing a machine learning problem)
     - 1.2.3 Infuse your apps with ML
     - 1.2.4 Build a data strategy around ML
-    - 1.2.5 Use ML creatively, to delight your users
+    - 1.2.5 Use ML creatively, to delight your users (Lab: Non-traditional ML use case)
 - 1.3 How Google does ML
+    - 1.3.1 The ML surprise
+    - 1.3.2 The secret sauce
+    - 1.3.3 The ML and business processes
+    - 1.3.4 The path to ML
+    - 1.3.5 End of phases deep dive
 - 1.4 Inclusive ML
+    - 1.4.1 Machine learning and human bias
+    - 1.4.2 Evaluating metrics with inclusion for your ML system 
+    - 1.4.3 Equality of opportunity
+    - 1.4.4 How to find errors in your dataset using Facets
 - 1.5 Python Notebooks in the Cloud
 - 1.6 Summary
 
