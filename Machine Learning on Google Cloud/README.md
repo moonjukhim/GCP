@@ -22,6 +22,10 @@
     - 1.4.3 Equality of opportunity
     - 1.4.4 How to find errors in your dataset using Facets
 - 1.5 Python Notebooks in the Cloud
+    - 1.5.1 Cloud AI Platform
+    - 1.5.2 Compute Engine and Cloud Storage
+    - 1.5.3 Data Analytics with BigQuery
+    - 1.5.4 Machine Learning APIs (Lab : Analyzing data using Cloud Cloud AI Platform and BigQuery, Invoke Machine Learning APIs)
 - 1.6 Summary
 
 #### Day 2 Launching into ML
