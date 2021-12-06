@@ -26,3 +26,4 @@ kubectl get pod -n istio-system
 kubectl -n istio-system get pods -l app=istiod --show-labels
 ```
 
+git clone -b workshop-v1 https://github.com/GoogleCloudPlatform/anthos-workshop.git anthos-workshop
