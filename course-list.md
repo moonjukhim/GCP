@@ -24,6 +24,7 @@
 - Networking in Google Cloud
 
 7. 머신러닝 및 인공지능
+- Google Cloud Big Data & Machine Learning Fundamentals
 - Machine Learning on Google Cloud
 - Advanced Machine Learning with TensorFlow on Google Cloud Platform
 - MLOps (Machine Learning Operations) Fundamentals
@@ -43,8 +44,6 @@
 - Customer Experiences with Contact Center AI
 - ~~Data Engineering on Google Cloud~~
 - ~~Data Integration with Cloud Data Fusion(Not Work)~~
-- Developing Applications with Google Cloud
-- Google Cloud Big Data & Machine Learning Fundamentals
 - Logging, Monitoring and Observability in Google Cloud
 - Marketing Analytics Solutions for Partners
 - Serverless Data Processing with Dataflow (ILT)
