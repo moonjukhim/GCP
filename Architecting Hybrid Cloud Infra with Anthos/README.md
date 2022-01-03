@@ -12,9 +12,9 @@
 ---
 
 3. Introducing Service Mesh 
-  - Lab1 : Installing Anthos Service Mesh
+  > - Lab1 : Installing Anthos Service Mesh
 4. Observing Anthos Services 
-  - Lab2 : Observing Anthos Services
+  > - Lab2 : Observing Anthos Services
 5. Managing Traffic Flow with Anthos Service Mesh
   - Lab3 : Managing Traffic Flow with Anthos Service Mesh
 6. Securing Network Traffic with Anthos Service Mesh
