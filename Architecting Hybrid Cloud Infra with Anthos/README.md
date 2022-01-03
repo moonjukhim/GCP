@@ -12,7 +12,7 @@
 ---
 
 3. Introducing Service Mesh 
-  &nbsp; - Lab1 : Installing Anthos Service Mesh
+  *Tabspace* - Lab1 : Installing Anthos Service Mesh
 4. Observing Anthos Services 
   > - Lab2 : Observing Anthos Services
 5. Managing Traffic Flow with Anthos Service Mesh
