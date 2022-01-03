@@ -11,3 +11,8 @@
 
 ---
 
+3. Introducing Service Mesh (Installing Anthos Service Mesh)
+  - Lab1 : Installing Anthos Service Mesh
+4. Observing Anthos Services (Service Observability in Anthos)
+  - Lab2 : Observing Anthos Services
+
