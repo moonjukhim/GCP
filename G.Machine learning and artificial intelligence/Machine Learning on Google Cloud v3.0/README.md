@@ -1,12 +1,10 @@
-### 1일차.HOW GOOGLE DOES MACHINE LEARNING
-    - 1. Using an Image Dataset to Train an AutoML Model
+### 1일차 - HOW GOOGLE DOES MACHINE LEARNING
+    1. Using an Image Dataset to Train an AutoML Model
+    2. Training an AutoML Video Classification Model
+    3. AutoML Tabular Training and Prediction (SDK) (Optional)
 
-Training an AutoML Video Classification Model
-
-AutoML Tabular Training and Prediction (SDK) (Optional)
-
-LAUNCHING INTO MACHINE LEARNING
-Improving Data Quality
+### 2일차 - LAUNCHING INTO MACHINE LEARNING
+    Improving Data Quality
 
 Exploratory Data Analysis Using Python and BigQuery
 
