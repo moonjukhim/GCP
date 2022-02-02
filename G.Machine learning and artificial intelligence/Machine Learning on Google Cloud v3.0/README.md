@@ -1,5 +1,5 @@
-1. 1일차.HOW GOOGLE DOES MACHINE LEARNING
-    1. Using an Image Dataset to Train an AutoML Model
+### 1일차.HOW GOOGLE DOES MACHINE LEARNING
+    - 1. Using an Image Dataset to Train an AutoML Model
 
 Training an AutoML Video Classification Model
 
