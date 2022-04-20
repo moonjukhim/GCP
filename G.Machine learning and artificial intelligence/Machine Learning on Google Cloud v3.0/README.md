@@ -4,12 +4,12 @@
     3. AutoML Tabular Training and Prediction (SDK) (Optional)
 
 ### 2일차 - LAUNCHING INTO MACHINE LEARNING
-    1. Improving Data Quality
-    2. Exploratory Data Analysis Using Python and BigQuery
-    3. Introduction to Linear Regression
-    4. Training an AutoML Classification Model (Structured Data)
-    5. Using BQML to Predict Penguin Weight (BQML & Explainable AI)
-    6. Using the BigQuery ML Hyperparameter Tuning to Improve Model Performance
+    4. Improving Data Quality
+    5. Exploratory Data Analysis Using Python and BigQuery
+    6. Introduction to Linear Regression
+    7. Training an AutoML Classification Model (Structured Data)
+    8. Using BQML to Predict Penguin Weight (BQML & Explainable AI)
+    9. Using the BigQuery ML Hyperparameter Tuning to Improve Model Performance
 
 ### 3일차 - TENSORFLOW ON GOOGLE CLOUD
     1. TensorFlow Dataset API
