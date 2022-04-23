@@ -29,9 +29,9 @@
 
 ### 5일차 - MACHINE LEARNING IN THE ENTERPRISE
     22. Exploring and Creating an Ecommerce Analytics Pipeline with Cloud Dataprep
-    2. Vertex AI: Building a fraud detection model with AutoML
-    3. Vertex AI: Custom Training Job and Prediction Using Managed Datasets
-    4. Vertex AI: Hyperparameter Tuning
-    5. Vertex AI Model Monitoring (Reference [Reference]
-    6. Introduction to Vertex AI Pipelines [Reference]
-    7. Introduction to Overfit and Underfit [Reference]
+    23. Vertex AI: Building a fraud detection model with AutoML
+    24. Vertex AI: Custom Training Job and Prediction Using Managed Datasets
+    25. Vertex AI: Hyperparameter Tuning
+    26. Vertex AI Model Monitoring (Reference [Reference]
+    27. Introduction to Vertex AI Pipelines [Reference]
+    28. Introduction to Overfit and Underfit [Reference]
