@@ -23,12 +23,12 @@
  - Lab 4: How to Build a BI Dashboard Using Google Data Studio and BigQuery
 
 ### Creating and Optimizing your Data Warehouse
- - Lab: Ingesting New Datasets into BigQuery
- - Lab: Troubleshooting and Solving Data Join Pitfalls
- - Lab: Creating Date-Partitioned Tables in BigQuery
- - Lab: Schema Design for Performance: Arrays and Structs in BigQuery
+ - Lab 5: Ingesting New Datasets into BigQuery
+ - Lab 6: Troubleshooting and Solving Data Join Pitfalls
+ - Lab 7: Creating Date-Partitioned Tables in BigQuery
+ - Lab 8: Schema Design for Performance: Arrays and Structs in BigQuery
 
 ### Machine Learning for Structured and Unstructured Datasets
- - Lab: Predict Visitor Purchases with a Classification Model with BigQuery ML
- - Lab: Extract, Analyze, and Translate Text from Images with the Cloud ML APIs
- - Lab: Classify Images of Clouds in the Cloud with AutoML Vision
+ - Lab 9: Predict Visitor Purchases with a Classification Model with BigQuery ML
+ - Lab 10: Extract, Analyze, and Translate Text from Images with the Cloud ML APIs
+ - Lab 11: Classify Images of Clouds in the Cloud with AutoML Vision
