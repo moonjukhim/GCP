@@ -1,3 +1,5 @@
+### Index
+
 - 00 - Course Introduction
 - 01 - Introduction to Google Cloud
 - 02 - Analyzing Large Datasets with BigQuery
