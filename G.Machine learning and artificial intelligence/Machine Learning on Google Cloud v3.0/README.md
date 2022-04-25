@@ -12,26 +12,26 @@
     9. Using the BigQuery ML Hyperparameter Tuning to Improve Model Performance
 
 ### 3일차 - TENSORFLOW ON GOOGLE CLOUD
-    1. TensorFlow Dataset API
-    2. Classify Structured Data using Keras Preprocessing Layers
-    3. Build a DNN using the Keras Functional API
-    4. Making New Layers and Models via Subclassing
-    5. Building, Training and Evaluating Models with TensorFlow Decision Forests [Reference]
-    6. Using BigQuery ML to Make Predictions with Imported TensorFlow Models [Reference]
+    10. TensorFlow Dataset API
+    11. Classify Structured Data using Keras Preprocessing Layers
+    12. Build a DNN using the Keras Functional API
+    13. Making New Layers and Models via Subclassing
+    14. Building, Training and Evaluating Models with TensorFlow Decision Forests [Reference]
+    15. Using BigQuery ML to Make Predictions with Imported TensorFlow Models [Reference]
 
 ### 4일차 - FEATURE ENGINEERING
-    1. Performing Advanced Feature Engineering in Keras
-    2. Performing Advanced Feature Engineering in BQML
-    3. TfTransform
-    4. Basic Feature Engineering in Keras [Reference]
-    5. Basic Feature Engineering in BQML [Reference]
-    6. Using Feature Store (API) - API [Reference]
+    16. Performing Advanced Feature Engineering in Keras
+    17. Performing Advanced Feature Engineering in BQML
+    18. TfTransform
+    19. Basic Feature Engineering in Keras [Reference]
+    20. Basic Feature Engineering in BQML [Reference]
+    21. Using Feature Store (API) - API [Reference]
 
 ### 5일차 - MACHINE LEARNING IN THE ENTERPRISE
-    1. Exploring and Creating an Ecommerce Analytics Pipeline with Cloud Dataprep
-    2. Vertex AI: Building a fraud detection model with AutoML
-    3. Vertex AI: Custom Training Job and Prediction Using Managed Datasets
-    4. Vertex AI: Hyperparameter Tuning
-    5. Vertex AI Model Monitoring (Reference [Reference]
-    6. Introduction to Vertex AI Pipelines [Reference]
-    7. Introduction to Overfit and Underfit [Reference]
+    22. Exploring and Creating an Ecommerce Analytics Pipeline with Cloud Dataprep
+    23. Vertex AI: Building a fraud detection model with AutoML
+    24. Vertex AI: Custom Training Job and Prediction Using Managed Datasets
+    25. Vertex AI: Hyperparameter Tuning
+    26. Vertex AI Model Monitoring (Reference [Reference]
+    27. Introduction to Vertex AI Pipelines [Reference]
+    28. Introduction to Overfit and Underfit [Reference]
