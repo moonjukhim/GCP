@@ -14,12 +14,13 @@
 
 ### 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
    ###### 4.1 Data Analyst Learning Path
+      - From Data to Insights with Google Cloud Platform(1)
+      - Big Data & Machine Learning Fundamentals(2)
+      - Analyzing and Visualizing Data in Looker(3)
+      - Developing Data Models with LookML(4)
 
 
-- From Data to Insights with Google Cloud Platform(1)
-- Big Data & Machine Learning Fundamentals(2)
-- Analyzing and Visualizing Data in Looker(3)
-- Developing Data Models with LookML(4)
+
 
 ### 5. Apigee 및 비즈니스 애플리케이션 플랫폼
 - Developing APIs with Google Cloud's Apigee API Platform
