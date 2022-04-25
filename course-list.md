@@ -13,7 +13,7 @@
 - Architecting Hybrid Cloud Infrastructure with Anthos
 
 ### 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
-   - ###### 4.1 Data Analyst Learning Path
+   ###### 4.1 Data Analyst Learning Path
 
 
 - From Data to Insights with Google Cloud Platform(1)
