@@ -13,14 +13,20 @@
 - Architecting Hybrid Cloud Infrastructure with Anthos
 
 ### 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
-###### 4.1 Data Analyst Learning Path
+#### 4.1 Data Analyst Learning Path
   - From Data to Insights with Google Cloud Platform(1)
   - Big Data & Machine Learning Fundamentals(2)
   - Analyzing and Visualizing Data in Looker(3)
   - Developing Data Models with LookML(4)
 
+#### 4.2 Data Engineer Learning Path
+  - Data Engineering on Google Cloud
+  - Serverless Data Processing with Dataflow
 
-
+#### 4.2 Data Engineer Learning Path
+  - Developing Applications on Google Cloud
+  - Enterprise Database Migration
+  - Migrating MySQL data to Cloud SQL using Database Migration Service
 
 ### 5. Apigee 및 비즈니스 애플리케이션 플랫폼
 - Developing APIs with Google Cloud's Apigee API Platform
