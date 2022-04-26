@@ -51,7 +51,6 @@
 
 ---
 
-
 - Customer Experiences with Contact Center AI
 - ~~Data Engineering on Google Cloud~~
 - ~~Data Integration with Cloud Data Fusion(Not Work)~~
