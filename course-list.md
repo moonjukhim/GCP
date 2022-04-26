@@ -13,7 +13,7 @@
 - Architecting Hybrid Cloud Infrastructure with Anthos
 
 ### 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
-#### <font color="blue">4.1 Data Analyst Learning Path</font>
+#### <span style="color:blue">4.1 Data Analyst Learning Path</span>
   - From Data to Insights with Google Cloud Platform(1)
   - Big Data & Machine Learning Fundamentals(2)
   - Analyzing and Visualizing Data in Looker(3)
