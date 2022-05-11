@@ -1,4 +1,4 @@
-### Index
+# Index
 
 ### Exploring, Transforming, and Visualizing Data
 - 00 - Course Introduction
@@ -22,6 +22,8 @@
 - 14 - Course Completion
 
 ---
+
+# Labs
 
 ### Exploring, Transforming, and Visualizing Data
  - Lab 1: BigQuery Basics
