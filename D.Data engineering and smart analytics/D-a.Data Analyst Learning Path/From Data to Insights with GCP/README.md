@@ -7,6 +7,7 @@
 - 03 - Exploring your Public Dataset with SQL
     - Lab 2: Explore your Ecommerce Dataset with SQL in Google BigQuery
 - 04 - Cleaning and Transforming your Data with Dataprep
+    - Lab 3: Creating a Data Transformation Pipeline with Cloud Dataprep
 - 05 - Visualizing Insights and Creating Scheduled Queries
 
 ### Creating and Optimizing your Data Warehouse
@@ -28,8 +29,6 @@
 
 ### Exploring, Transforming, and Visualizing Data
  - Lab 1: BigQuery Basics
- 
- - Lab 3: Creating a Data Transformation Pipeline with Cloud Dataprep
  - Lab 4: How to Build a BI Dashboard Using Google Data Studio and BigQuery
 
 ### Creating and Optimizing your Data Warehouse
