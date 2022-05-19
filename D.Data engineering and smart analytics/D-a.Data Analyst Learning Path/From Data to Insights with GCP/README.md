@@ -9,6 +9,8 @@
 - 04 - Cleaning and Transforming your Data with Dataprep
     - Lab 3: Creating a Data Transformation Pipeline with Cloud Dataprep
 - 05 - Visualizing Insights and Creating Scheduled Queries
+    - Lab 4: How to Build a BI Dashboard Using Google Data Studio and BigQuery
+
 
 ### Creating and Optimizing your Data Warehouse
 - 06 - Storing and Ingesting new Datasets
@@ -29,7 +31,6 @@
 
 ### Exploring, Transforming, and Visualizing Data
  - Lab 1: BigQuery Basics
- - Lab 4: How to Build a BI Dashboard Using Google Data Studio and BigQuery
 
 ### Creating and Optimizing your Data Warehouse
  - Lab 5: Ingesting New Datasets into BigQuery
