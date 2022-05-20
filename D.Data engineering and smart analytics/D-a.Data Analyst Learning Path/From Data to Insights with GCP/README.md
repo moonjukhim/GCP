@@ -24,7 +24,7 @@
 - 10 - Optimizing Queries for Performance
 
 ### Machine Learning for Structured and Unstructured Datasets
-- :eleven: 11 - Controlling Access with Data Security Best Practices
+- 11 - Controlling Access with Data Security Best Practices
 - 12 - Predicting Visitor Return Purchases with BigQuery ML
 - 13 - Deriving Insights from Unstructured Data using Machine Learning 
 - 14 - Course Completion
