@@ -14,9 +14,13 @@
 
 ### Creating and Optimizing your Data Warehouse
 - 06 - Storing and Ingesting new Datasets
+    - Lab 5: Ingesting New Datasets into BigQuery
 - 07 - Enriching your Data Warehouse with JOINs
+    - Lab 6: Troubleshooting and Solving Data Join Pitfalls
 - 08 - Partitioning your Queries and Tables for Advanced Insights
+    - Lab 7: Creating Date-Partitioned Tables in BigQuery
 - 09 - Designing Schemas that Scale_ Arrays and Structs in BigQuery
+    - Lab 8: Schema Design for Performance: Arrays and Structs in BigQuery
 - 10 - Optimizing Queries for Performance
 
 ### Machine Learning for Structured and Unstructured Datasets
@@ -31,12 +35,6 @@
 
 ### Exploring, Transforming, and Visualizing Data
  - Lab 1: BigQuery Basics
-
-### Creating and Optimizing your Data Warehouse
- - Lab 5: Ingesting New Datasets into BigQuery
- - Lab 6: Troubleshooting and Solving Data Join Pitfalls
- - Lab 7: Creating Date-Partitioned Tables in BigQuery
- - Lab 8: Schema Design for Performance: Arrays and Structs in BigQuery
 
 ### Machine Learning for Structured and Unstructured Datasets
  - Lab 9: Predict Visitor Purchases with a Classification Model with BigQuery ML
