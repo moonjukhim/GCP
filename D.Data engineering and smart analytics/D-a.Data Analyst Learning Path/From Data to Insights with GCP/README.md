@@ -4,6 +4,7 @@
 - 00 - Course Introduction
 - 01 - Introduction to Google Cloud
 - 02 - Analyzing Large Datasets with BigQuery
+    - Lab 1: BigQuery Basics
 - 03 - Exploring your Public Dataset with SQL
     - Lab 2: Explore your Ecommerce Dataset with SQL in Google BigQuery
 - 04 - Cleaning and Transforming your Data with Dataprep
@@ -32,9 +33,6 @@
 ---
 
 # Labs
-
-### Exploring, Transforming, and Visualizing Data
- - Lab 1: BigQuery Basics
 
 ### Machine Learning for Structured and Unstructured Datasets
  - Lab 9: Predict Visitor Purchases with a Classification Model with BigQuery ML
