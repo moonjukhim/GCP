@@ -23,7 +23,7 @@
   - Data Engineering on Google Cloud
   - Serverless Data Processing with Dataflow
 
-#### 4.2 Data Engineer Learning Path
+#### 4.3 Database Engineer Learning Path
   - Developing Applications on Google Cloud
   - Enterprise Database Migration
   - Migrating MySQL data to Cloud SQL using Database Migration Service
