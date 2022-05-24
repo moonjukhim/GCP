@@ -1,2 +1,2 @@
-|   Hadoop  | Dataproc      | Data fusion
-|   beam    | Dataflow      | Dataprep 
+|   Hadoop  | Dataproc      | Data fusion   |
+|   beam    | Dataflow      | Dataprep      |
