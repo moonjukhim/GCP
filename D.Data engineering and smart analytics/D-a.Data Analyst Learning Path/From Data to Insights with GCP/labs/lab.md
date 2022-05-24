@@ -1,8 +1,8 @@
 # Labs
 
 ### Exploring, Transforming, and Visualizing Data
- - Lab 1: BigQuery Basics
- - Lab 2: Explore your Ecommerce Dataset with SQL in Google BigQuery
+ - Lab 01: BigQuery Basics
+ - Lab 02: Explore your Ecommerce Dataset with SQL in Google BigQuery
  - Lab 3: Creating a Data Transformation Pipeline with Cloud Dataprep
  - Lab 4: How to Build a BI Dashboard Using Google Data Studio and BigQuery
 
