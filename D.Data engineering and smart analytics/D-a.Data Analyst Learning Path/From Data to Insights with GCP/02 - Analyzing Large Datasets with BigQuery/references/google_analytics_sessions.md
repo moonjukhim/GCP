@@ -34,3 +34,21 @@
 |eCommerceAction_option	    |STRING	    |이 필드에는 결제 옵션이 지정될 경우에 값이 들어갑니다. 예를 들어 배송 옵션에 'Fedex'가 표시될 수 있습니다.hits.eCommerceAction.option|	
 
 [from](https://support.google.com/analytics/answer/3437719?hl=ko&ref_topic=3416089)
+
+2017년 7월에 사용자가 조회한 페이지 순서
+
+```sql
+#standardSQL
+SELECT
+fullVisitorId,
+visitId,
+visitNumber,
+hits.hitNumber AS hitNumber,
+hits.page.pagePath AS pagePath
+FROM
+  `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+  UNNEST(hits) as hits
+WHERE _TABLE_SUFFIX BETWEEN '20170701' AND '20170731'
+AND hits.type="PAGE"
+ORDER BY fullVisitorId, visitId, visitNumber,hitNumber
+```
