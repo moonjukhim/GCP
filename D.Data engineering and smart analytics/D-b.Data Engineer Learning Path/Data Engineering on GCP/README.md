@@ -1,7 +1,9 @@
 ### Data Engineering on GCP
 
 - 1.1_Introduction_to_Data_Engineering
+  - :memo: Lab1 : Using BigQuery to do Analysis
 - 1.2_Building_a_Data_Lake
+  - :memo: Lab2 : Loading Taxi Data into Cloud SQL
 - 1.3_Building_a_Data_Warehouse
 
 - 2.0_Introduction
