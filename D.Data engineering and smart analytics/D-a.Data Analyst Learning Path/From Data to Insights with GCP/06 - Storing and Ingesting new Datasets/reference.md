@@ -1,6 +1,4 @@
-(Introduction to loading data)[ttps://cloud.google.com/bigquery/docs/loading-data]
-
-#### There are several ways to ingest data into BigQuery:
+#### [There are several ways to ingest data into BigQuery:](ttps://cloud.google.com/bigquery/docs/loading-data)
 
 - Batch load 
   - Load data from Cloud Storage
