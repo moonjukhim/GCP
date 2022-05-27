@@ -10,9 +10,9 @@
 - 2.1_Introduction_to_Building_Batch_Data_Pipelines
 - 2.2_Executing_Spark_on_Dataproc
 - 2.3_Serverless_Data_Processing_with_Dataflow
-  - :memo: Serverless Data Analysis with Dataflow: A Simple Dataflow Pipeline (Python/Java)
-  - :memo: Serverless Data Analysis with Dataflow: MapReduce in Dataflow (Python/Java)
-  - :memo: Serverless Data Analysis with Dataflow: Side Inputs 
+  - :memo: Lab6/7 : Serverless Data Analysis with Dataflow: A Simple Dataflow Pipeline (Python/Java)
+  - :memo: Lab8/9 : Serverless Data Analysis with Dataflow: MapReduce in Dataflow (Python/Java)
+  - :memo: Lab10/11 : Serverless Data Analysis with Dataflow: Side Inputs 
 - 2.4_Manage_Data_Pipelines_with_Cloud_Data_Fusion_and_Cloud_Composer
 
 - 3.1_Introduction
