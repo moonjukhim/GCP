@@ -12,7 +12,7 @@ select address_history from a
 ```
 
 
-### Struct (Type:RECORDE, Mode:NULLABLE)
+### Struct (Type:RECORD, Mode:NULLABLE)
 
 ```sql
 create table test.struct_demo 
