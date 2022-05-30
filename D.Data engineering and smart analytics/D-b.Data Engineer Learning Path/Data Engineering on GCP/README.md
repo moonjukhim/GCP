@@ -27,7 +27,7 @@
   - :memo: Lab15 : Streaming Data Processing: Streaming Data Pipelines
 - 3.4_High-Throughput_BigQuery_and_Bigtable_Streaming_Features
 - 3.5_Advanced_BigQuery_Functionality_and_Performance
-
+---
 - 4.1_Introduction_to_Analytics_and_AI
 - 4.2_Prebuilt_ML_model_APIs_for_Unstructured_Data
 - 4.3_Big_Data_Analytics_with_Notebooks
