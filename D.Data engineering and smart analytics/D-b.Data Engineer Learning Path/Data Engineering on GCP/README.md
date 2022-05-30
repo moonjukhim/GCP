@@ -5,15 +5,20 @@
 - 1.2_Building_a_Data_Lake
   - :memo: Lab2 : Loading Taxi Data into Cloud SQL
 - 1.3_Building_a_Data_Warehouse
+  - :memo: Lab3 : Loading Data into BigQuery
+  - :memo: Lab4 : Working with JSON and Array Data in BigQuery
 
 - 2.0_Introduction
 - 2.1_Introduction_to_Building_Batch_Data_Pipelines
 - 2.2_Executing_Spark_on_Dataproc
+  - :memo: Lab5 : Running Apache Spark jobs on Dataproc
 - 2.3_Serverless_Data_Processing_with_Dataflow
   - :memo: Lab6/7 : Serverless Data Analysis with Dataflow: A Simple Dataflow Pipeline (Python/Java)
   - :memo: Lab8/9 : Serverless Data Analysis with Dataflow: MapReduce in Dataflow (Python/Java)
   - :memo: Lab10/11 : Serverless Data Analysis with Dataflow: Side Inputs 
 - 2.4_Manage_Data_Pipelines_with_Cloud_Data_Fusion_and_Cloud_Composer
+  - :memo: Lab12 : Building and Executing a Pipeline Graph in Cloud Data Fusion
+  - :memo: Lab13 : An Introduction to Cloud Composer
 
 - 3.1_Introduction
 - 3.2_Serverless_Messaging_with_Pub_Sub
