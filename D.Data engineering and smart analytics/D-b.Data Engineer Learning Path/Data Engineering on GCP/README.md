@@ -26,6 +26,7 @@
 - 3.3_Dataflow_Streaming_Features
   - :memo: Lab15 : Streaming Data Processing: Streaming Data Pipelines
 - 3.4_High-Throughput_BigQuery_and_Bigtable_Streaming_Features
+  - :memo: Lab16 : Streaming Data Processing: Streaming Data Pipelines into Bigtable
 - 3.5_Advanced_BigQuery_Functionality_and_Performance
 ---
 - 4.1_Introduction_to_Analytics_and_AI
