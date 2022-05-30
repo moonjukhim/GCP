@@ -2,9 +2,9 @@
 
 - 1.1_Introduction_to_Data_Engineering
   - :memo: Lab1 : Using BigQuery to do Analysis
-- 1.2_Building_a_Data_Lake
+- 1.2_Building_a **Data Lake**
   - :memo: Lab2 : Loading Taxi Data into Cloud SQL
-- 1.3_Building_a_Data_Warehouse
+- 1.3_Building_a **Data Warehouse** 
   - :memo: Lab3 : Loading Data into BigQuery
   - :memo: Lab4 : Working with JSON and Array Data in BigQuery
 ---
