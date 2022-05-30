@@ -29,10 +29,17 @@
   - :memo: Lab16 : Streaming Data Processing: Streaming Data Pipelines into Bigtable
   - :memo: Lab17 : Streaming Data Processing: Streaming Analytics and Dashboards
 - 3.5_Advanced_BigQuery_Functionality_and_Performance
+  - :memo: Lab18: Optimizing your BigQuery Queries for Performance
+  - :memo: Lab19: Partitioned Tables in BigQuery (optional)
 ---
 - 4.1_Introduction_to_Analytics_and_AI
 - 4.2_Prebuilt_ML_model_APIs_for_Unstructured_Data
+  - :memo: Lab20: Using the Natural Language API to Classify Unstructured Text
 - 4.3_Big_Data_Analytics_with_Notebooks
+  - :memo: Lab21: BigQuery in JupyterLab on Vertex AI
 - 4.4_Production_ML_Pipelines_with_Kubeflow
+  - :memo: Lab22: Running ML Pipelines on Kubeflow
 - 4.5_Custom_Model_building_with_SQL_in_BigQuery_ML
+  - :memo: Lab23: Predict Bike Trip Duration with a Regression Model in BigQuery ML
+  - :memo: Lab24: Movie Recommendations in BigQuery ML
 - 4.6_Custom_Model_building_with_AutoML
