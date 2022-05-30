@@ -7,7 +7,7 @@
 - 1.3_Building_a_Data_Warehouse
   - :memo: Lab3 : Loading Data into BigQuery
   - :memo: Lab4 : Working with JSON and Array Data in BigQuery
-
+---
 - 2.0_Introduction
 - 2.1_Introduction_to_Building_Batch_Data_Pipelines
 - 2.2_Executing_Spark_on_Dataproc
@@ -19,11 +19,12 @@
 - 2.4_Manage_Data_Pipelines_with_Cloud_Data_Fusion_and_Cloud_Composer
   - :memo: Lab12 : Building and Executing a Pipeline Graph in Cloud Data Fusion
   - :memo: Lab13 : An Introduction to Cloud Composer
-
+---
 - 3.1_Introduction
 - 3.2_Serverless_Messaging_with_Pub_Sub
   - :memo: Lab14 : Streaming Data Processing:Publish Streaming Data into Pub/Sub
 - 3.3_Dataflow_Streaming_Features
+  - :memo: Lab15 : Streaming Data Processing: Streaming Data Pipelines
 - 3.4_High-Throughput_BigQuery_and_Bigtable_Streaming_Features
 - 3.5_Advanced_BigQuery_Functionality_and_Performance
 
