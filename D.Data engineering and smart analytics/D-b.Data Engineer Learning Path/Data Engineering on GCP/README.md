@@ -4,7 +4,7 @@
   - :memo: Lab1 : Using BigQuery to do Analysis
 - 1.2_Building_a _**Data Lake**_
   - :memo: Lab2 : Loading Taxi Data into Cloud SQL
-- 1.3_Building_a _**Data Warehouse** _
+- 1.3_Building_a _**Data Warehouse**_
   - :memo: Lab3 : Loading Data into BigQuery
   - :memo: Lab4 : Working with JSON and Array Data in BigQuery
 ---
