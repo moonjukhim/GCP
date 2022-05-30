@@ -22,6 +22,7 @@
 
 - 3.1_Introduction
 - 3.2_Serverless_Messaging_with_Pub_Sub
+  - :memo: Lab14 : Streaming Data Processing:Publish Streaming Data into Pub/Sub
 - 3.3_Dataflow_Streaming_Features
 - 3.4_High-Throughput_BigQuery_and_Bigtable_Streaming_Features
 - 3.5_Advanced_BigQuery_Functionality_and_Performance
