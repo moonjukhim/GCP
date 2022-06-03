@@ -9,6 +9,9 @@ Workflow failed. Causes: There was a problem refreshing your credentials. Please
 - 2.AverageSpeed.java (AvgSpeed.java)
 
 ```java
+// 
+// ...
+//
 avgSpeed.apply("ToBQRow", ParDo.of(new DoFn<KV<String, Double>, TableRow>() {
       @ProcessElement
       public void processElement(ProcessContext c) throws Exception {
