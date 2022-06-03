@@ -3,3 +3,28 @@ Workflow failed. Causes: There was a problem refreshing your credentials. Please
 
 --> 3번 진행하면 정상적으로 진행
 
+```java
+avgSpeed.apply("ToBQRow", ParDo.of(new DoFn<KV<String, Double>, TableRow>() {
+      @ProcessElement
+      public void processElement(ProcessContext c) throws Exception {
+        TableRow row = new TableRow();
+        String stationKey = c.element().getKey();
+        Double speed = c.element().getValue();
+        String line = Instant.now().toString() + "," + stationKey + "," + speed; // CSV
+        LaneInfo info = LaneInfo.newLaneInfo(line);
+        row.set("timestamp", info.getTimestamp());
+        row.set("latitude", info.getLatitude());
+        row.set("longitude", info.getLongitude());
+        row.set("highway", info.getHighway());
+        row.set("direction", info.getDirection());
+        row.set("lane", info.getLane());
+        row.set("speed", info.getSpeed());
+        row.set("sensorId", info.getSensorKey());
+        c.output(row);
+      }
+    })) // <<<<<< 
+        .apply(BigQueryIO.writeTableRows().to(avgSpeedTable)//
+            .withSchema(schema)//
+            .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND) // WriteDisposition.WRITE_APPEND:새 래코드 추가
+            .withCreateDisposition(BigQueryIO.Write.CreateDisposition.CREATE_IF_NEEDED));
+```
