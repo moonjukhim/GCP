@@ -3,6 +3,8 @@ Workflow failed. Causes: There was a problem refreshing your credentials. Please
 
 --> 3번 진행하면 정상적으로 진행
 
+AverageSpeed.java (AvgSpeed.java)
+
 ```java
 avgSpeed.apply("ToBQRow", ParDo.of(new DoFn<KV<String, Double>, TableRow>() {
       @ProcessElement
