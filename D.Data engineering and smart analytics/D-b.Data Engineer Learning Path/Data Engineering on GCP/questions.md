@@ -1,7 +1,7 @@
 ### BigQuery
 
 1. with 절과 성능 관련
-    - []https://flowygo.com/en/blog/bigquery-with-clause/
+    - [BigQuery: WITH Clause](https://flowygo.com/en/blog/bigquery-with-clause/)
 
 2. 파티션 만료 시간 설정
     - https://cloud.google.com/bigquery/docs/managing-partitioned-tables#partition-expiration
