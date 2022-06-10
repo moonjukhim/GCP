@@ -35,7 +35,7 @@
 |date	                                        |STRING	    |YYYYMMDD 형식으로 표시되는 세션 날짜	|
 |visitId	                                    |INTEGER	  |이 필드는 더 이상 사용되지 않습니다. 대신 'fullVisitorId'를 사용|	
 
-
+---
 
 [from](https://support.google.com/analytics/answer/3437719?hl=ko&ref_topic=3416089)
 
