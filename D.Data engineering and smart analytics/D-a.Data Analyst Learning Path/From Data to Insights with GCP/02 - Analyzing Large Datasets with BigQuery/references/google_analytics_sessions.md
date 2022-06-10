@@ -1,3 +1,5 @@
+### ecommerce sample data schema
+
 |Name                                         |Type       |Description|
 |---------------------------------------------|-----|-----|
 |fullVisitorId	                              |STRING	    |고유한 방문자 ID|	
