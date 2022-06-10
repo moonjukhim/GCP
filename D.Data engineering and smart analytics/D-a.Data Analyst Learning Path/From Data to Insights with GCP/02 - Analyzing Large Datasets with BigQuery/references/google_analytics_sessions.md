@@ -16,14 +16,14 @@
 |hits.page.pagePathLevel1                     |STRING	    |pagePath의 첫 번째 계층구조 수준에서 모든 페이지 경로를 롤업하는 측정기준|	
 |hits.product.productRefundAmount             |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 제품 환불 과정의 처리 금액|	
 |hits.product.productQuantity                 |INTEGER	  |구매된 제품의 수량|	
-|hits.product.productPrice                    |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 제품 가격|	
-|hits.product.productRevenue                  |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 제품 수익|	
-|hits.product.productSKU                      |STRING	    |제품 SKU |	
-|hits.product.v2ProductName                   |STRING	    |제품명 |	
-|hits.product.v2ProductCategory               |STRING	    |상품 카테고리 |	
-|hits.product.productVariant                  |STRING	    |유사 제품 |
-|hits.transaction.currencyCode                |STRING	    |거래에 대한 현지 통화 코드입니다.|	
-|hits.transaction.transactionRevenue          |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 총 거래 수익.|	
+|hits.product.productPrice                    |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 제품 가격        |	
+|hits.product.productRevenue                  |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 제품 수익        |	
+|hits.product.productSKU                      |STRING	    |제품 SKU                                          |	
+|hits.product.v2ProductName                   |STRING	    |제품명                                            |	
+|hits.product.v2ProductCategory               |STRING	    |상품 카테고리                                      |	
+|hits.product.productVariant                  |STRING	    |유사 제품                                         |
+|hits.transaction.currencyCode                |STRING	    |거래에 대한 현지 통화 코드                         |	
+|hits.transaction.transactionRevenue          |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 총 거래 수익     |	
 |hits.transaction.transactionId	              |STRING	    |전자상거래의 거래 ID입니다.|	
 |geoNetwork.country                           |STRING	    |세션이 발생한 국가입니다(IP 주소 기준)|	
 |geoNetwork.city	                            |STRING	    |IP 주소 또는 지역 ID에서 가져온 사용자의 도시입니다.	|
@@ -32,14 +32,8 @@
 |totals.pageviews	                            |INTEGER	  |세션 내의 총 페이지뷰 수입니다.	|
 |totals.sessionQualityDim	                    |INTEGER	  |각 세션이 거래에 얼마나 근접했는지를 보여주는 추정치입니다. 	|
 |transactions.transactions                    |INTEGER	  |세션 내의 총 전자상거래 수입니다.	|
-|date	                                        |STRING	    |YYYYMMDD 형식으로 표시되는 세션 날짜입니다.	|
-|visitId	                                    |INTEGER	  |이 필드는 더 이상 사용되지 않습니다. 대신 'fullVisitorId'를 사용합니다.|	
-
-
-	
-
-
-
+|date	                                        |STRING	    |YYYYMMDD 형식으로 표시되는 세션 날짜	|
+|visitId	                                    |INTEGER	  |이 필드는 더 이상 사용되지 않습니다. 대신 'fullVisitorId'를 사용|	
 
 
 
