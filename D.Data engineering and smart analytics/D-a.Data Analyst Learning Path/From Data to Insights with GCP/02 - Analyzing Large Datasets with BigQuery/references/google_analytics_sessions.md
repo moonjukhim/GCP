@@ -10,7 +10,7 @@
 |hits.item.itemQuantity	                      |INTEGER	  |판매된 제품의 수량|	
 |hits.item.itemRevenue                        |INTEGER	  |애널리틱스로 전달된 값으로 표시되는 총 상품 수익|	
 |hits.time	                                  |INTEGER	  |이 조회가 등록된 visitStartTime 이후 경과한 시간(단위: 밀리초) 첫 번째 조회는 0|
-|hits.type                                    |STRING	    |조회 유형(예: '페이지', '거래', '품목', '이벤트', '소셜', '앱뷰', '예외')	|
+|hits.type                                    |STRING	    |조회 유형(page,'거래','품목',event,social,'앱뷰', '예외')	|
 |hits.page.pageTitle	                        |STRING	    |페이지 제목|	
 |hits.page.searchKeyword	                    |STRING	    |검색결과 페이지인 경우 입력한 키워드|	
 |hits.page.pagePathLevel1                     |STRING	    |pagePath의 첫 번째 계층구조 수준에서 모든 페이지 경로를 롤업하는 측정기준|	
