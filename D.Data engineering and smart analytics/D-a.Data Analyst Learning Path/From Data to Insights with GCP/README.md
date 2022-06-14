@@ -32,9 +32,3 @@
     - :memo: Lab 11: Classify Images of Clouds in the Cloud with AutoML Vision
 - 14 - Course Completion
 
----
-
-# Labs
-
-### Machine Learning for Structured and Unstructured Datasets
- 
