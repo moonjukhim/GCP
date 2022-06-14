@@ -26,7 +26,10 @@
 ### Machine Learning for Structured and Unstructured Datasets
 - 11 - Controlling Access with Data Security Best Practices
 - 12 - Predicting Visitor Return Purchases with BigQuery ML
+    - :memo: Lab 9: Predict Visitor Purchases with a Classification Model with BigQuery ML
 - 13 - Deriving Insights from Unstructured Data using Machine Learning 
+    - :memo: Lab 10: Extract, Analyze, and Translate Text from Images with the Cloud ML APIs
+    - :memo: Lab 11: Classify Images of Clouds in the Cloud with AutoML Vision
 - 14 - Course Completion
 
 ---
@@ -34,6 +37,4 @@
 # Labs
 
 ### Machine Learning for Structured and Unstructured Datasets
- - Lab 9: Predict Visitor Purchases with a Classification Model with BigQuery ML
- - Lab 10: Extract, Analyze, and Translate Text from Images with the Cloud ML APIs
- - Lab 11: Classify Images of Clouds in the Cloud with AutoML Vision
+ 
