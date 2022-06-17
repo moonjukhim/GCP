@@ -1,5 +1,5 @@
 ### Day 1
-### Exploring, Transforming, and Visualizing Data
+##### Exploring, Transforming, and Visualizing Data
 
 | 오픈소스  |Managed Service| GUI           |
 |-----------|---------------|---------------|
