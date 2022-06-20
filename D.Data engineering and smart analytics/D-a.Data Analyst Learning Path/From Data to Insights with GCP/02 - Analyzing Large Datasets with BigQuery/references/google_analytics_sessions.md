@@ -56,3 +56,19 @@ WHERE _TABLE_SUFFIX BETWEEN '20170701' AND '20170731'
 AND hits.type="PAGE"
 ORDER BY fullVisitorId, visitId, visitNumber,hitNumber
 ```
+
+Data 비교
+
+```sql
+select * 
+from `data-to-insights.ecommerce.web_analytics`
+where fullVisitorId = '6897161498212019070'
+```
+
+그리고
+
+```sql
+select * 
+from `data-to-insights.ecommerce.all_sessions`
+where fullVisitorId = '6897161498212019070'
+```
