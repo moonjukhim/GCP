@@ -9,4 +9,7 @@
 
 ---
 
-[Data Fusion의 Array 문제](https://stackoverflow.com/questions/71613232/array-issue-in-data-fusion)
+### References
+
+- [Data Fusion의 Array 문제](https://stackoverflow.com/questions/71613232/array-issue-in-data-fusion)
+
