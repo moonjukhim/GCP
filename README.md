@@ -51,7 +51,7 @@
 
 ---
 
-![GCP Trainer](Z1.Etc/Certifications/gcp_instructor.png =100x100)
+![GCP Trainer](Z1.Etc/Certifications/gcp_instructor_thumb.png)
 ![GCP DE](Z1.Etc/)
 
 ---
