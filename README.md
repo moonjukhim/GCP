@@ -52,7 +52,7 @@
 ---
 
 ![GCP Trainer](Z1.Etc/Certifications/gcp_instructor_thumb.png)
-![GCP DE](Z1.Etc/)
+![GCP DE](Z1.Etc/Certifications/gcp_data_engineer_thumb.png)
 
 ---
 
