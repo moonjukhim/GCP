@@ -7,6 +7,7 @@
 ### 2. 애플리케이션 현대화
 - Developing Applications with Google Cloud Platform
 - Application Development with Cloud Run
+- Logging, Monitoring and Observability in Google Cloud
 
 ### 3. 하이브리드 및 멀티 클라우드
 - Architecting with Google Kubernetes Engine
@@ -57,13 +58,5 @@
 ![GCP SE](Z1.Etc/Certifications/gcp_security_engineer_thumb.png)
 
 ---
-
-- Customer Experiences with Contact Center AI
-- ~~Data Engineering on Google Cloud~~
-- ~~Data Integration with Cloud Data Fusion(Not Work)~~
-- Logging, Monitoring and Observability in Google Cloud
-- Marketing Analytics Solutions for Partners
-- Serverless Data Processing with Dataflow (ILT)
-
 
 
