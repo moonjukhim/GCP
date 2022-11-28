@@ -11,9 +11,9 @@
 7. Responsible AI Development
 8. Course Summary
 
-- 1. 이미지 데이터 세트를 사용하여 AutoML 모델 학습
-- 2. AutoML 동영상 분류 모델 학습
-- 3. AutoML 테이블 형식 학습 및 예측(SDK)(선택사항)
+- Lab1. 이미지 데이터 세트를 사용하여 AutoML 모델 학습
+- Lab2. AutoML 동영상 분류 모델 학습
+- Lab3. AutoML 테이블 형식 학습 및 예측(SDK)(선택사항)
 
 ##### 머신러닝 시작하기
 
