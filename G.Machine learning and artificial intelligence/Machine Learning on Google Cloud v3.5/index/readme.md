@@ -17,20 +17,20 @@
 
 ##### 머신러닝 시작하기
 
-1. 데이터 품질 개선
-2. Python 및 BigQuery를 사용한 탐색적 데이터 분석
-3. 선형 회귀 소개
-4. AutoML 분류 모델 학습(구조화된 데이터)
-5. BQML을 사용하여 펭귄 체중 예측(BQML 및 Explainable AI)
-6. BigQuery ML 초매개변수 조정을 사용하여 모델 성능 향상
+- Lab1. 데이터 품질 개선
+- Lab2. Python 및 BigQuery를 사용한 탐색적 데이터 분석
+- Lab3. 선형 회귀 소개
+- Lab4. AutoML 분류 모델 학습(구조화된 데이터)
+- Lab5. BQML을 사용하여 펭귄 체중 예측(BQML 및 Explainable AI)
+- Lab6. BigQuery ML 초매개변수 조정을 사용하여 모델 성능 향상
 
 ##### TensorFlow Dataset API
 
-1. Keras 사전 처리 레이어를 사용하여 구조화된 데이터 분류하기
-2. Keras Functional API를 사용하여 DNN 빌드하기
-3. 서브클래스로 새 레이어 및 모델 만들기
-4. TensorFlow 결정 포레스트로 모델 빌드, 학습, 평가[참조]
-5. BigQuery ML을 사용하여 가져온 TensorFlow 모델로 예측 수행[참조]
+- Lab1. Keras 사전 처리 레이어를 사용하여 구조화된 데이터 분류하기
+- Lab2. Keras Functional API를 사용하여 DNN 빌드하기
+- Lab3. 서브클래스로 새 레이어 및 모델 만들기
+- Lab4. TensorFlow 결정 포레스트로 모델 빌드, 학습, 평가[참조]
+- Lab5. BigQuery ML을 사용하여 가져온 TensorFlow 모델로 예측 수행[참조]
 
 ##### 특성 추출
 
