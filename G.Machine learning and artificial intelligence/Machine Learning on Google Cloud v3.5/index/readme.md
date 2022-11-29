@@ -26,6 +26,12 @@
 
 ##### TensorFlow Dataset API
 
+9. Introduction to the course
+10. Introduction to the Tensorflow ecosystem
+11. Build scalable data input pipeline with the tf.data API
+12. Building Neural Networks in Tensorflow with the Keras API
+13. Scaling Tensorflow training and prediction on Google Cloud
+
 - Lab1. Keras 사전 처리 레이어를 사용하여 구조화된 데이터 분류하기
 - Lab2. Keras Functional API를 사용하여 DNN 빌드하기
 - Lab3. 서브클래스로 새 레이어 및 모델 만들기
