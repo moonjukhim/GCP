@@ -17,6 +17,14 @@
 
 ##### 머신러닝 시작하기
 
+9. Get to know your data: Improve data through exploratory data analysis
+10. ML in practice
+11. Intro to automated machine learning(AutoML) using Vertex AI
+12. Optimization
+13. BigQuery Machine Learning
+14. Generalization and sampling
+15. Summary
+
 - Lab1. 데이터 품질 개선
 - Lab2. Python 및 BigQuery를 사용한 탐색적 데이터 분석
 - Lab3. 선형 회귀 소개
@@ -26,11 +34,11 @@
 
 ##### TensorFlow Dataset API
 
-9. Introduction to the course
-10. Introduction to the Tensorflow ecosystem
-11. Build scalable data input pipeline with the tf.data API
-12. Building Neural Networks in Tensorflow with the Keras API
-13. Scaling Tensorflow training and prediction on Google Cloud
+16. Introduction to the course
+17. Introduction to the Tensorflow ecosystem
+18. Build scalable data input pipeline with the tf.data API
+19. Building Neural Networks in Tensorflow with the Keras API
+20. Scaling Tensorflow training and prediction on Google Cloud
 
 - Lab1. Keras 사전 처리 레이어를 사용하여 구조화된 데이터 분류하기
 - Lab2. Keras Functional API를 사용하여 DNN 빌드하기
