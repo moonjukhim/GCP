@@ -1,6 +1,6 @@
 ### TensorFlow on Google Cloud
 
-###### Day 3
+###### Day 3 : TensorFlow on Google Cloud
 
 1. Introduction to the course
 2. Introduction to the TensorFlow ecosystem
