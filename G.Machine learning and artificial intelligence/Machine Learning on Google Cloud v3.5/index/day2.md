@@ -6,5 +6,5 @@
 4. Introduction to automated machine learning using Vertex AI (page90)
 5. Optimization (page152)
 6. BigQuery Machine Learning: Develop ML models where your data lives(page231)
-7. Generalizing and sampling (page26)
+7. Generalizing and sampling (page260)
 8. Summary
