@@ -5,16 +5,16 @@
     - Google Cloud Fundamentals: Core Infrastructure
     - Architecting with Google Compute Engine
 
-### 2. 애플리케이션 현대화
+## 2. 애플리케이션 현대화
 
-- Developing Applications with Google Cloud Platform
-- Application Development with Cloud Run
-- Logging, Monitoring and Observability in Google Cloud
+    - Developing Applications with Google Cloud Platform
+    - Application Development with Cloud Run
+    - Logging, Monitoring and Observability in Google Cloud
 
-### 3. 하이브리드 및 멀티 클라우드
+## 3. 하이브리드 및 멀티 클라우드
 
-- Architecting with Google Kubernetes Engine
-- Architecting Hybrid Cloud Infrastructure with Anthos
+    - Architecting with Google Kubernetes Engine
+    - Architecting Hybrid Cloud Infrastructure with Anthos
 
 ### 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
 
