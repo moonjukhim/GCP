@@ -16,14 +16,14 @@
     - Architecting with Google Kubernetes Engine
     - Architecting Hybrid Cloud Infrastructure with Anthos
 
-### 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
+## 4. 스마트 분석 및 데이터 분석 (Data engineering and analytics)
 
-#### 4.1 Data Analyst Learning Path
+### 4.1 Data Analyst Learning Path
 
-- From Data to Insights with Google Cloud Platform(1)
-- Big Data & Machine Learning Fundamentals(2)
-- Analyzing and Visualizing Data in Looker(3)
-- Developing Data Models with LookML(4)
+    - From Data to Insights with Google Cloud Platform(1)
+    - Big Data & Machine Learning Fundamentals(2)
+    - Analyzing and Visualizing Data in Looker(3)
+    - Developing Data Models with LookML(4)
 
 #### 4.2 Data Engineer Learning Path
 
