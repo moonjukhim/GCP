@@ -1,6 +1,6 @@
 # Google Cloud Platform Learning Path
 
-### 1. 인프라 현대화
+## 1. 인프라 현대화
 
     - Google Cloud Fundamentals: Core Infrastructure
     - Architecting with Google Compute Engine
