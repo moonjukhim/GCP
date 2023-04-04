@@ -1,6 +1,6 @@
 ### Architecting Hybrid Cloud Infra with Anthos 2.0
 
-1. The need for Anthos (### Day 1 #######)
+1. Introduction Anthos (### Day 1 #######)
 2. Anthos Environments
 3. Fleet Networking
    - :memo: North-south routing with Multi-Cluster Gateways
@@ -12,11 +12,11 @@
    - :memo: AHYBRID041 Observing Anthos Services
 6. Anthos Service Mesh Routing
    - :memo: Managing traffic flow with Anthos Service Mesh
-7. Securing Network Traffic with Anthos Service Mesh
+7. Anthos Service Mesh Security
    - :memo: Securing Traffic with Anthos Service Mesh
 8. Multi-cluster Networking with Anthos Service Mesh
    - :memo: Configuring a multi-cluster mesh
-9. The need for Anthos bare metal (### Day 3 #######)
+9. Introduction Anthos Bare Metal (### Day 3 #######)
 10. Planning and building the Anthos admin cluster
     - :memo: Creating infrastructure and deploying Anthos clusters on bare metal
 11. Adding and configuring user clusters
