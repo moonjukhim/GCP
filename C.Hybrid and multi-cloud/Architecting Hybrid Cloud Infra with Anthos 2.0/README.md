@@ -7,6 +7,9 @@
 4. Managing configuration with Anthos
    - :memo: Configuring Clusters with Anthos Config Management
    - :memo: Enforcing policy with Anthos Config Management Policy Controller
+
+---
+
 5. Introducing Anthos Service Mesh (### Day 2 #######)
    - :memo: AHYBRID032: Anthos Service Mesh Walkthrough
    - :memo: AHYBRID041 Observing Anthos Services
@@ -16,6 +19,9 @@
    - :memo: Securing Traffic with Anthos Service Mesh
 8. Multi-cluster Networking with Anthos Service Mesh
    - :memo: Configuring a multi-cluster mesh
+
+---
+
 9. Introduction Anthos Bare Metal (### Day 3 #######)
 10. Planning and building the Anthos admin cluster
     - :memo: Creating infrastructure and deploying Anthos clusters on bare metal
