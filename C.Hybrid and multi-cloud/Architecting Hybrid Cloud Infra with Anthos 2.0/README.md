@@ -11,10 +11,10 @@
 ---
 
 5. Introducing Anthos Service Mesh (### Day 2 #######)
-   - :memo: 032: Anthos Service Mesh Walkthrough
-   - :memo: AHYBRID041 Observing Anthos Services
+   - :memo: 032: Anthos Service Mesh Walkthrough(in, O)
+   - :memo: 041: Observing Anthos Services
 6. Anthos Service Mesh Routing
-   - :memo: Managing traffic flow with Anthos Service Mesh
+   - :memo: 051: Managing traffic flow with Anthos Service Mesh
 7. Anthos Service Mesh Security
    - :memo: Securing Traffic with Anthos Service Mesh
 8. Multi-cluster Networking with Anthos Service Mesh
@@ -29,13 +29,16 @@
     - :memo: Deploying workloads on Anthos clusters on bare metal
 12. Operating and managing clusters
     - :memo: Observing Anthos clusters on bare metal
-13. Application migration with Anthos
+
+---
+
+13. Application migration with Anthos (### Day 4 #######)
 14. Modern CI / CD
 15. Serverless on Anthos
 
 ---
 
-# Labs
+### Labs
 
 AHYBRID022 North-south routing with Multi-Cluster Gateways
 AHYBRID032: Anthos Service Mesh Walkthrough
