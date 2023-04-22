@@ -16,7 +16,7 @@
 6. Anthos Service Mesh Routing
    - :memo: 051: Managing traffic flow with Anthos Service Mesh
 7. Anthos Service Mesh Security
-   - :memo: Securing Traffic with Anthos Service Mesh
+   - :memo: 061: Securing Traffic with Anthos Service Mesh(in, )
 8. Multi-cluster Networking with Anthos Service Mesh
    - :memo: Configuring a multi-cluster mesh
 
