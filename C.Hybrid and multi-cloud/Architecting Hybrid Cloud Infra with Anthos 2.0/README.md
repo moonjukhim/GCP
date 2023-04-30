@@ -24,7 +24,7 @@
 
 9. Introduction Anthos Bare Metal (### Day 3 #######)
 10. Planning and building the Anthos admin cluster
-    - :memo: Creating infrastructure and deploying Anthos clusters on bare metal
+    - :memo: 091: Creating infrastructure and deploying Anthos clusters on bare metal
 11. Adding and configuring user clusters
     - :memo: Deploying workloads on Anthos clusters on bare metal
 12. Operating and managing clusters
