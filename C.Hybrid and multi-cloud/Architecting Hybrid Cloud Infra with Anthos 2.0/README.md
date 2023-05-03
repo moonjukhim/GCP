@@ -26,9 +26,9 @@
 10. Planning and building the Anthos admin cluster
     - :memo: 091: Creating infrastructure and deploying Anthos clusters on bare metal
 11. Adding and configuring user clusters
-    - :memo: Deploying workloads on Anthos clusters on bare metal
+    - :memo: 092: Deploying workloads on Anthos clusters on bare metal
 12. Operating and managing clusters
-    - :memo: Observing Anthos clusters on bare metal
+    - :memo: 093: Observing Anthos clusters on bare metal
 
 ---
 
