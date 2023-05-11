@@ -1,0 +1,1 @@
+[Google Kubernetes Engine에서 Cloud SQL에 연결](https://cloud.google.com/sql/docs/mysql/connect-kubernetes-engine?hl=ko)
