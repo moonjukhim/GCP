@@ -1,0 +1,1 @@
+[Statefulset 이해](https://bcho.tistory.com/1306)
