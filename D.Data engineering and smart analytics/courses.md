@@ -1,0 +1,9 @@
+- D-a.Data Analyst Path
+    - Analyzing and Visualizing Data in Looker
+    - Developing Data Models with LookML
+    - From Data to Insights with Google Cloud Platform
+- D-b.Data Engineer Path
+    - Data Engineering on Google Cloud Platfrom
+    - Serverless Data Processing with Dataflow
+- D-c.Database Engineer Path
+    - Enterprise Database Migration
