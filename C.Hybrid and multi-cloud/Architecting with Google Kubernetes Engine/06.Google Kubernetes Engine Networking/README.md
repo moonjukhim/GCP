@@ -1,0 +1,1 @@
+[내부 HTTP(S) 부하 분산기의 인그레스 구성](https://cloud.google.com/kubernetes-engine/docs/how-to/internal-load-balance-ingress?hl=ko)
