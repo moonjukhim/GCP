@@ -69,3 +69,73 @@
 ![GCP SE](Z1.Etc/Certifications/gcp_security_engineer_thumb.png)
 
 ---
+
+
+  
+Architecting Hybrid Infrastructure with Anthos
+Getting Started with Google Kubernetes Engine
+Google Cloud Fundamentals for AWS Professionals
+Google Cloud Fundamentals for Azure Professionals
+Achieving Advanced Insights with BigQuery   - [1.6]  
+Analyzing and Visualizing Data in Looker  - [1.1]  
+Application Development with Cloud Run  - [2.0]   
+Applying Machine Learning to your Data with GCP   - [1.6]  
+Architecting Hybrid Cloud Infrastructure with Anthos   - [2.0.1] 
+Architecting with Google Cloud: Design and Process   - [2.0]  
+Architecting with Google Compute Engine   - [2.2]  
+Building conversational experiences with Dialogflow
+Building Solutions with Apigee X   - [1.0]   
+Creating New BigQuery Datasets and Visualizing Insights   - [1.6]  
+Customer Experiences with Contact Center AI   - [1.1]    
+Customer Experiences with Contact Center AI - Dialogflow CX   - [2.0]    
+Customer Experiences with Contact Center AI - Dialogflow ES   - [2.0]     
+Data Engineering on Google Cloud   - [2.5]    
+Data Integration with Cloud Data Fusion   - [1.0]    
+Data Warehousing with BigQuery: Storage Design, Query Optimization, and Administration (ILT)   - [1.0] 
+Deploying and Managing Google Cloud VMware Engine   - [2.7]     
+Deploying and Migrating to Google Cloud VMware Engine   - [1.5]     
+Developing APIs with Google Cloud's Apigee API Platform   - [3.0.0]     
+Developing Applications with Cloud Functions on Google Cloud   - [1.0]     
+Developing Applications with Google Cloud   - [1.4]  
+Developing Data Models with LookML   - [1.1]  
+Enterprise Database Migration   - [1.0]  
+Exploring ​and ​Preparing ​your ​Data with BigQuery   
+From Data to Insights with Google Cloud Platform  - [1.6]    
+G Suite - Work transformation    
+GenAI Study Jam - Generative AI Explorer   - [1.0]  
+Getting Started with FinOps on Google Cloud   - [1.1]    
+Getting Started with Google Kubernetes Engine   - [2.0]    
+Getting Started with Terraform for Google Cloud   - [1.0]    
+Google Cloud Big Data & Machine Learning Fundamentals   - [2.1]     
+Google Cloud Big Data and Machine Learning Fundamentals   - [3.0]   
+Google Cloud Fundamentals for Researchers   - [1.0]  
+Google Cloud Fundamentals: Core Infrastructure   - [5.1]  -   
+Google Cloud Platform Big Data and Machine Learning Fundamentals   - [1.3]    
+Google Cloud Platform Fundamentals for AWS Professionals   - [2]    
+Google Workspace - Work Transformation   - [1.1]  
+Hybrid Infrastructure with Anthos for Partners   - [1.74]    
+Installing and Managing Google Cloud's Apigee API Platform for Private Cloud   - [2.0.0]  
+Interactive Chat for Applications using Generative AI Studio  - [1.0] 
+Introduction to AI and Machine Learning on Google Cloud   - [v.1.0]  
+Introduction to Responsible AI in Practice   - [1.0]  
+Introduction to Vertex Forecasting and Time Series in Practice   - [v.1.0]  
+Launching into Machine Learning   - [2.0] 
+Logging, Monitoring and Observability in Google Cloud   - [2.0]  
+Looker Developer Deep Dive  - [1.0]  
+Machine Learning on Google Cloud   - [3.5]     
+Machine Learning with TensorFlow on Google Cloud  - [2.0]    
+Managing a Data Mesh with Dataplex   - [1.0]    
+Managing Google Cloud's Apigee API Platform for Hybrid Cloud   - [2.0]  
+Marketing Analytics Solutions for Partners   - [1.2.2]   
+Migrating Amazon Redshift Users to BigQuery   - [1.0]  -   
+Migrating Snowflake Users to BigQuery   - [1.0]  -   
+Migrating Teradata Users to BigQuery   - [1.0]  -   
+Networking in Google Cloud   - [2.0]  
+roi-anthos-dev   - [1.0]    
+Security in Google Cloud   - [3.0] 
+Serverless Data Processing with Dataflow (ILT)   - [1.0]  
+Text Generation for Applications using Generative AI Studio   - [1.0]  
+Understanding Cloud Spanner   - [1.0]  
+Vertex AI Forecasting   - [1.0] 
+Vertex AI Model Garden   - [1.0]     
+VM Migration for Partners   - [1.60]    
