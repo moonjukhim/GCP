@@ -70,17 +70,13 @@
 
 ---
 
-
   
-Architecting Hybrid Infrastructure with Anthos
-Getting Started with Google Kubernetes Engine
-Google Cloud Fundamentals for AWS Professionals
-Google Cloud Fundamentals for Azure Professionals
 Achieving Advanced Insights with BigQuery   - [1.6]  
 Analyzing and Visualizing Data in Looker  - [1.1]  
 Application Development with Cloud Run  - [2.0]   
 Applying Machine Learning to your Data with GCP   - [1.6]  
 Architecting Hybrid Cloud Infrastructure with Anthos   - [2.0.1] 
+Architecting Hybrid Infrastructure with Anthos
 Architecting with Google Cloud: Design and Process   - [2.0]  
 Architecting with Google Compute Engine   - [2.2]  
 Building conversational experiences with Dialogflow
@@ -108,6 +104,8 @@ Getting Started with Google Kubernetes Engine   - [2.0]
 Getting Started with Terraform for Google Cloud   - [1.0]    
 Google Cloud Big Data & Machine Learning Fundamentals   - [2.1]     
 Google Cloud Big Data and Machine Learning Fundamentals   - [3.0]   
+Google Cloud Fundamentals for AWS Professionals
+Google Cloud Fundamentals for Azure Professionals
 Google Cloud Fundamentals for Researchers   - [1.0]  
 Google Cloud Fundamentals: Core Infrastructure   - [5.1]  -   
 Google Cloud Platform Big Data and Machine Learning Fundamentals   - [1.3]    
@@ -127,9 +125,9 @@ Machine Learning with TensorFlow on Google Cloud  - [2.0]
 Managing a Data Mesh with Dataplex   - [1.0]    
 Managing Google Cloud's Apigee API Platform for Hybrid Cloud   - [2.0]  
 Marketing Analytics Solutions for Partners   - [1.2.2]   
-Migrating Amazon Redshift Users to BigQuery   - [1.0]  -   
-Migrating Snowflake Users to BigQuery   - [1.0]  -   
-Migrating Teradata Users to BigQuery   - [1.0]  -   
+Migrating Amazon Redshift Users to BigQuery   - [1.0]     
+Migrating Snowflake Users to BigQuery   - [1.0]  
+Migrating Teradata Users to BigQuery   - [1.0]    
 Networking in Google Cloud   - [2.0]  
 roi-anthos-dev   - [1.0]    
 Security in Google Cloud   - [3.0] 
