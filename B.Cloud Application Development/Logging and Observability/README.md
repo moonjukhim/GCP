@@ -10,6 +10,14 @@
 8. Investigating application performance issues
 9. Optimizing the costs of monitoring
 
+- Monitoring and Dashboarding Multiple Projects
+- Alerting in Google Cloud
+- Log Analytics on Google Cloud
+- Cloud Audit Logs
+- Monitoring a Compute Engine by using Ops Agent
+- Analyzing Network Traffic with VPC Flow Logs
+- view Application latency with Cloud Trace
+
 ---
 
 ### 1.x
