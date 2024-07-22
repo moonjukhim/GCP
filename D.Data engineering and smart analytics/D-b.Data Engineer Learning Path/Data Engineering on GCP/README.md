@@ -1,4 +1,31 @@
-### Data Engineering on GCP
+### Data Engineering on GCP 
+
+##### 2.5.x
+
+- 1.1_Introduction_to_Data_Engineering
+- 1.2_Building_a _**Data Lake**_
+- 1.3_Building_a _**Data Warehouse**_
+---
+- 2.0_Introduction
+- 2.1_Introduction_to_Building_Batch_Data_Pipelines
+- 2.2_Executing_Spark_on _**Dataproc**_
+- 2.3_Serverless_Data_Processing_with _**Dataflow**_
+- 2.4_Manage_Data_Pipelines_with _**Cloud Data Fusion**_ and _**Cloud Composer**_
+---
+- 3.1_Introduction
+- 3.2_Serverless_Messaging_with _**Pub/Sub**_
+- 3.3 _**Dataflow Streaming**_ Features
+- 3.4_High-Throughput _**BigQuery**_ and _**Bigtable**_ Streaming_Features
+- 3.5_Advanced_BigQuery_Functionality_and_Performance
+---
+- 4.1_Introduction_to_Analytics_and_AI
+- 4.2_Prebuilt_ML_model_APIs_for_Unstructured_Data
+- 4.3_Big_Data_Analytics_with _**Notebooks**_
+- 4.4_Production_ML_Pipelines_with _**Kubeflow**_
+- 4.5_Custom_Model_building_with_SQL_in _**BigQuery ML**_
+- 4.6_Custom_Model_building_with _**AutoML**_
+
+---
 
 - 1.1_Introduction_to_Data_Engineering
   - :memo: Lab1 : Using BigQuery to do Analysis
