@@ -1,1 +1,0 @@
-- Architecting Hybrid Cloud Infrastructure with Anthos
