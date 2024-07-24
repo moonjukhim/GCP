@@ -1,26 +1,24 @@
 ### Architecting Hybrid Cloud Infra with Anthos 2.0
 
-1. Introduction Anthos (### Day 1 #######)
+##### (Day 1)
+
+1. Introduction Anthos 
 2. Anthos Environments
-3. Fleet Networking
-   - :memo: 022: North-south routing with Multi-Cluster Gateways(in,)
-4. Managing configuration with Anthos
-   - :memo: 071: Configuring Clusters with Anthos Config Management(in,)
-   - :memo: 072: Enforcing policy with Anthos Config Management Policy Controller(in,)
+3. Fleet Networking (022)
+4. Managing configuration with Anthos (071, 072)
 
 ---
 
-5. Introducing Anthos Service Mesh (### Day 2 #######)
-   - :memo: 032: Anthos Service Mesh Walkthrough(in, O)
-   - :memo: 041: Observing Anthos Services
-6. Anthos Service Mesh Routing
-   - :memo: 051: Managing traffic flow with Anthos Service Mesh
-7. Anthos Service Mesh Security
-   - :memo: 061: Securing Traffic with Anthos Service Mesh(in, )
-8. Multi-cluster Networking with Anthos Service Mesh
-   - :memo: Configuring a multi-cluster mesh
+##### (Day 2)
+
+5. Introducing Anthos Service Mesh (032, 041)
+6. Anthos Service Mesh Routing (051)
+7. Anthos Service Mesh Security (061)
+8. Multi-cluster Networking with Anthos Service Mesh ()
 
 ---
+
+##### (Day 3) 
 
 9. Introduction Anthos Bare Metal (### Day 3 #######)
 10. Planning and building the Anthos admin cluster
