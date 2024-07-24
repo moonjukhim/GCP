@@ -1,0 +1,94 @@
+resources:
+- name: setup-vm
+  properties:
+    disks:
+    - autoDelete: true
+      boot: true
+      deviceName: boot
+      initializeParams:
+        diskName: setup-vm-disk
+        sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-11
+      type: PERSISTENT
+    machineType: https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-04-0f1088281a0e/zones/us-central1-b/machineTypes/n1-standard-1
+    metadata:
+      items:
+      - key: startup-script
+        value: |
+          #!/bin/bash -x
+
+          export HOSTNAME=$(hostname)
+          export PROJECT_ID=$(gcloud config get-value project)
+          export LAB_DIR="/setup"
+
+          # export KUBECONFIG=/.kube/config
+
+          gcloud config set project $PROJECT_ID
+          mkdir $LAB_DIR
+          cd $LAB_DIR
+          mkdir bin
+
+          function apt-get-install {
+            until apt-get -q -y -o DPkg::Options::=--force-confold -o DPkg::Options::=--force-confdef install $@; do
+              echo "== install of packages $@ failed, retrying =="
+              sleep 5
+            done
+          }
+
+          apt update
+          apt-get-install git
+
+          # revise to use google's repo once merged
+          git clone https://github.com/GoogleCloudPlatform/training-data-analyst.git
+          cd ./training-data-analyst/courses/ahybrid/v1.0/AHYBRID031
+          # git clone https://github.com/jwdavis/training-data-analyst.git --branch jwd-anthos-hotfixes
+          # cd ./training-data-analyst/courses/ahybrid/v1.0/AHYBRID031
+
+
+          chmod +x ../common/scripts/services.sh
+          ../common/scripts/services.sh
+
+          source ./scripts/env.sh
+
+          chmod +x ../common/scripts/install.sh
+          ../common/scripts/install.sh
+
+          chmod +x ../common/scripts/create_gke.sh
+          ../common/scripts/create_gke.sh
+
+          gcloud beta runtime-config configs variables set success/${HOSTNAME} success \
+            --config-name ${HOSTNAME}-config >>${PROJECT_ID}.txt
+      - key: student
+        value: student-01-c8d0bea8cc96
+      - key: serial-port-enable
+        value: 'TRUE'
+    networkInterfaces:
+    - accessConfigs:
+      - name: External NAT
+        type: ONE_TO_ONE_NAT
+      network: https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-04-0f1088281a0e/global/networks/default
+    serviceAccounts:
+    - email: qwiklabs-gcp-04-0f1088281a0e@qwiklabs-gcp-04-0f1088281a0e.iam.gserviceaccount.com
+      scopes:
+      - https://www.googleapis.com/auth/cloud-platform
+      - https://www.googleapis.com/auth/source.full_control
+    zone: us-central1-b
+  type: compute.v1.instance
+- name: setup-vm-config
+  properties:
+    config: setup-vm-config
+  type: runtimeconfig.v1beta1.config
+- metadata: null
+  name: setup-vm-waiter
+  properties:
+    failure:
+      cardinality:
+        number: 1
+        path: /failure
+    parent: $(ref.setup-vm-config.name)
+    success:
+      cardinality:
+        number: 1
+        path: /success
+    timeout: 1200s
+    waiter: setup-vm-waiter
+  type: runtimeconfig.v1beta1.waiter
