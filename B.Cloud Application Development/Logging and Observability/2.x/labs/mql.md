@@ -26,3 +26,21 @@ fetch k8s_container
 | every 1m
 | condition val(0) > 0.73 '1'
 ```
+
+
+---
+
+##### Example
+
+```MQL
+fetch k8s_cluster
+| metric 'logging.googleapis.com/log_entry_count'
+| align rate(1m)
+| every 1m
+| group_by [],
+    [value_log_entry_count_aggregate: aggregate(value.log_entry_count)]
+```
+
+```PromQL
+sum(rate(logging_googleapis_com:log_entry_count{monitored_resource="k8s_cluster"}[${__interval}]))
+```
