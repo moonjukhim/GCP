@@ -27,9 +27,6 @@ fetch k8s_container
 | condition val(0) > 0.73 '1'
 ```
 
-
----
-
 ##### Example
 
 ```MQL
@@ -41,6 +38,18 @@ fetch k8s_cluster
     [value_log_entry_count_aggregate: aggregate(value.log_entry_count)]
 ```
 
+```MQL
+fetch gce_instance
+| metric 'compute.googleapis.com/instance/cpu/utilization'
+| group_by 1m, [value_utilization_mean: mean(value.utilization)]
+| every 1m
+```
+
 ```PromQL
-sum(rate(logging_googleapis_com:log_entry_count{monitored_resource="k8s_cluster"}[${__interval}]))
+avg_over_time(
+  compute_googleapis_com:instance_cpu_utilization{
+    monitored_resource="gce_instance"
+  }
+  [${__interval}]
+)
 ```
