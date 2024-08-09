@@ -1,3 +1,11 @@
+6. Task 6. Deploy the Gateway and HTTPRoutes
+
+```bash
+# kubectl get gateway external-http -o=jsonpath="{.status.addresses[0].value}" --context gke-west-1 --namespace store | xargs echo -e
+kubectl get Gateway --namespace store
+kubectl get Gateway external-http -o=jsonpath="{.status.addresses[0].value}" --context gke-west-1 --namespace store | xargs echo -e
+```
+
 ### Error Reporting
 
 ERROR: (gcloud.container.fleet.ingress.enable) INVALID_ARGUMENT: InvalidValueError for field config_membership: Membership "projects/qwiklabs-gcp-01-efa77e845415/locations/global/memberships/gke-west-1" does not exist
