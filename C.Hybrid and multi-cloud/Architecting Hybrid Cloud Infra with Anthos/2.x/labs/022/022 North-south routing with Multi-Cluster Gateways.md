@@ -1,6 +1,22 @@
 1. Configure kubectl and cluster
 2. Register cluster in an Anthos Fleet
+
+   ```bash
+   gcloud container fleet memberships register gke-west-1 \
+   --gke-cluster ${WEST1_LOCATION}/gke-west-1 \
+   --enable-workload-identity \
+   --project=${PROJECT_ID}
+
+   # ...
+   ```
+
 3. Enable Multi-cluster Service(MCS)
+
+   ```bash
+   gcloud container fleet multi-cluster-services enable \
+   --project ${PROJECT_ID}
+   ```
+
 4. Install Gateway API CRD & enable Multi-cluster Gateway
 5. Deploy the demo app
 
