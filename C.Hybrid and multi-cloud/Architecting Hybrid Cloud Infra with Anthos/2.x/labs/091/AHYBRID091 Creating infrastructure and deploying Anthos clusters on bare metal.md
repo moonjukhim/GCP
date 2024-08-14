@@ -1,3 +1,5 @@
+### Creating infrastructure and deploying Anthos clusters on bare metal
+
 #### Task 1. Confirm your network setup
 
 #### Task 2. Create your server infrastructure
