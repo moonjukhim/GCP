@@ -1,0 +1,1988 @@
+components:
+  comp-add-json-escape-to-list:
+    executorLabel: exec-add-json-escape-to-list
+    inputDefinitions:
+      parameters:
+        input_list:
+          parameterType: LIST
+    outputDefinitions:
+      parameters:
+        Output:
+          parameterType: STRING
+  comp-condition-2:
+    dag:
+      outputs:
+        parameters:
+          pipelinechannel--model-evaluation-import-evaluation_resource_name:
+            valueFromParameter:
+              outputParameterKey: evaluation_resource_name
+              producerSubtask: model-evaluation-import
+      tasks:
+        model-evaluation-import:
+          cachingOptions:
+            enableCache: true
+          componentRef:
+            name: comp-model-evaluation-import
+          inputs:
+            artifacts:
+              metrics:
+                componentInputArtifact: pipelinechannel--model-evaluation-text-generation-evaluation_metrics
+              model:
+                componentInputArtifact: pipelinechannel--importer-2-artifact
+              row_based_metrics:
+                componentInputArtifact: pipelinechannel--model-evaluation-text-generation-row_based_metrics
+            parameters:
+              dataset_paths:
+                componentInputParameter: pipelinechannel--batch_predict_gcs_source_uris
+              dataset_type:
+                componentInputParameter: pipelinechannel--batch_predict_predictions_format
+              display_name:
+                componentInputParameter: pipelinechannel--evaluation_display_name
+              problem_type:
+                componentInputParameter: pipelinechannel--evaluation_task
+          taskInfo:
+            name: model-evaluation-import
+    inputDefinitions:
+      artifacts:
+        pipelinechannel--importer-2-artifact:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+        pipelinechannel--model-evaluation-text-generation-evaluation_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+        pipelinechannel--model-evaluation-text-generation-row_based_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+      parameters:
+        pipelinechannel--batch_predict_gcs_source_uris:
+          parameterType: LIST
+        pipelinechannel--batch_predict_predictions_format:
+          parameterType: STRING
+        pipelinechannel--enable_row_based_metrics:
+          parameterType: BOOLEAN
+        pipelinechannel--evaluation_display_name:
+          parameterType: STRING
+        pipelinechannel--evaluation_task:
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        pipelinechannel--model-evaluation-import-evaluation_resource_name:
+          parameterType: STRING
+  comp-condition-3:
+    dag:
+      outputs:
+        parameters:
+          pipelinechannel--model-evaluation-import-2-evaluation_resource_name:
+            valueFromParameter:
+              outputParameterKey: evaluation_resource_name
+              producerSubtask: model-evaluation-import-2
+      tasks:
+        model-evaluation-import-2:
+          cachingOptions:
+            enableCache: true
+          componentRef:
+            name: comp-model-evaluation-import-2
+          inputs:
+            artifacts:
+              metrics:
+                componentInputArtifact: pipelinechannel--model-evaluation-text-generation-evaluation_metrics
+              model:
+                componentInputArtifact: pipelinechannel--importer-2-artifact
+            parameters:
+              dataset_paths:
+                componentInputParameter: pipelinechannel--batch_predict_gcs_source_uris
+              dataset_type:
+                componentInputParameter: pipelinechannel--batch_predict_predictions_format
+              display_name:
+                componentInputParameter: pipelinechannel--evaluation_display_name
+              problem_type:
+                componentInputParameter: pipelinechannel--evaluation_task
+          taskInfo:
+            name: model-evaluation-import-2
+    inputDefinitions:
+      artifacts:
+        pipelinechannel--importer-2-artifact:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+        pipelinechannel--model-evaluation-text-generation-evaluation_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+      parameters:
+        pipelinechannel--batch_predict_gcs_source_uris:
+          parameterType: LIST
+        pipelinechannel--batch_predict_predictions_format:
+          parameterType: STRING
+        pipelinechannel--enable_row_based_metrics:
+          parameterType: BOOLEAN
+        pipelinechannel--evaluation_display_name:
+          parameterType: STRING
+        pipelinechannel--evaluation_task:
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        pipelinechannel--model-evaluation-import-2-evaluation_resource_name:
+          parameterType: STRING
+  comp-condition-branches-1:
+    dag:
+      outputs:
+        parameters:
+          pipelinechannel--condition-branches-1-oneof-1:
+            valueFromOneof:
+              parameterSelectors:
+              - outputParameterKey: pipelinechannel--model-evaluation-import-evaluation_resource_name
+                producerSubtask: condition-2
+              - outputParameterKey: pipelinechannel--model-evaluation-import-2-evaluation_resource_name
+                producerSubtask: condition-3
+      tasks:
+        condition-2:
+          componentRef:
+            name: comp-condition-2
+          inputs:
+            artifacts:
+              pipelinechannel--importer-2-artifact:
+                componentInputArtifact: pipelinechannel--importer-2-artifact
+              pipelinechannel--model-evaluation-text-generation-evaluation_metrics:
+                componentInputArtifact: pipelinechannel--model-evaluation-text-generation-evaluation_metrics
+              pipelinechannel--model-evaluation-text-generation-row_based_metrics:
+                componentInputArtifact: pipelinechannel--model-evaluation-text-generation-row_based_metrics
+            parameters:
+              pipelinechannel--batch_predict_gcs_source_uris:
+                componentInputParameter: pipelinechannel--batch_predict_gcs_source_uris
+              pipelinechannel--batch_predict_predictions_format:
+                componentInputParameter: pipelinechannel--batch_predict_predictions_format
+              pipelinechannel--enable_row_based_metrics:
+                componentInputParameter: pipelinechannel--enable_row_based_metrics
+              pipelinechannel--evaluation_display_name:
+                componentInputParameter: pipelinechannel--evaluation_display_name
+              pipelinechannel--evaluation_task:
+                componentInputParameter: pipelinechannel--evaluation_task
+          taskInfo:
+            name: condition-2
+          triggerPolicy:
+            condition: inputs.parameter_values['pipelinechannel--enable_row_based_metrics']
+              == true
+        condition-3:
+          componentRef:
+            name: comp-condition-3
+          inputs:
+            artifacts:
+              pipelinechannel--importer-2-artifact:
+                componentInputArtifact: pipelinechannel--importer-2-artifact
+              pipelinechannel--model-evaluation-text-generation-evaluation_metrics:
+                componentInputArtifact: pipelinechannel--model-evaluation-text-generation-evaluation_metrics
+            parameters:
+              pipelinechannel--batch_predict_gcs_source_uris:
+                componentInputParameter: pipelinechannel--batch_predict_gcs_source_uris
+              pipelinechannel--batch_predict_predictions_format:
+                componentInputParameter: pipelinechannel--batch_predict_predictions_format
+              pipelinechannel--enable_row_based_metrics:
+                componentInputParameter: pipelinechannel--enable_row_based_metrics
+              pipelinechannel--evaluation_display_name:
+                componentInputParameter: pipelinechannel--evaluation_display_name
+              pipelinechannel--evaluation_task:
+                componentInputParameter: pipelinechannel--evaluation_task
+          taskInfo:
+            name: condition-3
+          triggerPolicy:
+            condition: '!(inputs.parameter_values[''pipelinechannel--enable_row_based_metrics'']
+              == true)'
+    inputDefinitions:
+      artifacts:
+        pipelinechannel--importer-2-artifact:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+        pipelinechannel--model-evaluation-text-generation-evaluation_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+        pipelinechannel--model-evaluation-text-generation-row_based_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+      parameters:
+        pipelinechannel--batch_predict_gcs_source_uris:
+          parameterType: LIST
+        pipelinechannel--batch_predict_predictions_format:
+          parameterType: STRING
+        pipelinechannel--enable_row_based_metrics:
+          parameterType: BOOLEAN
+        pipelinechannel--evaluation_display_name:
+          parameterType: STRING
+        pipelinechannel--evaluation_task:
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        pipelinechannel--condition-branches-1-oneof-1:
+          parameterType: STRING
+  comp-evaluation-dataset-preprocessor-internal:
+    executorLabel: exec-evaluation-dataset-preprocessor-internal
+    inputDefinitions:
+      parameters:
+        display_name:
+          defaultValue: llm_evaluation_dataset_preprocessor_component
+          isOptional: true
+          parameterType: STRING
+        encryption_spec_key_name:
+          defaultValue: ''
+          description: 'Customer-managed encryption key options for the
+
+            CustomJob. If this is set, then all resources created by the CustomJob
+
+            will be encrypted with the provided encryption key.'
+          isOptional: true
+          parameterType: STRING
+        gcs_source_uris:
+          description: A json escaped list of GCS URIs of the input eval dataset.
+          parameterType: STRING
+        input_field_name:
+          defaultValue: input_text
+          description: 'The field name of the input eval dataset instances that
+
+            contains the input prompts to the LLM.'
+          isOptional: true
+          parameterType: STRING
+        location:
+          description: Required. The GCP region that runs the pipeline component.
+          parameterType: STRING
+        machine_type:
+          defaultValue: e2-highmem-16
+          description: 'The machine type of this custom job. If not set, defaulted
+
+            to `e2-highmem-16`. More details:
+
+            https://cloud.google.com/compute/docs/machine-resource'
+          isOptional: true
+          parameterType: STRING
+        model_name:
+          defaultValue: publishers/google/model/text-bison@002
+          description: Name of the model being used to create model-specific schemas.
+          isOptional: true
+          parameterType: STRING
+        network:
+          defaultValue: ''
+          description: 'The full name of the Compute Engine network to which the job
+
+            should be peered. For example, projects/12345/global/networks/myVPC.
+
+            Format is of the form projects/{project}/global/networks/{network}.
+
+            Where {project} is a project number, as in 12345, and {network} is a
+
+            network name. Private services access must already be configured for the
+
+            network. If left unspecified, the job is not peered with any network.'
+          isOptional: true
+          parameterType: STRING
+        project:
+          description: Required. The GCP project that runs the pipeline component.
+          parameterType: STRING
+        role_field_name:
+          defaultValue: role
+          description: 'The field name of the role for input eval dataset instances
+
+            that contains the input prompts to the LLM.'
+          isOptional: true
+          parameterType: STRING
+        service_account:
+          defaultValue: ''
+          description: 'Sets the default service account for workload run-as
+
+            account. The service account running the pipeline
+
+            (https://cloud.google.com/vertex-ai/docs/pipelines/configure-project#service-account)
+
+            submitting jobs must have act-as permission on this run-as account. If
+
+            unspecified, the Vertex AI Custom Code Service
+
+            Agent(https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+
+            for the CustomJob''s project.'
+          isOptional: true
+          parameterType: STRING
+        target_field_name:
+          defaultValue: ground_truth
+          description: 'The field name of the target for input eval dataset
+
+            instances.'
+          isOptional: true
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        gcp_resources:
+          description: Serialized gcp_resources proto tracking the custom job.
+          parameterType: STRING
+        output_dirs:
+          description: 'A list of GCS directories where the output files will be
+
+            stored, generated by the pipeline.'
+          parameterType: LIST
+  comp-importer:
+    executorLabel: exec-importer
+    inputDefinitions:
+      parameters:
+        metadata:
+          parameterType: STRING
+        uri:
+          parameterType: STRING
+    outputDefinitions:
+      artifacts:
+        artifact:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+  comp-importer-2:
+    executorLabel: exec-importer-2
+    inputDefinitions:
+      parameters:
+        metadata:
+          parameterType: STRING
+        uri:
+          parameterType: STRING
+    outputDefinitions:
+      artifacts:
+        artifact:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+  comp-llmevaluationpreprocessorop:
+    dag:
+      outputs:
+        parameters:
+          preprocessed_gcs_source_uris:
+            valueFromParameter:
+              outputParameterKey: output_dirs
+              producerSubtask: evaluation-dataset-preprocessor-internal
+      tasks:
+        add-json-escape-to-list:
+          cachingOptions:
+            enableCache: true
+          componentRef:
+            name: comp-add-json-escape-to-list
+          inputs:
+            parameters:
+              input_list:
+                componentInputParameter: gcs_source_uris
+          taskInfo:
+            name: add-json-escape-to-list
+        evaluation-dataset-preprocessor-internal:
+          cachingOptions:
+            enableCache: true
+          componentRef:
+            name: comp-evaluation-dataset-preprocessor-internal
+          dependentTasks:
+          - add-json-escape-to-list
+          inputs:
+            parameters:
+              display_name:
+                componentInputParameter: display_name
+              encryption_spec_key_name:
+                componentInputParameter: encryption_spec_key_name
+              gcs_source_uris:
+                taskOutputParameter:
+                  outputParameterKey: Output
+                  producerTask: add-json-escape-to-list
+              input_field_name:
+                componentInputParameter: input_field_name
+              location:
+                componentInputParameter: location
+              machine_type:
+                componentInputParameter: machine_type
+              model_name:
+                componentInputParameter: model_name
+              network:
+                componentInputParameter: network
+              project:
+                componentInputParameter: project
+              role_field_name:
+                componentInputParameter: role_field_name
+              service_account:
+                componentInputParameter: service_account
+              target_field_name:
+                componentInputParameter: target_field_name
+          taskInfo:
+            name: evaluation-dataset-preprocessor-internal
+    inputDefinitions:
+      parameters:
+        display_name:
+          defaultValue: llm_evaluation_dataset_preprocessor_component
+          description: The name of the Evaluation job.
+          isOptional: true
+          parameterType: STRING
+        encryption_spec_key_name:
+          defaultValue: ''
+          description: 'Customer-managed encryption key options for the
+
+            CustomJob. If this is set, then all resources created by the CustomJob
+
+            will be encrypted with the provided encryption key.'
+          isOptional: true
+          parameterType: STRING
+        gcs_source_uris:
+          description: A list of GCS URIs of the input eval dataset.
+          parameterType: LIST
+        input_field_name:
+          defaultValue: input_text
+          description: 'The field name of the input eval dataset instances that
+
+            contains the input prompts to the LLM.'
+          isOptional: true
+          parameterType: STRING
+        location:
+          description: Required. The GCP region that runs the pipeline component.
+          parameterType: STRING
+        machine_type:
+          defaultValue: e2-standard-4
+          description: 'The machine type of this custom job. If not set, defaulted
+
+            to `e2-standard-4`. More details:
+
+            https://cloud.google.com/compute/docs/machine-resource'
+          isOptional: true
+          parameterType: STRING
+        model_name:
+          defaultValue: publishers/google/model/text-bison@002
+          description: Name of the model being used to create model-specific schemas.
+          isOptional: true
+          parameterType: STRING
+        network:
+          defaultValue: ''
+          description: 'The full name of the Compute Engine network to which the job
+
+            should be peered. For example, projects/12345/global/networks/myVPC.
+
+            Format is of the form projects/{project}/global/networks/{network}.
+
+            Where {project} is a project number, as in 12345, and {network} is a
+
+            network name. Private services access must already be configured for the
+
+            network. If left unspecified, the job is not peered with any network.'
+          isOptional: true
+          parameterType: STRING
+        project:
+          description: Required. The GCP project that runs the pipeline component.
+          parameterType: STRING
+        role_field_name:
+          defaultValue: role
+          description: 'The field name of the role for input eval dataset
+
+            instances that contains the input prompts to the LLM.'
+          isOptional: true
+          parameterType: STRING
+        service_account:
+          defaultValue: ''
+          description: 'Sets the default service account for workload run-as
+
+            account. The service account running the pipeline
+
+            (https://cloud.google.com/vertex-ai/docs/pipelines/configure-project#service-account)
+
+            submitting jobs must have act-as permission on this run-as account. If
+
+            unspecified, the Vertex AI Custom Code Service
+
+            Agent(https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+
+            for the CustomJob''s project.'
+          isOptional: true
+          parameterType: STRING
+        target_field_name:
+          defaultValue: ground_truth
+          description: 'The field name of the target for input eval dataset
+
+            instances.'
+          isOptional: true
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        preprocessed_gcs_source_uris:
+          description: 'A list of GCS directories where the
+
+            preprocessed eval dataset files will be stored..'
+          parameterType: LIST
+  comp-model-batch-predict:
+    executorLabel: exec-model-batch-predict
+    inputDefinitions:
+      artifacts:
+        model:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+          description: The Model used to get predictions via this job. Must share
+            the same ancestor Location. Starting this job has no impact on any existing
+            deployments of the Model and their resources. Either this or `unmanaged_container_model`
+            must be specified.
+          isOptional: true
+        unmanaged_container_model:
+          artifactType:
+            schemaTitle: google.UnmanagedContainerModel
+            schemaVersion: 0.0.1
+          description: The unmanaged container model used to get predictions via this
+            job. This should be used for models that are not uploaded to Vertex. Either
+            this or model must be specified.
+          isOptional: true
+      parameters:
+        accelerator_count:
+          defaultValue: 0.0
+          description: The number of accelerators to attach to the `machine_type`.
+            Only used if `machine_type` is set.  For more details about the machine
+            spec, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/MachineSpec
+          isOptional: true
+          parameterType: NUMBER_INTEGER
+        accelerator_type:
+          defaultValue: ''
+          description: The type of accelerator(s) that may be attached to the machine
+            as per `accelerator_count`. Only used if `machine_type` is set.  For more
+            details about the machine spec, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/MachineSpec
+          isOptional: true
+          parameterType: STRING
+        bigquery_destination_output_uri:
+          defaultValue: ''
+          description: 'The BigQuery project location where the output is to be written
+            to. In the given project a new dataset is created with name `prediction_<model-display-name>_<job-create-time>`
+            where is made BigQuery-dataset-name compatible (for example, most special
+            characters become underscores), and timestamp is in YYYY_MM_DDThh_mm_ss_sssZ
+            "based on ISO-8601" format. In the dataset two tables will be created,
+            `predictions`, and `errors`. If the Model has both `instance` and `prediction`
+            schemata defined then the tables have columns as follows: The `predictions`
+            table contains instances for which the prediction succeeded, it has columns
+            as per a concatenation of the Model''s instance and prediction schemata.
+            The `errors` table contains rows for which the prediction has failed,
+            it has instance columns, as per the instance schema, followed by a single
+            "errors" column, which as values has [google.rpc.Status](Status) represented
+            as a STRUCT, and containing only `code` and `message`. For more details
+            about this output config, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#OutputConfig.'
+          isOptional: true
+          parameterType: STRING
+        bigquery_source_input_uri:
+          defaultValue: ''
+          description: 'BigQuery URI to a table, up to 2000 characters long. For example:
+            `projectId.bqDatasetId.bqTableId`  For more details about this input config,
+            see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig.'
+          isOptional: true
+          parameterType: STRING
+        encryption_spec_key_name:
+          defaultValue: ''
+          description: 'Customer-managed encryption key options for a BatchPredictionJob.
+            If this is set, then all resources created by the BatchPredictionJob will
+            be encrypted with the provided encryption key.  Has the form: `projects/my-project/locations/my-location/keyRings/my-kr/cryptoKeys/my-key`.
+            The key needs to be in the same region as where the compute resource is
+            created.'
+          isOptional: true
+          parameterType: STRING
+        excluded_fields:
+          defaultValue: []
+          description: Fields that will be excluded in the prediction instance that
+            is sent to the Model. Excluded will be attached to the batch prediction
+            output if key_field is not specified. When `excluded_fields` is populated,
+            `included_fields` must be empty. The input must be JSONL with objects
+            at each line, CSV, BigQuery or TfRecord. may be specified via the Model's
+            `parameters_schema_uri`.
+          isOptional: true
+          parameterType: LIST
+        explanation_metadata:
+          defaultValue: {}
+          description: Explanation metadata configuration for this BatchPredictionJob.
+            Can be specified only if `generate_explanation` is set to `True`.  This
+            value overrides the value of `Model.explanation_metadata`. All fields
+            of `explanation_metadata` are optional in the request. If a field of the
+            `explanation_metadata` object is not populated, the corresponding field
+            of the `Model.explanation_metadata` object is inherited.  For more details,
+            see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/ExplanationSpec#explanationmetadata.
+          isOptional: true
+          parameterType: STRUCT
+        explanation_parameters:
+          defaultValue: {}
+          description: Parameters to configure explaining for Model's predictions.
+            Can be specified only if `generate_explanation` is set to `True`.  This
+            value overrides the value of `Model.explanation_parameters`. All fields
+            of `explanation_parameters` are optional in the request. If a field of
+            the `explanation_parameters` object is not populated, the corresponding
+            field of the `Model.explanation_parameters` object is inherited.  For
+            more details, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/ExplanationSpec#ExplanationParameters.
+          isOptional: true
+          parameterType: STRUCT
+        gcs_destination_output_uri_prefix:
+          defaultValue: ''
+          description: The Google Cloud Storage location of the directory where the
+            output is to be written to. In the given directory a new directory is
+            created. Its name is `prediction-<model-display-name>-<job-create-time>`,
+            where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. Inside
+            of it files `predictions_0001.<extension>`, `predictions_0002.<extension>`,
+            ..., `predictions_N.<extension>` are created where `<extension>` depends
+            on chosen `predictions_format`, and N may equal 0001 and depends on the
+            total number of successfully predicted instances. If the Model has both
+            `instance` and `prediction` schemata defined then each such file contains
+            predictions as per the `predictions_format`. If prediction for any instance
+            failed (partially or completely), then an additional `errors_0001.<extension>`,
+            `errors_0002.<extension>`,..., `errors_N.<extension>` files are created
+            (N depends on total number of failed predictions). These files contain
+            the failed instances, as per their schema, followed by an additional `error`
+            field which as value has `google.rpc.Status` containing only `code` and
+            `message` fields.  For more details about this output config, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#OutputConfig.
+          isOptional: true
+          parameterType: STRING
+        gcs_source_uris:
+          defaultValue: []
+          description: Google Cloud Storage URI(-s) to your instances to run batch
+            prediction on. They must match `instances_format`. May contain wildcards.
+            For more information on wildcards, see [WildcardNames](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames).
+            For more details about this input config, see [InputConfig](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig).
+          isOptional: true
+          parameterType: LIST
+        generate_explanation:
+          defaultValue: false
+          description: 'Generate explanation along with the batch prediction results.
+            This will cause the batch prediction output to include explanations based
+            on the `prediction_format`: - `bigquery`: output includes a column named
+            `explanation`. The value is a struct that conforms to the [aiplatform.gapic.Explanation]
+            object. - `jsonl`: The JSON objects on each line include an additional
+            entry keyed `explanation`. The value of the entry is a JSON object that
+            conforms to the [aiplatform.gapic.Explanation] object. - `csv`: Generating
+            explanations for CSV format is not supported.  If this field is set to
+            true, either the Model.explanation_spec or explanation_metadata and explanation_parameters
+            must be populated.'
+          isOptional: true
+          parameterType: BOOLEAN
+        included_fields:
+          defaultValue: []
+          description: Fields that will be included in the prediction instance that
+            is sent to the Model. If `instance_type` is `array`, the order of field
+            names in `included_fields` also determines the order of the values in
+            the array. When `included_fields` is populated, `excluded_fields` must
+            be empty. The input must be JSONL with objects at each line, CSV, BigQuery
+            or TfRecord.
+          isOptional: true
+          parameterType: LIST
+        instance_type:
+          defaultValue: ''
+          description: 'The format of the instance that the Model accepts. Vertex
+            AI will convert compatible [InstancesFormat](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig)
+            to the specified format. Supported values are: `object`: Each input is
+            converted to JSON object format. * For `bigquery`, each row is converted
+            to an object. * For `jsonl`, each line of the JSONL input must be an object.
+            * Does not apply to `csv`, `file-list`, `tf-record`, or `tf-record-gzip`.
+            `array`: Each input is converted to JSON array format. * For `bigquery`,
+            each row is converted to an array. The order of columns is determined
+            by the BigQuery column order, unless [included_fields](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig)
+            is populated. `included_fields` must be populated for specifying field
+            orders. * For `jsonl`, if each line of the JSONL input is an object, `included_fields`
+            must be populated for specifying field orders. * Does not apply to `csv`,
+            `file-list`, `tf-record`, or `tf-record-gzip`. If not specified, Vertex
+            AI converts the batch prediction input as follows: * For `bigquery` and
+            `csv`, the behavior is the same as `array`. The order of columns is the
+            same as defined in the file or table, unless included_fields is populated.
+            * For `jsonl`, the prediction instance format is determined by each line
+            of the input. * For `tf-record`/`tf-record-gzip`, each record will be
+            converted to an object in the format of `{"b64": <value>}`, where `<value>`
+            is the Base64-encoded string of the content of the record. * For `file-list`,
+            each file in the list will be converted to an object in the format of
+            `{"b64": <value>}`, where `<value>` is the Base64-encoded string of the
+            content of the file.'
+          isOptional: true
+          parameterType: STRING
+        instances_format:
+          defaultValue: jsonl
+          description: The format in which instances are given, must be one of the
+            [Model](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.models)'s
+            supportedInputStorageFormats. For more details about this input config,
+            see [InputConfig](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig.)
+          isOptional: true
+          parameterType: STRING
+        job_display_name:
+          description: The user-defined name of this BatchPredictionJob.
+          parameterType: STRING
+        key_field:
+          defaultValue: ''
+          description: 'The name of the field that is considered as a key. The values
+            identified by the key field is not included in the transformed instances
+            that is sent to the Model. This is similar to specifying this name of
+            the field in [excluded_fields](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig).
+            In addition, the batch prediction output will not include the instances.
+            Instead the output will only include the value of the key field, in a
+            field named `key` in the output: * For `jsonl` output format, the output
+            will have a `key` field instead of the `instance` field. * For `csv`/`bigquery`
+            output format, the output will have have a `key` column instead of the
+            instance feature columns. The input must be JSONL with objects at each
+            line, CSV, BigQuery or TfRecord.'
+          isOptional: true
+          parameterType: STRING
+        labels:
+          defaultValue: {}
+          description: The labels with user-defined metadata to organize your BatchPredictionJobs.  Label
+            keys and values can be no longer than 64 characters (Unicode codepoints),
+            can only contain lowercase letters, numeric characters, underscores and
+            dashes. International characters are allowed.  See https://goo.gl/xmQnxf
+            for more information and examples of labels.
+          isOptional: true
+          parameterType: STRUCT
+        location:
+          defaultValue: us-central1
+          description: Location for creating the BatchPredictionJob.
+          isOptional: true
+          parameterType: STRING
+        machine_type:
+          defaultValue: ''
+          description: The type of machine for running batch prediction on dedicated
+            resources. If the Model supports DEDICATED_RESOURCES this config may be
+            provided (and the job will use these resources). If the Model doesn't
+            support AUTOMATIC_RESOURCES, this config must be provided.  For more details
+            about the BatchDedicatedResources, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#BatchDedicatedResources.
+            For more details about the machine spec, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/MachineSpec
+          isOptional: true
+          parameterType: STRING
+        manual_batch_tuning_parameters_batch_size:
+          defaultValue: 0.0
+          description: The number of the records (e.g. instances) of the operation
+            given in each batch to a machine replica. Machine type, and size of a
+            single record should be considered when setting this parameter, higher
+            value speeds up the batch operation's execution, but too high value will
+            result in a whole batch not fitting in a machine's memory, and the whole
+            operation will fail.
+          isOptional: true
+          parameterType: NUMBER_INTEGER
+        max_replica_count:
+          defaultValue: 0.0
+          description: The maximum number of machine replicas the batch operation
+            may be scaled to. Only used if `machine_type` is set.
+          isOptional: true
+          parameterType: NUMBER_INTEGER
+        model_parameters:
+          defaultValue: {}
+          description: The parameters that govern the predictions. The schema of the
+            parameters
+          isOptional: true
+          parameterType: STRUCT
+        predictions_format:
+          defaultValue: jsonl
+          description: The format in which Vertex AI gives the predictions. Must be
+            one of the Model's supportedOutputStorageFormats. For more details about
+            this output config, see [OutputConfig](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#OutputConfig).
+          isOptional: true
+          parameterType: STRING
+        project:
+          defaultValue: '{{$.pipeline_google_cloud_project_id}}'
+          description: Project to create the BatchPredictionJob. Defaults to the project
+            in which the PipelineJob is run.
+          isOptional: true
+          parameterType: STRING
+        service_account:
+          defaultValue: ''
+          description: The service account that the DeployedModel's container runs
+            as. If not specified, a system generated one will be used, which has minimal
+            permissions and the custom container, if used, may not have enough permission
+            to access other Google Cloud resources. Users deploying the Model must
+            have the iam.serviceAccounts.actAs permission on this service account.
+          isOptional: true
+          parameterType: STRING
+        starting_replica_count:
+          defaultValue: 0.0
+          description: The number of machine replicas used at the start of the batch
+            operation. If not set, Vertex AI decides starting number, not greater
+            than `max_replica_count`. Only used if `machine_type` is set.
+          isOptional: true
+          parameterType: NUMBER_INTEGER
+    outputDefinitions:
+      artifacts:
+        batchpredictionjob:
+          artifactType:
+            schemaTitle: google.VertexBatchPredictionJob
+            schemaVersion: 0.0.1
+          description: '[**Deprecated. Use gcs_output_directory and bigquery_output_table
+            instead.**] Artifact representation of the created batch prediction job.'
+        bigquery_output_table:
+          artifactType:
+            schemaTitle: google.BQTable
+            schemaVersion: 0.0.1
+          description: Artifact tracking the batch prediction job output. This is
+            only available if bigquery_output_table is specified.
+        gcs_output_directory:
+          artifactType:
+            schemaTitle: system.Artifact
+            schemaVersion: 0.0.1
+          description: Artifact tracking the batch prediction job output. This is
+            only available if gcs_destination_output_uri_prefix is specified.
+      parameters:
+        gcp_resources:
+          description: Serialized gcp_resources proto tracking the batch prediction
+            job. For more details, see https://github.com/kubeflow/pipelines/blob/master/components/google-cloud/google_cloud_pipeline_components/proto/README.md.
+          parameterType: STRING
+  comp-model-evaluation-import:
+    executorLabel: exec-model-evaluation-import
+    inputDefinitions:
+      artifacts:
+        classification_metrics:
+          artifactType:
+            schemaTitle: google.ClassificationMetrics
+            schemaVersion: 0.0.1
+          description: 'google.ClassificationMetrics artifact generated from
+
+            the ModelEvaluationClassificationOp component.'
+          isOptional: true
+        embedding_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'The embedding metrics artifact generated from the
+
+            embedding retrieval metrics component.'
+          isOptional: true
+        explanation:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'Path for model explanation metrics generated from an evaluation
+
+            component.'
+          isOptional: true
+        feature_attributions:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'The feature attributions metrics artifact generated
+
+            from the feature attribution component.'
+          isOptional: true
+        forecasting_metrics:
+          artifactType:
+            schemaTitle: google.ForecastingMetrics
+            schemaVersion: 0.0.1
+          description: 'google.ForecastingMetrics artifact generated from
+
+            the ModelEvaluationForecastingOp component.'
+          isOptional: true
+        metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: Path of metrics generated from an evaluation component.
+          isOptional: true
+        model:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+          description: 'Vertex model resource that will be the parent resource of
+            the
+
+            uploaded evaluation.'
+        question_answering_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'system.Metrics artifact generated from
+
+            the LLMEvaluationTextGenerationOp component. Subject to change to
+
+            google.QuestionAnsweringMetrics.'
+          isOptional: true
+        regression_metrics:
+          artifactType:
+            schemaTitle: google.RegressionMetrics
+            schemaVersion: 0.0.1
+          description: 'google.ClassificationMetrics artifact generated from
+
+            the ModelEvaluationRegressionOp component.'
+          isOptional: true
+        row_based_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: Path of row_based_metrics generated from an evaluation component.
+          isOptional: true
+        summarization_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'system.Metrics artifact generated from
+
+            the LLMEvaluationTextGenerationOp component. Subject to change to
+
+            google.SummarizationMetrics.'
+          isOptional: true
+        text_generation_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'system.Metrics artifact generated from
+
+            the LLMEvaluationTextGenerationOp component. Subject to change to
+
+            google.TextGenerationMetrics.'
+          isOptional: true
+      parameters:
+        dataset_path:
+          defaultValue: ''
+          isOptional: true
+          parameterType: STRING
+        dataset_paths:
+          defaultValue: []
+          isOptional: true
+          parameterType: LIST
+        dataset_type:
+          defaultValue: ''
+          isOptional: true
+          parameterType: STRING
+        display_name:
+          defaultValue: ''
+          description: The display name for the uploaded model evaluation resource.
+          isOptional: true
+          parameterType: STRING
+        problem_type:
+          description: 'The problem type of the metrics being imported to the
+
+            VertexModel. `classification`, `regression`, `forecasting`,
+
+            `text-generation`, `question-answering`, and `summarization` are the
+
+            currently supported problem types. Must be provided when `metrics` is
+
+            provided.'
+          isOptional: true
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        evaluation_resource_name:
+          parameterType: STRING
+        gcp_resources:
+          parameterType: STRING
+  comp-model-evaluation-import-2:
+    executorLabel: exec-model-evaluation-import-2
+    inputDefinitions:
+      artifacts:
+        classification_metrics:
+          artifactType:
+            schemaTitle: google.ClassificationMetrics
+            schemaVersion: 0.0.1
+          description: 'google.ClassificationMetrics artifact generated from
+
+            the ModelEvaluationClassificationOp component.'
+          isOptional: true
+        embedding_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'The embedding metrics artifact generated from the
+
+            embedding retrieval metrics component.'
+          isOptional: true
+        explanation:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'Path for model explanation metrics generated from an evaluation
+
+            component.'
+          isOptional: true
+        feature_attributions:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'The feature attributions metrics artifact generated
+
+            from the feature attribution component.'
+          isOptional: true
+        forecasting_metrics:
+          artifactType:
+            schemaTitle: google.ForecastingMetrics
+            schemaVersion: 0.0.1
+          description: 'google.ForecastingMetrics artifact generated from
+
+            the ModelEvaluationForecastingOp component.'
+          isOptional: true
+        metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: Path of metrics generated from an evaluation component.
+          isOptional: true
+        model:
+          artifactType:
+            schemaTitle: google.VertexModel
+            schemaVersion: 0.0.1
+          description: 'Vertex model resource that will be the parent resource of
+            the
+
+            uploaded evaluation.'
+        question_answering_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'system.Metrics artifact generated from
+
+            the LLMEvaluationTextGenerationOp component. Subject to change to
+
+            google.QuestionAnsweringMetrics.'
+          isOptional: true
+        regression_metrics:
+          artifactType:
+            schemaTitle: google.RegressionMetrics
+            schemaVersion: 0.0.1
+          description: 'google.ClassificationMetrics artifact generated from
+
+            the ModelEvaluationRegressionOp component.'
+          isOptional: true
+        row_based_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: Path of row_based_metrics generated from an evaluation component.
+          isOptional: true
+        summarization_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'system.Metrics artifact generated from
+
+            the LLMEvaluationTextGenerationOp component. Subject to change to
+
+            google.SummarizationMetrics.'
+          isOptional: true
+        text_generation_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: 'system.Metrics artifact generated from
+
+            the LLMEvaluationTextGenerationOp component. Subject to change to
+
+            google.TextGenerationMetrics.'
+          isOptional: true
+      parameters:
+        dataset_path:
+          defaultValue: ''
+          isOptional: true
+          parameterType: STRING
+        dataset_paths:
+          defaultValue: []
+          isOptional: true
+          parameterType: LIST
+        dataset_type:
+          defaultValue: ''
+          isOptional: true
+          parameterType: STRING
+        display_name:
+          defaultValue: ''
+          description: The display name for the uploaded model evaluation resource.
+          isOptional: true
+          parameterType: STRING
+        problem_type:
+          description: 'The problem type of the metrics being imported to the
+
+            VertexModel. `classification`, `regression`, `forecasting`,
+
+            `text-generation`, `question-answering`, and `summarization` are the
+
+            currently supported problem types. Must be provided when `metrics` is
+
+            provided.'
+          isOptional: true
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        evaluation_resource_name:
+          parameterType: STRING
+        gcp_resources:
+          parameterType: STRING
+  comp-model-evaluation-text-generation:
+    executorLabel: exec-model-evaluation-text-generation
+    inputDefinitions:
+      artifacts:
+        joined_predictions_gcs_source:
+          artifactType:
+            schemaTitle: system.Artifact
+            schemaVersion: 0.0.1
+          description: 'An Artifact with an URI pointing toward a GCS
+
+            directory or a GCS file with joined prediction & ground truth files to
+            be
+
+            used for this evaluation.'
+          isOptional: true
+        predictions_gcs_source:
+          artifactType:
+            schemaTitle: system.Artifact
+            schemaVersion: 0.0.1
+          description: 'An Artifact with an URI pointing toward a GCS
+
+            directory with only prediction files to be used for this evaluation.'
+          isOptional: true
+      parameters:
+        display_name:
+          defaultValue: model-evaluation-text-generation
+          description: The name of the evaluation custom job.
+          isOptional: true
+          parameterType: STRING
+        enable_row_based_metrics:
+          defaultValue: false
+          isOptional: true
+          parameterType: BOOLEAN
+        encryption_spec_key_name:
+          defaultValue: ''
+          description: ' Customer-managed encryption key options. If set,
+
+            resources created by this pipeline will be encrypted with the provided
+
+            encryption key. Has the form:
+
+            `projects/my-project/locations/my-location/keyRings/my-kr/cryptoKeys/my-key`.
+
+            The key needs to be in the same region as where the compute resource is
+
+            created.'
+          isOptional: true
+          parameterType: STRING
+        evaluation_task:
+          defaultValue: text-generation
+          description: 'The task that the large language model will be evaluated
+
+            on. The evaluation component computes a set of metrics relevant to that
+
+            specific task. Currently supported tasks are: `summarization`,
+
+            `question-answering`, and `text-generation`.'
+          isOptional: true
+          parameterType: STRING
+        ground_truth_gcs_source:
+          defaultValue: ''
+          description: 'A storage URI pointing toward a GCS directory with
+
+            only ground truth files to be used for this evaluation.'
+          isOptional: true
+          parameterType: STRING
+        location:
+          description: The GCP region that runs the pipeline component.
+          parameterType: STRING
+        machine_type:
+          defaultValue: e2-standard-4
+          description: 'The machine type of this custom job. If not set, defaulted
+            to
+
+            `e2-standard-4`. More details:
+
+            https://cloud.google.com/compute/docs/machine-resource'
+          isOptional: true
+          parameterType: STRING
+        network:
+          defaultValue: ''
+          description: 'The full name of the Compute Engine network to which the job
+            should
+
+            be peered. For example, `projects/12345/global/networks/myVPC`. Format
+            is
+
+            of the form `projects/{project}/global/networks/{network}`. Where
+
+            `{project}` is a project number, as in `12345`, and `{network}` is a
+
+            network name, as in `myVPC`. To specify this field, you must have already
+
+            configured VPC Network Peering for Vertex AI
+
+            (https://cloud.google.com/vertex-ai/docs/general/vpc-peering). If left
+
+            unspecified, the job is not peered with any network.'
+          isOptional: true
+          parameterType: STRING
+        prediction_field_name:
+          defaultValue: predictions.content
+          description: 'The full name path of the prediction field in the
+
+            prediction file. Formatted to be able to find nested columns, delimited
+            by
+
+            `.`. If not set, defaulted to `predictions.content`.'
+          isOptional: true
+          parameterType: STRING
+        predictions_format:
+          defaultValue: jsonl
+          description: 'The file format for the LLM Batch Prediction results.
+
+            `jsonl` is currently the only allowed format. If not set, defaulted to
+
+            `jsonl`.'
+          isOptional: true
+          parameterType: STRING
+        project:
+          description: The GCP project that runs the pipeline component.
+          parameterType: STRING
+        reserved_ip_ranges:
+          defaultValue: []
+          description: 'A list of names for the reserved ip ranges under the VPC
+
+            network that can be used for this job. If set, we will deploy the job
+
+            within the provided ip ranges. Otherwise, the job will be deployed to
+            any
+
+            ip ranges under the provided VPC network.'
+          isOptional: true
+          parameterType: LIST
+        service_account:
+          defaultValue: ''
+          description: 'Sets the default service account for workload run-as
+
+            account. The service account running the pipeline
+
+            (https://cloud.google.com/vertex-ai/docs/pipelines/configure-project#service-account)
+
+            submitting jobs must have act-as permission on this run-as account. If
+
+            unspecified, the Vertex AI Custom Code Service
+
+            Agent(https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+
+            for the CustomJob''s project.'
+          isOptional: true
+          parameterType: STRING
+        target_field_name:
+          defaultValue: instance.output_text
+          description: 'The full name path of the features target field in the
+
+            predictions file. Formatted to be able to find nested columns, delimited
+
+            by `.`. Alternatively referred to as the ground truth (or
+
+            ground_truth_column) field. If not set, defaulted to `inputs.output_text`.'
+          isOptional: true
+          parameterType: STRING
+    outputDefinitions:
+      artifacts:
+        evaluation_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: '`Metrics` artifact representing the language model
+
+            evaluation metrics.'
+        row_based_metrics:
+          artifactType:
+            schemaTitle: system.Metrics
+            schemaVersion: 0.0.1
+          description: '`Metrics` artifact representing the language model
+
+            evaluation metrics of each instance. This is only available if
+
+            enable_row_based_metrics is set to True.'
+      parameters:
+        gcp_resources:
+          description: 'Serialized gcp_resources proto tracking the custom job.
+
+            For more details, see
+
+            https://github.com/kubeflow/pipelines/blob/master/components/google-cloud/google_cloud_pipeline_components/proto/README.md.'
+          parameterType: STRING
+  comp-model-name-preprocessor:
+    executorLabel: exec-model-name-preprocessor
+    inputDefinitions:
+      parameters:
+        location:
+          description: Required. The GCP region that runs the pipeline component.
+          parameterType: STRING
+        model_name:
+          description: 'The Model name used to run evaluation. Must be a publisher
+
+            Model or a managed Model sharing the same ancestor location. Starting
+
+            this job has no impact on any existing deployments of the Model and
+
+            their resources.'
+          parameterType: STRING
+        project:
+          description: Required. The GCP project that runs the pipeline component.
+          parameterType: STRING
+        service_account:
+          defaultValue: ''
+          description: 'Sets the default service account for workload run-as
+
+            account. The service account running the pipeline
+
+            (https://cloud.google.com/vertex-ai/docs/pipelines/configure-project#service-account)'
+          isOptional: true
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        gcp_resources:
+          description: Serialized gcp_resources proto tracking the custom job.
+          parameterType: STRING
+        processed_model_name:
+          description: Preprocessed model name.
+          parameterType: STRING
+deploymentSpec:
+  executors:
+    exec-add-json-escape-to-list:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - add_json_escape_to_list
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.7.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef add_json_escape_to_list(input_list: List[str]) -> str:\n  import\
+          \ json\n\n  json_escaped_list = json.dumps(input_list).replace('\"', '\\\
+          \\\"')\n  return json_escaped_list\n\n"
+        image: gcr.io/ml-pipeline/llm-model-evaluation:v0.6
+    exec-evaluation-dataset-preprocessor-internal:
+      container:
+        args:
+        - --type
+        - CustomJob
+        - --payload
+        - '{"display_name": "{{$.inputs.parameters[''display_name'']}}", "job_spec":
+          {"worker_pool_specs": [{"replica_count": "1", "machine_spec": {"machine_type":
+          "{{$.inputs.parameters[''machine_type'']}}", "accelerator_type": "ACCELERATOR_TYPE_UNSPECIFIED",
+          "accelerator_count": 0}, "container_spec": {"image_uri": "gcr.io/ml-pipeline/llm-model-evaluation:v0.6",
+          "args": ["--eval_dataset_preprocessor=True", "--gcs_source_uris={{$.inputs.parameters[''gcs_source_uris'']}}",
+          "--input_field_name={{$.inputs.parameters[''input_field_name'']}}", "--role_field_name={{$.inputs.parameters[''role_field_name'']}}",
+          "--target_field_name={{$.inputs.parameters[''target_field_name'']}}--model_name={{$.inputs.parameters[''model_name'']}}",
+          "--output_dirs={{$.outputs.parameters[''output_dirs''].output_file}}", "--executor_input={{$.json_escape[1]}}"]}}],
+          "service_account": "{{$.inputs.parameters[''service_account'']}}", "network":
+          "{{$.inputs.parameters[''network'']}}", "reserved_ip_ranges": []}, "encryption_spec":
+          {"kms_key_name": "{{$.inputs.parameters[''encryption_spec_key_name'']}}"}}'
+        - --project
+        - '{{$.inputs.parameters[''project'']}}'
+        - --location
+        - '{{$.inputs.parameters[''location'']}}'
+        - --gcp_resources
+        - '{{$.outputs.parameters[''gcp_resources''].output_file}}'
+        command:
+        - python3
+        - -u
+        - -m
+        - google_cloud_pipeline_components.container.v1.custom_job.launcher
+        image: gcr.io/ml-pipeline/google-cloud-pipeline-components:2.16.1
+    exec-importer:
+      importer:
+        artifactUri:
+          constant: https://{{channel:task=;name=location;type=String;}}-aiplatform.googleapis.com/v1/{{channel:task=model-name-preprocessor;name=processed_model_name;type=String;}}
+        metadata:
+          resourceName: '{{$.inputs.parameters[''metadata'']}}'
+        typeSchema:
+          schemaTitle: google.VertexModel
+          schemaVersion: 0.0.1
+    exec-importer-2:
+      importer:
+        artifactUri:
+          constant: https://{{channel:task=;name=location;type=String;}}-aiplatform.googleapis.com/v1/{{channel:task=;name=model_name;type=String;}}
+        metadata:
+          resourceName: '{{$.inputs.parameters[''metadata'']}}'
+        typeSchema:
+          schemaTitle: google.VertexModel
+          schemaVersion: 0.0.1
+    exec-model-batch-predict:
+      container:
+        args:
+        - --type
+        - BatchPredictionJob
+        - --payload
+        - '{"Concat": ["{", "\"display_name\": \"", "{{$.inputs.parameters[''job_display_name'']}}",
+          "\", ", {"IfPresent": {"InputName": "model", "Then": {"Concat": ["\"model\":
+          \"", "{{$.inputs.artifacts[''model''].metadata[''resourceName'']}}", "\","]}}},
+          " \"input_config\": {", "\"instances_format\": \"", "{{$.inputs.parameters[''instances_format'']}}",
+          "\"", ", \"gcs_source\": {", "\"uris\":", "{{$.inputs.parameters[''gcs_source_uris'']}}",
+          "}", ", \"bigquery_source\": {", "\"input_uri\": \"", "{{$.inputs.parameters[''bigquery_source_input_uri'']}}",
+          "\"", "}", "}", ", \"instance_config\": {", "\"instance_type\": \"", "{{$.inputs.parameters[''instance_type'']}}",
+          "\"", ", \"key_field\": \"", "{{$.inputs.parameters[''key_field'']}}", "\"
+          ", {"IfPresent": {"InputName": "included_fields", "Then": {"Concat": [",
+          \"included_fields\": ", "{{$.inputs.parameters[''included_fields'']}}"]}}},
+          {"IfPresent": {"InputName": "excluded_fields", "Then": {"Concat": [", \"excluded_fields\":
+          ", "{{$.inputs.parameters[''excluded_fields'']}}"]}}}, "}", ", \"model_parameters\":
+          ", "{{$.inputs.parameters[''model_parameters'']}}", ", \"output_config\":
+          {", "\"predictions_format\": \"", "{{$.inputs.parameters[''predictions_format'']}}",
+          "\"", ", \"gcs_destination\": {", "\"output_uri_prefix\": \"", "{{$.inputs.parameters[''gcs_destination_output_uri_prefix'']}}",
+          "\"", "}", ", \"bigquery_destination\": {", "\"output_uri\": \"", "{{$.inputs.parameters[''bigquery_destination_output_uri'']}}",
+          "\"", "}", "}", ", \"dedicated_resources\": {", "\"machine_spec\": {", "\"machine_type\":
+          \"", "{{$.inputs.parameters[''machine_type'']}}", "\"", ", \"accelerator_type\":
+          \"", "{{$.inputs.parameters[''accelerator_type'']}}", "\"", ", \"accelerator_count\":
+          ", "{{$.inputs.parameters[''accelerator_count'']}}", "}", ", \"starting_replica_count\":
+          ", "{{$.inputs.parameters[''starting_replica_count'']}}", ", \"max_replica_count\":
+          ", "{{$.inputs.parameters[''max_replica_count'']}}", "}", ", \"service_account\":
+          \"", "{{$.inputs.parameters[''service_account'']}}", "\"", ", \"manual_batch_tuning_parameters\":
+          {", "\"batch_size\": ", "{{$.inputs.parameters[''manual_batch_tuning_parameters_batch_size'']}}",
+          "}", ", \"generate_explanation\": ", "{{$.inputs.parameters[''generate_explanation'']}}",
+          ", \"explanation_spec\": {", "\"parameters\": ", "{{$.inputs.parameters[''explanation_parameters'']}}",
+          ", \"metadata\": ", "{{$.inputs.parameters[''explanation_metadata'']}}",
+          "}", ", \"labels\": ", "{{$.inputs.parameters[''labels'']}}", ", \"encryption_spec\":
+          {\"kms_key_name\":\"", "{{$.inputs.parameters[''encryption_spec_key_name'']}}",
+          "\"}", "}"]}'
+        - --project
+        - '{{$.inputs.parameters[''project'']}}'
+        - --location
+        - '{{$.inputs.parameters[''location'']}}'
+        - --gcp_resources
+        - '{{$.outputs.parameters[''gcp_resources''].output_file}}'
+        - --executor_input
+        - '{{$}}'
+        command:
+        - python3
+        - -u
+        - -m
+        - google_cloud_pipeline_components.container.v1.batch_prediction_job.launcher
+        image: gcr.io/ml-pipeline/google-cloud-pipeline-components:2.16.1
+    exec-model-evaluation-import:
+      container:
+        args:
+        - '{"IfPresent": {"InputName": "metrics", "Then": ["--metrics", "{{$.inputs.artifacts[''metrics''].uri}}",
+          "--metrics_explanation", "{{$.inputs.artifacts[''metrics''].metadata[''explanation_gcs_path'']}}"]}}'
+        - '{"IfPresent": {"InputName": "row_based_metrics", "Then": ["--row_based_metrics",
+          "{{$.inputs.artifacts[''row_based_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "explanation", "Then": ["--explanation", "{{$.inputs.artifacts[''explanation''].metadata[''explanation_gcs_path'']}}"]}}'
+        - '{"IfPresent": {"InputName": "classification_metrics", "Then": ["--classification_metrics",
+          "{{$.inputs.artifacts[''classification_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "forecasting_metrics", "Then": ["--forecasting_metrics",
+          "{{$.inputs.artifacts[''forecasting_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "regression_metrics", "Then": ["--regression_metrics",
+          "{{$.inputs.artifacts[''regression_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "text_generation_metrics", "Then": ["--text_generation_metrics",
+          "{{$.inputs.artifacts[''text_generation_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "question_answering_metrics", "Then": ["--question_answering_metrics",
+          "{{$.inputs.artifacts[''question_answering_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "summarization_metrics", "Then": ["--summarization_metrics",
+          "{{$.inputs.artifacts[''summarization_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "feature_attributions", "Then": ["--feature_attributions",
+          "{{$.inputs.artifacts[''feature_attributions''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "embedding_metrics", "Then": ["--embedding_metrics",
+          "{{$.inputs.artifacts[''embedding_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "problem_type", "Then": ["--problem_type",
+          "{{$.inputs.parameters[''problem_type'']}}"]}}'
+        - --display_name
+        - '{{$.inputs.parameters[''display_name'']}}'
+        - --dataset_path
+        - '{{$.inputs.parameters[''dataset_path'']}}'
+        - --dataset_paths
+        - '{{$.inputs.parameters[''dataset_paths'']}}'
+        - --dataset_type
+        - '{{$.inputs.parameters[''dataset_type'']}}'
+        - --pipeline_job_id
+        - '{{$.pipeline_job_uuid}}'
+        - --pipeline_job_resource_name
+        - '{{$.pipeline_job_resource_name}}'
+        - --model_name
+        - '{{$.inputs.artifacts[''model''].metadata[''resourceName'']}}'
+        - --gcp_resources
+        - '{{$.outputs.parameters[''gcp_resources''].output_file}}'
+        - --evaluation_resource_name
+        - '{{$.outputs.parameters[''evaluation_resource_name''].output_file}}'
+        command:
+        - python3
+        - -u
+        - -m
+        - google_cloud_pipeline_components.container._implementation.model_evaluation.import_model_evaluation
+        image: gcr.io/ml-pipeline/google-cloud-pipeline-components:2.16.1
+    exec-model-evaluation-import-2:
+      container:
+        args:
+        - '{"IfPresent": {"InputName": "metrics", "Then": ["--metrics", "{{$.inputs.artifacts[''metrics''].uri}}",
+          "--metrics_explanation", "{{$.inputs.artifacts[''metrics''].metadata[''explanation_gcs_path'']}}"]}}'
+        - '{"IfPresent": {"InputName": "row_based_metrics", "Then": ["--row_based_metrics",
+          "{{$.inputs.artifacts[''row_based_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "explanation", "Then": ["--explanation", "{{$.inputs.artifacts[''explanation''].metadata[''explanation_gcs_path'']}}"]}}'
+        - '{"IfPresent": {"InputName": "classification_metrics", "Then": ["--classification_metrics",
+          "{{$.inputs.artifacts[''classification_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "forecasting_metrics", "Then": ["--forecasting_metrics",
+          "{{$.inputs.artifacts[''forecasting_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "regression_metrics", "Then": ["--regression_metrics",
+          "{{$.inputs.artifacts[''regression_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "text_generation_metrics", "Then": ["--text_generation_metrics",
+          "{{$.inputs.artifacts[''text_generation_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "question_answering_metrics", "Then": ["--question_answering_metrics",
+          "{{$.inputs.artifacts[''question_answering_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "summarization_metrics", "Then": ["--summarization_metrics",
+          "{{$.inputs.artifacts[''summarization_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "feature_attributions", "Then": ["--feature_attributions",
+          "{{$.inputs.artifacts[''feature_attributions''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "embedding_metrics", "Then": ["--embedding_metrics",
+          "{{$.inputs.artifacts[''embedding_metrics''].uri}}"]}}'
+        - '{"IfPresent": {"InputName": "problem_type", "Then": ["--problem_type",
+          "{{$.inputs.parameters[''problem_type'']}}"]}}'
+        - --display_name
+        - '{{$.inputs.parameters[''display_name'']}}'
+        - --dataset_path
+        - '{{$.inputs.parameters[''dataset_path'']}}'
+        - --dataset_paths
+        - '{{$.inputs.parameters[''dataset_paths'']}}'
+        - --dataset_type
+        - '{{$.inputs.parameters[''dataset_type'']}}'
+        - --pipeline_job_id
+        - '{{$.pipeline_job_uuid}}'
+        - --pipeline_job_resource_name
+        - '{{$.pipeline_job_resource_name}}'
+        - --model_name
+        - '{{$.inputs.artifacts[''model''].metadata[''resourceName'']}}'
+        - --gcp_resources
+        - '{{$.outputs.parameters[''gcp_resources''].output_file}}'
+        - --evaluation_resource_name
+        - '{{$.outputs.parameters[''evaluation_resource_name''].output_file}}'
+        command:
+        - python3
+        - -u
+        - -m
+        - google_cloud_pipeline_components.container._implementation.model_evaluation.import_model_evaluation
+        image: gcr.io/ml-pipeline/google-cloud-pipeline-components:2.16.1
+    exec-model-evaluation-text-generation:
+      container:
+        args:
+        - --type
+        - CustomJob
+        - --payload
+        - '{"display_name": "{{$.inputs.parameters[''display_name'']}}", "job_spec":
+          {"worker_pool_specs": [{"replica_count": "1", "machine_spec": {"machine_type":
+          "{{$.inputs.parameters[''machine_type'']}}", "accelerator_type": "ACCELERATOR_TYPE_UNSPECIFIED",
+          "accelerator_count": 0}, "container_spec": {"image_uri": "gcr.io/ml-pipeline/llm-model-evaluation:v0.6",
+          "args": ["--evaluation_task={{$.inputs.parameters[''evaluation_task'']}}",
+          "--target_field_name={{$.inputs.parameters[''target_field_name'']}}", "--prediction_field_name={{$.inputs.parameters[''prediction_field_name'']}}",
+          "--predictions_format={{$.inputs.parameters[''predictions_format'']}}",
+          "--joined_predictions_gcs_source={{$.inputs.artifacts[''joined_predictions_gcs_source''].uri}}",
+          "--predictions_gcs_source={{$.inputs.artifacts[''predictions_gcs_source''].uri}}",
+          "--ground_truth_gcs_source={{$.inputs.parameters[''ground_truth_gcs_source'']}}",
+          "--evaluation_metrics_output_path={{$.outputs.artifacts[''evaluation_metrics''].path}}",
+          "--enable_row_based_metrics={{$.inputs.parameters[''enable_row_based_metrics'']}}",
+          "--row_based_metrics_output_path={{$.outputs.artifacts[''row_based_metrics''].path}}",
+          "--executor_input={{$.json_escape[1]}}"]}}], "service_account": "{{$.inputs.parameters[''service_account'']}}",
+          "network": "{{$.inputs.parameters[''network'']}}", "reserved_ip_ranges":
+          {{$.inputs.parameters[''reserved_ip_ranges'']}}}, "encryption_spec": {"kms_key_name":
+          "{{$.inputs.parameters[''encryption_spec_key_name'']}}"}}'
+        - --project
+        - '{{$.inputs.parameters[''project'']}}'
+        - --location
+        - '{{$.inputs.parameters[''location'']}}'
+        - --gcp_resources
+        - '{{$.outputs.parameters[''gcp_resources''].output_file}}'
+        command:
+        - python3
+        - -u
+        - -m
+        - google_cloud_pipeline_components.container.v1.custom_job.launcher
+        image: gcr.io/ml-pipeline/google-cloud-pipeline-components:2.16.1
+    exec-model-name-preprocessor:
+      container:
+        args:
+        - --model_name_preprocessor
+        - 'true'
+        - --project
+        - '{{$.inputs.parameters[''project'']}}'
+        - --location
+        - '{{$.inputs.parameters[''location'']}}'
+        - --root_dir
+        - '{{$.pipeline_root}}'
+        - --model_name
+        - '{{$.inputs.parameters[''model_name'']}}'
+        - --processed_model_name
+        - '{{$.outputs.parameters[''processed_model_name''].output_file}}'
+        - --service_account
+        - '{{$.inputs.parameters[''service_account'']}}'
+        - --gcp_resources
+        - '{{$.outputs.parameters[''gcp_resources''].output_file}}'
+        - --executor_input
+        - '{{$}}'
+        image: gcr.io/ml-pipeline/llm-model-evaluation:v0.6
+pipelineInfo:
+  description: 'LLM Text Generation Evaluation pipeline.
+
+    This pipeline supports evaluating large language models, publisher or managed
+
+    models, performing the following generative tasks: `summarization`, `question-answering`,
+    and `text-generation`.'
+  name: evaluation-llm-text-generation-pipeline
+root:
+  dag:
+    outputs:
+      artifacts:
+        evaluation_metrics:
+          artifactSelectors:
+          - outputArtifactKey: evaluation_metrics
+            producerSubtask: model-evaluation-text-generation
+        model-evaluation-text-generation-evaluation_metrics:
+          artifactSelectors:
+          - outputArtifactKey: evaluation_metrics
+            producerSubtask: model-evaluation-text-generation
+        model-evaluation-text-generation-row_based_metrics:
+          artifactSelectors:
+          - outputArtifactKey: row_based_metrics
+            producerSubtask: model-evaluation-text-generation
+      parameters:
+        evaluation_resource_name:
+          valueFromParameter:
+            outputParameterKey: pipelinechannel--condition-branches-1-oneof-1
+            producerSubtask: condition-branches-1
+    tasks:
+      condition-branches-1:
+        componentRef:
+          name: comp-condition-branches-1
+        dependentTasks:
+        - importer-2
+        - model-evaluation-text-generation
+        inputs:
+          artifacts:
+            pipelinechannel--importer-2-artifact:
+              taskOutputArtifact:
+                outputArtifactKey: artifact
+                producerTask: importer-2
+            pipelinechannel--model-evaluation-text-generation-evaluation_metrics:
+              taskOutputArtifact:
+                outputArtifactKey: evaluation_metrics
+                producerTask: model-evaluation-text-generation
+            pipelinechannel--model-evaluation-text-generation-row_based_metrics:
+              taskOutputArtifact:
+                outputArtifactKey: row_based_metrics
+                producerTask: model-evaluation-text-generation
+          parameters:
+            pipelinechannel--batch_predict_gcs_source_uris:
+              componentInputParameter: batch_predict_gcs_source_uris
+            pipelinechannel--batch_predict_predictions_format:
+              componentInputParameter: batch_predict_predictions_format
+            pipelinechannel--enable_row_based_metrics:
+              componentInputParameter: enable_row_based_metrics
+            pipelinechannel--evaluation_display_name:
+              componentInputParameter: evaluation_display_name
+            pipelinechannel--evaluation_task:
+              componentInputParameter: evaluation_task
+        taskInfo:
+          name: condition-branches-1
+      importer:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-importer
+        dependentTasks:
+        - model-name-preprocessor
+        inputs:
+          parameters:
+            metadata:
+              taskOutputParameter:
+                outputParameterKey: processed_model_name
+                producerTask: model-name-preprocessor
+            pipelinechannel--location:
+              componentInputParameter: location
+            pipelinechannel--model-name-preprocessor-processed_model_name:
+              taskOutputParameter:
+                outputParameterKey: processed_model_name
+                producerTask: model-name-preprocessor
+            uri:
+              runtimeValue:
+                constant: https://{{$.inputs.parameters['pipelinechannel--location']}}-aiplatform.googleapis.com/v1/{{$.inputs.parameters['pipelinechannel--model-name-preprocessor-processed_model_name']}}
+        taskInfo:
+          name: get-vertex-model
+      importer-2:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-importer-2
+        inputs:
+          parameters:
+            metadata:
+              componentInputParameter: model_name
+            pipelinechannel--location:
+              componentInputParameter: location
+            pipelinechannel--model_name:
+              componentInputParameter: model_name
+            uri:
+              runtimeValue:
+                constant: https://{{$.inputs.parameters['pipelinechannel--location']}}-aiplatform.googleapis.com/v1/{{$.inputs.parameters['pipelinechannel--model_name']}}
+        taskInfo:
+          name: get-vertex-eval-model
+      llmevaluationpreprocessorop:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-llmevaluationpreprocessorop
+        inputs:
+          parameters:
+            encryption_spec_key_name:
+              componentInputParameter: encryption_spec_key_name
+            gcs_source_uris:
+              componentInputParameter: batch_predict_gcs_source_uris
+            input_field_name:
+              componentInputParameter: input_field_name
+            location:
+              componentInputParameter: location
+            machine_type:
+              componentInputParameter: machine_type
+            model_name:
+              componentInputParameter: model_name
+            network:
+              componentInputParameter: network
+            project:
+              componentInputParameter: project
+            role_field_name:
+              componentInputParameter: role_field_name
+            service_account:
+              componentInputParameter: service_account
+            target_field_name:
+              componentInputParameter: target_field_name
+        taskInfo:
+          name: llmevaluationpreprocessorop
+      model-batch-predict:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-model-batch-predict
+        dependentTasks:
+        - importer
+        - llmevaluationpreprocessorop
+        inputs:
+          artifacts:
+            model:
+              taskOutputArtifact:
+                outputArtifactKey: artifact
+                producerTask: importer
+          parameters:
+            encryption_spec_key_name:
+              componentInputParameter: encryption_spec_key_name
+            gcs_destination_output_uri_prefix:
+              componentInputParameter: batch_predict_gcs_destination_output_uri
+            gcs_source_uris:
+              taskOutputParameter:
+                outputParameterKey: preprocessed_gcs_source_uris
+                producerTask: llmevaluationpreprocessorop
+            instances_format:
+              componentInputParameter: batch_predict_instances_format
+            job_display_name:
+              runtimeValue:
+                constant: evaluation-batch-predict-{{$.pipeline_job_uuid}}-{{$.pipeline_task_uuid}}
+            location:
+              componentInputParameter: location
+            model_parameters:
+              componentInputParameter: batch_predict_model_parameters
+            predictions_format:
+              componentInputParameter: batch_predict_predictions_format
+            project:
+              componentInputParameter: project
+        taskInfo:
+          name: model-batch-predict
+      model-evaluation-text-generation:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-model-evaluation-text-generation
+        dependentTasks:
+        - model-batch-predict
+        inputs:
+          artifacts:
+            joined_predictions_gcs_source:
+              taskOutputArtifact:
+                outputArtifactKey: gcs_output_directory
+                producerTask: model-batch-predict
+          parameters:
+            enable_row_based_metrics:
+              componentInputParameter: enable_row_based_metrics
+            encryption_spec_key_name:
+              componentInputParameter: encryption_spec_key_name
+            evaluation_task:
+              componentInputParameter: evaluation_task
+            location:
+              componentInputParameter: location
+            machine_type:
+              componentInputParameter: machine_type
+            network:
+              componentInputParameter: network
+            pipelinechannel--target_field_name:
+              componentInputParameter: target_field_name
+            predictions_format:
+              componentInputParameter: batch_predict_predictions_format
+            project:
+              componentInputParameter: project
+            service_account:
+              componentInputParameter: service_account
+            target_field_name:
+              runtimeValue:
+                constant: instance.{{$.inputs.parameters['pipelinechannel--target_field_name']}}
+        taskInfo:
+          name: model-evaluation-text-generation
+      model-name-preprocessor:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-model-name-preprocessor
+        inputs:
+          parameters:
+            location:
+              componentInputParameter: location
+            model_name:
+              componentInputParameter: model_name
+            project:
+              componentInputParameter: project
+            service_account:
+              componentInputParameter: service_account
+        taskInfo:
+          name: model-name-preprocessor
+  inputDefinitions:
+    parameters:
+      batch_predict_gcs_destination_output_uri:
+        description: Required. The Google Cloud Storage location of the directory
+          where the eval pipeline output is to be written to.
+        parameterType: STRING
+      batch_predict_gcs_source_uris:
+        description: "Required. Google Cloud Storage URI(s) to your eval dataset instances\
+          \ data to run batch prediction on. The instances data should also contain\
+          \ the ground truth (target) data, used for evaluation. May contain wildcards.\
+          \ For more information on [wildcards](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames).\
+          \ For more details about this [input config](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig).\
+          \ The content of gcs source files should be preset to one of the following\
+          \ formats:\n1) Prediction & Evaluation Dataset format, guaranteeing \"prompt\"\
+          \ and \"ground_truth\" attributes are included\n{\n  \"prompt\": \"your\
+          \ input/prompt text\",\n  \"ground_truth\": \"your ground truth output text\"\
+          \n}\nor\n2) Tuning Dataset format, guaranteeing \"input_text\" and \"output_text\"\
+          \ attributes are included.\n{\n  \"input_text\": \"your input/prompt text\"\
+          ,\n  \"output_text\": \"your ground truth output text\"\n}"
+        parameterType: LIST
+      batch_predict_instances_format:
+        defaultValue: jsonl
+        description: The format in which instances are given, must be one of the Model's
+          supportedInputStorageFormats. Only "jsonl" is currently supported. For more
+          details about this input config, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#InputConfig.
+        isOptional: true
+        parameterType: STRING
+      batch_predict_model_parameters:
+        defaultValue: {}
+        description: 'A map of parameters that govern the predictions. Some acceptable
+          parameters include: maxOutputTokens, topK, topP, and temperature.'
+        isOptional: true
+        parameterType: STRUCT
+      batch_predict_predictions_format:
+        defaultValue: jsonl
+        description: The format in which Vertex AI gives the predictions. Must be
+          one of the Model's supportedOutputStorageFormats. Only "jsonl" is currently
+          supported. For more details about this output config, see https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs#OutputConfig.
+        isOptional: true
+        parameterType: STRING
+      enable_row_based_metrics:
+        defaultValue: false
+        description: Flag of if row based metrics is enabled, default value is false.
+        isOptional: true
+        parameterType: BOOLEAN
+      encryption_spec_key_name:
+        defaultValue: ''
+        description: ' Customer-managed encryption key options. If set, resources
+          created by this pipeline will be encrypted with the provided encryption
+          key. Has the form: `projects/my-project/locations/my-location/keyRings/my-kr/cryptoKeys/my-key`.
+          The key needs to be in the same region as where the compute resource is
+          created.'
+        isOptional: true
+        parameterType: STRING
+      evaluation_display_name:
+        defaultValue: evaluation-llm-text-generation-pipeline-{{$.pipeline_job_uuid}}
+        description: The display name of the uploaded evaluation resource to the Vertex
+          AI model.
+        isOptional: true
+        parameterType: STRING
+      evaluation_task:
+        defaultValue: text-generation
+        description: 'The task that the large language model will be evaluated on.
+          The evaluation component computes a set of metrics relevant to that specific
+          task. Currently supported tasks are: `summarization`, `question-answering`,
+          `text-generation`.'
+        isOptional: true
+        parameterType: STRING
+      input_field_name:
+        defaultValue: input_text
+        description: The field name of the input eval dataset instances that contains
+          the input prompts to the LLM.
+        isOptional: true
+        parameterType: STRING
+      location:
+        description: Required. The GCP region that runs the pipeline components.
+        parameterType: STRING
+      machine_type:
+        defaultValue: e2-standard-4
+        description: 'The machine type of this custom job. If not set, defaulted to
+          `e2-standard-4`. More details: https://cloud.google.com/compute/docs/machine-resource'
+        isOptional: true
+        parameterType: STRING
+      model_name:
+        defaultValue: publishers/google/models/text-bison@002
+        description: The Model name used to run evaluation. Must be a publisher Model
+          or a managed Model sharing the same ancestor location. Starting this job
+          has no impact on any existing deployments of the Model and their resources.
+        isOptional: true
+        parameterType: STRING
+      network:
+        defaultValue: ''
+        description: The full name of the Compute Engine network to which the job
+          should be peered. For example, `projects/12345/global/networks/myVPC`. Format
+          is of the form `projects/{project}/global/networks/{network}`. Where `{project}`
+          is a project number, as in `12345`, and `{network}` is a network name, as
+          in `myVPC`. To specify this field, you must have already configured VPC
+          Network Peering for Vertex AI (https://cloud.google.com/vertex-ai/docs/general/vpc-peering).
+          If left unspecified, the job is not peered with any network.
+        isOptional: true
+        parameterType: STRING
+      project:
+        description: Required. The GCP project that runs the pipeline components.
+        parameterType: STRING
+      role_field_name:
+        defaultValue: role
+        description: The field name of the role for input eval dataset instances that
+          contains the input prompts to the LLM.
+        isOptional: true
+        parameterType: STRING
+      service_account:
+        defaultValue: ''
+        description: Sets the default service account for workload run-as account.
+          The service account running the pipeline (https://cloud.google.com/vertex-ai/docs/pipelines/configure-project#service-account)
+          submitting jobs must have act-as permission on this run-as account. If unspecified,
+          the Vertex AI Custom Code Service Agent(https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+          for the CustomJob's project.
+        isOptional: true
+        parameterType: STRING
+      target_field_name:
+        defaultValue: output_text
+        description: The field name of the eval dataset instance that contains an
+          example reference text response. Alternatively referred to as the ground
+          truth (or ground_truth_column) field. If not set, defaulted to `output_text`.
+        isOptional: true
+        parameterType: STRING
+  outputDefinitions:
+    artifacts:
+      evaluation_metrics:
+        artifactType:
+          schemaTitle: system.Metrics
+          schemaVersion: 0.0.1
+        description: Metrics Artifact for LLM Text Generation.
+      model-evaluation-text-generation-evaluation_metrics:
+        artifactType:
+          schemaTitle: system.Metrics
+          schemaVersion: 0.0.1
+        description: '`Metrics` artifact representing the language model
+
+          evaluation metrics.'
+      model-evaluation-text-generation-row_based_metrics:
+        artifactType:
+          schemaTitle: system.Metrics
+          schemaVersion: 0.0.1
+        description: '`Metrics` artifact representing the language model
+
+          evaluation metrics of each instance. This is only available if
+
+          enable_row_based_metrics is set to True.'
+    parameters:
+      evaluation_resource_name:
+        description: If run on a user's managed VertexModel, the imported evaluation
+          resource name. Empty if run on a publisher model.
+        parameterType: STRING
+schemaVersion: 2.1.0
+sdkVersion: kfp-2.7.0
