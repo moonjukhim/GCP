@@ -3,7 +3,6 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: (unknown)
-  creationTimestamp: null
   name: gcpsessionaffinityfilters.networking.gke.io
 spec:
   group: networking.gke.io
@@ -11,9 +10,6 @@ spec:
     categories:
     - gateway-api
     kind: GCPSessionAffinityFilter
-    listKind: GCPSessionAffinityFilterList
-    plural: gcpsessionaffinityfilters
-    singular: gcpsessionaffinityfilter
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -156,7 +152,6 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: (unknown)
-  creationTimestamp: null
   name: gcpsessionaffinitypolicies.networking.gke.io
 spec:
   group: networking.gke.io
