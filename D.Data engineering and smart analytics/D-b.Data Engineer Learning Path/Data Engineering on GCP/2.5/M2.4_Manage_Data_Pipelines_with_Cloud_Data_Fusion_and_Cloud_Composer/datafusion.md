@@ -6,5 +6,11 @@ gcloud services enable datafusion.googleapis.com
 ```
 
 ```bash
-gcloud beta data-fusion instances create my-instance --project=my-project --location=my-location --zone=my-zone
+gcloud beta data-fusion instances create cloudfusion --project=qwiklabs-gcp-04-3ee183e77a2c --location=my-location --zone=my-zone
+```
+
+```bash
+export BUCKET=$GOOGLE_CLOUD_PROJECT
+gcloud storage buckets create gs://$BUCKET
+gcloud storage cp gs://cloud-training/OCBL017/ny-taxi-2018-sample.csv gs://$BUCKET
 ```
