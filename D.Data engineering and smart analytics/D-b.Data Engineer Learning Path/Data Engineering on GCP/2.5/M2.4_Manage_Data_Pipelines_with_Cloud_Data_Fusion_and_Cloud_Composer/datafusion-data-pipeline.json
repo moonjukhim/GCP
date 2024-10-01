@@ -1,0 +1,222 @@
+{
+    "artifact": {
+        "name": "cdap-data-pipeline",
+        "version": "6.10.1",
+        "scope": "SYSTEM"
+    },
+    "description": "",
+    "name": "",
+    "change": {
+        "description": ""
+    },
+    "parentVersion": "",
+    "config": {
+        "resources": {
+            "memoryMB": 2048,
+            "virtualCores": 1
+        },
+        "driverResources": {
+            "memoryMB": 2048,
+            "virtualCores": 1
+        },
+        "connections": [
+            {
+                "from": "GCSFile",
+                "to": "Wrangler"
+            },
+            {
+                "from": "Wrangler",
+                "to": "Joiner"
+            },
+            {
+                "from": "Joiner",
+                "to": "BigQuery2"
+            },
+            {
+                "from": "BigQuery",
+                "to": "Joiner"
+            }
+        ],
+        "postActions": [],
+        "properties": {},
+        "processTimingEnabled": true,
+        "stageLoggingEnabled": true,
+        "stages": [
+            {
+                "name": "GCSFile",
+                "plugin": {
+                    "name": "GCSFile",
+                    "type": "batchsource",
+                    "label": "GCSFile",
+                    "artifact": {
+                        "name": "google-cloud",
+                        "version": "0.23.1",
+                        "scope": "SYSTEM"
+                    },
+                    "properties": {
+                        "path": "gs://qwiklabs-gcp-03-2eec15533209/ny-taxi-2018-sample.csv",
+                        "fileEncoding": "UTF-8",
+                        "useConnection": "true",
+                        "format": "csv",
+                        "enableQuotedValues": "false",
+                        "connection": "${conn(Cloud Storage Default)}",
+                        "skipHeader": "true",
+                        "referenceName": "qwiklabs-gcp-03-2eec15533209.ny-taxi-2018-sample.csv",
+                        "schema": "{\"type\":\"record\",\"name\":\"text\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":\"string\"},{\"name\":\"dropoff_datetime\",\"type\":\"string\"},{\"name\":\"passenger_count\",\"type\":\"int\"},{\"name\":\"trip_distance\",\"type\":\"double\"},{\"name\":\"payment_type\",\"type\":\"int\"},{\"name\":\"fare_amount\",\"type\":\"double\"},{\"name\":\"extra\",\"type\":\"double\"},{\"name\":\"tip_amount\",\"type\":\"double\"},{\"name\":\"total_amount\",\"type\":\"double\"},{\"name\":\"pickup_location_id\",\"type\":\"int\"},{\"name\":\"dropoff_location_id\",\"type\":\"int\"}]}"
+                    }
+                },
+                "outputSchema": "{\"type\":\"record\",\"name\":\"text\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":\"string\"},{\"name\":\"dropoff_datetime\",\"type\":\"string\"},{\"name\":\"passenger_count\",\"type\":\"int\"},{\"name\":\"trip_distance\",\"type\":\"double\"},{\"name\":\"payment_type\",\"type\":\"int\"},{\"name\":\"fare_amount\",\"type\":\"double\"},{\"name\":\"extra\",\"type\":\"double\"},{\"name\":\"tip_amount\",\"type\":\"double\"},{\"name\":\"total_amount\",\"type\":\"double\"},{\"name\":\"pickup_location_id\",\"type\":\"int\"},{\"name\":\"dropoff_location_id\",\"type\":\"int\"}]}",
+                "id": "GCSFile"
+            },
+            {
+                "name": "Wrangler",
+                "plugin": {
+                    "name": "Wrangler",
+                    "type": "transform",
+                    "label": "Wrangler",
+                    "artifact": {
+                        "name": "wrangler-transform",
+                        "version": "4.10.1",
+                        "scope": "SYSTEM"
+                    },
+                    "properties": {
+                        "directives": "set-type :trip_distance float \nset-type :total_amount float \nset-type :pickup_location_id string \nfilter-rows-on condition-false trip_distance >0.0",
+                        "field": "*",
+                        "precondition": "false",
+                        "workspaceId": "9616543f-a767-4e03-863c-171cfd39d2ad",
+                        "schema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]}]}",
+                        "expressionLanguage": "jexl",
+                        "on-error": "fail-pipeline"
+                    }
+                },
+                "outputSchema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]}]}",
+                "inputSchema": [
+                    {
+                        "name": "GCSFile",
+                        "schema": "{\"type\":\"record\",\"name\":\"text\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":\"string\"},{\"name\":\"dropoff_datetime\",\"type\":\"string\"},{\"name\":\"passenger_count\",\"type\":\"int\"},{\"name\":\"trip_distance\",\"type\":\"double\"},{\"name\":\"payment_type\",\"type\":\"int\"},{\"name\":\"fare_amount\",\"type\":\"double\"},{\"name\":\"extra\",\"type\":\"double\"},{\"name\":\"tip_amount\",\"type\":\"double\"},{\"name\":\"total_amount\",\"type\":\"double\"},{\"name\":\"pickup_location_id\",\"type\":\"int\"},{\"name\":\"dropoff_location_id\",\"type\":\"int\"}]}"
+                    }
+                ],
+                "id": "Wrangler"
+            },
+            {
+                "name": "Joiner",
+                "plugin": {
+                    "name": "Joiner",
+                    "type": "batchjoiner",
+                    "label": "Joiner",
+                    "artifact": {
+                        "name": "core-plugins",
+                        "version": "2.12.1",
+                        "scope": "SYSTEM"
+                    },
+                    "properties": {
+                        "selectedFields": "Wrangler.pickup_datetime as pickup_datetime,Wrangler.dropoff_datetime as dropoff_datetime,Wrangler.passenger_count as passenger_count,Wrangler.trip_distance as trip_distance,Wrangler.payment_type as payment_type,Wrangler.fare_amount as fare_amount,Wrangler.tip_amount as tip_amount,Wrangler.total_amount as total_amount,Wrangler.pickup_location_id as pickup_location_id,Wrangler.dropoff_location_id as dropoff_location_id,BigQuery.zone_id as zone_id,BigQuery.zone_name as zone_name,BigQuery.borough as borough",
+                        "requiredInputs": "Wrangler,BigQuery",
+                        "conditionType": "basic",
+                        "joinKeys": "Wrangler.pickup_location_id = BigQuery.zone_id",
+                        "joinNullKeys": "true",
+                        "distributionEnabled": "false",
+                        "schema": "{\"type\":\"record\",\"name\":\"join.typeoutput\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]},{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                },
+                "outputSchema": [
+                    {
+                        "name": "etlSchemaBody",
+                        "schema": "{\"type\":\"record\",\"name\":\"join.typeoutput\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]},{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                ],
+                "inputSchema": [
+                    {
+                        "name": "Wrangler",
+                        "schema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]}]}"
+                    },
+                    {
+                        "name": "BigQuery",
+                        "schema": "{\"type\":\"record\",\"name\":\"output\",\"fields\":[{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                ],
+                "id": "Joiner"
+            },
+            {
+                "name": "BigQuery2",
+                "plugin": {
+                    "name": "BigQueryTable",
+                    "type": "batchsink",
+                    "label": "BigQuery2",
+                    "artifact": {
+                        "name": "google-cloud",
+                        "version": "0.23.1",
+                        "scope": "SYSTEM"
+                    },
+                    "properties": {
+                        "useConnection": "false",
+                        "project": "auto-detect",
+                        "serviceAccountType": "filePath",
+                        "serviceFilePath": "auto-detect",
+                        "referenceName": "bq_insert",
+                        "dataset": "trips",
+                        "table": "trips_pickup_name",
+                        "bucket": "qwiklabs-gcp-03-2eec15533209-temp",
+                        "operation": "insert",
+                        "truncateTable": "false",
+                        "allowSchemaRelaxation": "false",
+                        "location": "US",
+                        "createPartitionedTable": "false",
+                        "partitioningType": "TIME",
+                        "timePartitioningType": "DAY",
+                        "partitionFilterRequired": "false",
+                        "schema": "{\"type\":\"record\",\"name\":\"join.typeoutput\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]},{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                },
+                "outputSchema": [
+                    {
+                        "name": "etlSchemaBody",
+                        "schema": "{\"type\":\"record\",\"name\":\"join.typeoutput\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]},{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                ],
+                "inputSchema": [
+                    {
+                        "name": "Joiner",
+                        "schema": "{\"type\":\"record\",\"name\":\"join.typeoutput\",\"fields\":[{\"name\":\"pickup_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_datetime\",\"type\":[\"string\",\"null\"]},{\"name\":\"passenger_count\",\"type\":[\"int\",\"null\"]},{\"name\":\"trip_distance\",\"type\":[\"float\",\"null\"]},{\"name\":\"payment_type\",\"type\":[\"int\",\"null\"]},{\"name\":\"fare_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"tip_amount\",\"type\":[\"double\",\"null\"]},{\"name\":\"total_amount\",\"type\":[\"float\",\"null\"]},{\"name\":\"pickup_location_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"dropoff_location_id\",\"type\":[\"int\",\"null\"]},{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                ],
+                "id": "BigQuery2"
+            },
+            {
+                "name": "BigQuery",
+                "plugin": {
+                    "name": "BigQueryTable",
+                    "type": "batchsource",
+                    "label": "BigQuery",
+                    "artifact": {
+                        "name": "google-cloud",
+                        "version": "0.23.1",
+                        "scope": "SYSTEM"
+                    },
+                    "properties": {
+                        "useConnection": "false",
+                        "project": "auto-detect",
+                        "serviceAccountType": "filePath",
+                        "serviceFilePath": "auto-detect",
+                        "referenceName": "zone_mapping",
+                        "dataset": "trips",
+                        "table": "zone_id_mapping",
+                        "bucket": "qwiklabs-gcp-03-2eec15533209-temp",
+                        "enableQueryingViews": "false",
+                        "schema": "{\"type\":\"record\",\"name\":\"output\",\"fields\":[{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}"
+                    }
+                },
+                "outputSchema": "{\"type\":\"record\",\"name\":\"output\",\"fields\":[{\"name\":\"zone_id\",\"type\":[\"string\",\"null\"]},{\"name\":\"zone_name\",\"type\":[\"string\",\"null\"]},{\"name\":\"borough\",\"type\":[\"string\",\"null\"]}]}",
+                "id": "BigQuery"
+            }
+        ],
+        "schedule": "0 1 */1 * *",
+        "engine": "spark",
+        "numOfRecordsPreview": 100,
+        "rangeRecordsPreview": {
+            "min": 1,
+            "max": "5000"
+        },
+        "maxConcurrentRuns": 1
+    }
+}
