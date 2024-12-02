@@ -47,3 +47,11 @@
     - 모델 개발
     - 모델 서빙
     - MLOps 및 워크플로 자동화
+
+- 1.4. 생성형 AI
+    - 생성형 AI 및 LLM 
+    - 생성형 AI 사용 사례:Duet AI
+    - Model Garden 
+    - Generative AI Studio
+    - AI 솔루션
+
