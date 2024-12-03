@@ -7,13 +7,14 @@
 3. AI/ML AI Development Workflow (125 ~ 221)
 4. AI/ML Generative AI (222 ~ )
 
-##### Day2 
+##### Day2
 
-1. Exploratory Data Analysis
-2. ML in Practice
-3. Vertex AI
-4. Optimization
-5. BigQuery ML
+1. Exploratory Data Analysis (5 ~ 43) (Lab: EDA)
+2. ML in Practice (44 ~ 82)
+3. Vertex AI (83 ~ 140)
+4. Optimization(141 ~ 215)
+5. BigQuery ML (216 ~ 240)
+6. 일반화 샘플링 (241 ~ 269)
 
 ##### Day3
 
@@ -32,26 +33,27 @@
 
 ---
 
-- 1.2. AI Development Options 
-    - AI 개발 옵션
-    - 선행 학습된 API
-    - Vertex AI
-    - AutoML
-    - 커스텀 학습   
-    - Lab : Natural Language API
+- 1.2. AI Development Options
+
+  - AI 개발 옵션
+  - 선행 학습된 API
+  - Vertex AI
+  - AutoML
+  - 커스텀 학습
+  - Lab : Natural Language API
 
 - 1.3. AI Development Workflow
-    - 
-    - ML 워크플로
-    - 데이터 준비
-    - 모델 개발
-    - 모델 서빙
-    - MLOps 및 워크플로 자동화
+
+  -
+  - ML 워크플로
+  - 데이터 준비
+  - 모델 개발
+  - 모델 서빙
+  - MLOps 및 워크플로 자동화
 
 - 1.4. 생성형 AI
-    - 생성형 AI 및 LLM 
-    - 생성형 AI 사용 사례:Duet AI
-    - Model Garden 
-    - Generative AI Studio
-    - AI 솔루션
-
+  - 생성형 AI 및 LLM
+  - 생성형 AI 사용 사례:Duet AI
+  - Model Garden
+  - Generative AI Studio
+  - AI 솔루션
