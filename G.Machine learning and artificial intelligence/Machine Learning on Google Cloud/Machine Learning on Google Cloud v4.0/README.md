@@ -1,13 +1,13 @@
 ### Machine Learning on Google Cloud
 
-##### Day1
+##### Day1 : Artificial Intelligence & ML_Fundamentals
 
 1. AI/ML AI Foundation (3 ~ 66)
 2. AI/ML AI Development Options (67 ~ 124)
 3. AI/ML AI Development Workflow (125 ~ 221)
 4. AI/ML Generative AI (222 ~ )
 
-##### Day2
+##### Day2 : Launching_into_Machine_Learning
 
 1. Exploratory Data Analysis (5 ~ 43) (Lab: EDA)
 2. ML in Practice (44 ~ 82)
@@ -16,9 +16,12 @@
 5. BigQuery ML (216 ~ 240)
 6. 일반화 샘플링 (241 ~ 269)
 
-##### Day3
+##### Day3 : Tensorflow on Google Cloud
 
-1. Tensorflow on Google Cloud
+1. Tensorflow 생태계 소개 (4 ~ 19)
+2. 입력 데이터 파이프라인 설계 및 빌드 (20 ~ 46)
+3. Keras API (47 ~ )
+4. Google Cloud에서 Tensorflow 학습 및 예측 확장
 
 ##### Day4
 
