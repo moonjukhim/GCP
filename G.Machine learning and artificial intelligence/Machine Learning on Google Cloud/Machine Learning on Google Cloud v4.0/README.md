@@ -20,14 +20,16 @@
 
 1. Tensorflow 생태계 소개 (4 ~ 19)
 2. 입력 데이터 파이프라인 설계 및 빌드 (20 ~ 46)
-3. Keras API (47 ~ )
-4. Google Cloud에서 Tensorflow 학습 및 예측 확장
+3. Keras API (47 ~ 124)
+4. Vertex AI를 사용한 규모에 맞춘 학습 (125 ~ )
 
-##### Day4
+##### Day4 : Feature Engineering
 
-1. Feature Engineering
+1. 특성 추출의 목적과 프로세스 설명 (3 ~ 52)
+2. Keras와 BigQuery ML을 사용한 특성 추출 수행 (53 ~ 100)
+3. Feature Store 소개 (101 ~ )
 
-##### Day 5
+##### Day 5 : Machine Learning in the Enterprise
 
 1. Data in the Enterprise
 2. Custom Training
