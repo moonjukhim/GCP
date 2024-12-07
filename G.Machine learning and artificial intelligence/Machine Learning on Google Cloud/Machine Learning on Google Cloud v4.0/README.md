@@ -31,10 +31,13 @@
 
 ##### Day 5 : Machine Learning in the Enterprise
 
-1. Data in the Enterprise
-2. Custom Training
-3. Hyperparameter Tuning
-4. Vertex AI Pipeline
+1. ML Workflow in Enterprise (7 ~ 16 )
+2. Data in the Enterprise (17 ~ )
+3. Custom Training
+4. Hyperparameter Tuning ( ~ 138)
+5. Prediction & Model Monitoring ( 139 ~ 172)
+6. Vertex AI Pipeline (173 ~)
+
 
 ---
 
