@@ -2,18 +2,18 @@
 
 ##### Day1 : Artificial Intelligence & ML_Fundamentals
 
-1. AI/ML AI Foundation (3 ~ 66)
-2. AI/ML AI Development Options (67 ~ 124)
-3. AI/ML AI Development Workflow (125 ~ 221)
-4. AI/ML Generative AI (222 ~ )
+1. AI/ML AI Foundation (3 ~ 66) Lab1
+2. AI/ML AI Development Options (67 ~ 124) Lab2
+3. AI/ML AI Development Workflow (125 ~ 221) Lab3
+4. AI/ML Generative AI (222 ~ ) Lab4
 
 ##### Day2 : Launching_into_Machine_Learning
 
-1. Exploratory Data Analysis (5 ~ 43) (Lab: EDA)
-2. ML in Practice (44 ~ 82)
+1. Exploratory Data Analysis (5 ~ 43) (Lab: EDA) Lab5,Lab6
+2. ML in Practice (44 ~ 82) Lab7:Lenear
 3. Vertex AI (83 ~ 140)
 4. Optimization(141 ~ 215)
-5. BigQuery ML (216 ~ 240)
+5. BigQuery ML (216 ~ 240) Lab8:BigQuery
 6. 일반화 샘플링 (241 ~ 269)
 
 ##### Day3 : Tensorflow on Google Cloud
@@ -37,7 +37,6 @@
 4. Hyperparameter Tuning ( ~ 138)
 5. Prediction & Model Monitoring ( 139 ~ 172)
 6. Vertex AI Pipeline (173 ~)
-
 
 ---
 
