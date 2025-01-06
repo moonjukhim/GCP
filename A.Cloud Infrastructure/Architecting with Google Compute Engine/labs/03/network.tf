@@ -51,7 +51,7 @@ resource "google_compute_firewall" "privatenet_allow_ssh" {
 
   source_ranges = ["0.0.0.0/0"] # 모든 IP 대역 허용 (보안에 유의!)
 
-  target_tags = ["ssh-allow-rule"]
+  # target_tags = ["ssh-allow-rule"]
 }
 
 
