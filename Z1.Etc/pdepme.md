@@ -48,7 +48,7 @@
     - Technical Workshop 3 : 
     - Technical Workshop 4 : 
         - Building Batch Data Pipelines on Google Cloud
-            - [Cloud Dataproc에서 Apache Spark 작업 실행하기](https://partner.cloudskillsboost.google/course_templates/53/labs/522618)
+            - [Cloud Dataproc에서 Apache Spark 작업 실행하기](https://partner.cloudskillsboost.google/course_templates/53/labs/522618) <<>>
             - [간단한 Dataflow 파이프라인](https://partner.cloudskillsboost.google/course_templates/53/labs/522628)
             - [Cloud Data Fusion 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
             - [Cloud Composer 소개 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522655)
@@ -58,8 +58,8 @@
     - Technical Workshop 6 :   
         - Building Resilient Streaming Analytics Systems on Google Cloud
             - [스트리밍 데이터 처리: Pub/Sub에 스트리밍 데이터 게시](https://partner.cloudskillsboost.google/course_templates/52/labs/508360)
-            - [스트리밍 데이터 처리: 스트리밍 데이터 파이프라인](https://partner.cloudskillsboost.google/course_templates/52/labs/508366)
-            - [스트리밍 데이터 처리: 스트리밍 분석 및 대시보드](https://partner.cloudskillsboost.google/course_templates/52/labs/508371)\
+            - [스트리밍 데이터 처리: 스트리밍 데이터 파이프라인](https://partner.cloudskillsboost.google/course_templates/52/labs/508366) 
+            - [스트리밍 데이터 처리: 스트리밍 분석 및 대시보드](https://partner.cloudskillsboost.google/course_templates/52/labs/508371) <<>>
             - [스트리밍 데이터 처리: Bigtable로의 스트리밍 데이터 파이프라인](https://partner.cloudskillsboost.google/course_templates/52/labs/508376)
             - [성능 향상을 위한 BigQuery 쿼리 최적화 2.5](https://partner.cloudskillsboost.google/course_templates/52/labs/508384)
 
