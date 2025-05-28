@@ -2,10 +2,11 @@
 
 |모듈                           |내용                   |
 |------------------------------ |---------------------- |
+|Google Cloud Platform Lab 소개  |                      |
 |Cloud Storage, Data Lake, Data Governance | [Google Cloud Storage - Bucket Lock](https://partner.cloudskillsboost.google/focuses/42450?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46241136&_gl=1*8ue3y*_up*MQ..*_ga*MTY2MjczODI3NC4xNzQ4NDA3ODI0*_ga_2X30ZRBDSG*czE3NDg0MDc4MjQkbzEkZzAkdDE3NDg0MDc4MjQkajYwJGwwJGgw) |
 |Dataproc                       | [Spark용 Dataproc 서버리스를 사용하여 BigQuery 로드](https://partner.cloudskillsboost.google/focuses/102961?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46241197) |
 |IAM                            |                   |
-|Google Cloud Platform Lab 소개  |                  |
+|Pub/Sub and Dataflow             |                  |
 |BigQuery and Datastream        | [Datastream: BigQuery로 PostgreSQL 복제](https://partner.cloudskillsboost.google/focuses/61951?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46240984)|
 |Databases                      |                   |
 |Other                          |                   |
