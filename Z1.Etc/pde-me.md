@@ -2,16 +2,18 @@
 
 ##### Delta
 
-- [Cloud Dataproc에서 Apache Spark 작업 실행하기](https://partner.cloudskillsboost.google/course_templates/53/labs/522618) 
-- [Cloud Data Fusion 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
-- [Cloud Composer 소개 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522655)
-<br>
-- [스트리밍 데이터 처리: Pub/Sub에 스트리밍 데이터 게시](https://partner.cloudskillsboost.google/course_templates/52/labs/508360)
-- [Serverless Data Processing with Dataflow - Using Dataflow for Streaming Analytics](https://partner.cloudskillsboost.google/course_templates/229/labs/526229)
-- [Serverless Data Processing with Dataflow - Custom Dataflow Flex Templates](https://partner.cloudskillsboost.google/course_templates/264/labs/521604)
-- [BigQuery에서 날짜를 기준으로 파티션을 나눈 테이블 만들기](https://partner.cloudskillsboost.google/course_templates/624/labs/548381)
-- [BigQuery에서 JSON, 배열, 구조체 작업 수행하기](https://partner.cloudskillsboost.google/course_templates/624/labs/548383)
-- [BigQuery ML에서 분류 모델로 방문자 구매 예측하기](https://partner.cloudskillsboost.google/course_templates/627/labs/490568)
+- 1st
+    - [Cloud Dataproc에서 Apache Spark 작업 실행하기](https://partner.cloudskillsboost.google/course_templates/53/labs/522618) 
+    - [Cloud Data Fusion 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
+    - [Cloud Composer 소개 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522655)
+
+-2nd
+    - [스트리밍 데이터 처리: Pub/Sub에 스트리밍 데이터 게시](https://partner.cloudskillsboost.google/course_templates/52/labs/508360)
+    - [Serverless Data Processing with Dataflow - Using Dataflow for Streaming Analytics](https://partner.cloudskillsboost.google/course_templates/229/labs/526229)
+    - [Serverless Data Processing with Dataflow - Custom Dataflow Flex Templates](https://partner.cloudskillsboost.google/course_templates/264/labs/521604)
+    - [BigQuery에서 날짜를 기준으로 파티션을 나눈 테이블 만들기](https://partner.cloudskillsboost.google/course_templates/624/labs/548381)
+    - [BigQuery에서 JSON, 배열, 구조체 작업 수행하기](https://partner.cloudskillsboost.google/course_templates/624/labs/548383)
+    - [BigQuery ML에서 분류 모델로 방문자 구매 예측하기](https://partner.cloudskillsboost.google/course_templates/627/labs/490568)
 
 ---
 
