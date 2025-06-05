@@ -10,6 +10,7 @@
 - [Serverless Data Processing with Dataflow - Using Dataflow for Streaming Analytics](https://partner.cloudskillsboost.google/course_templates/229/labs/526229)
 - [Serverless Data Processing with Dataflow - Custom Dataflow Flex Templates](https://partner.cloudskillsboost.google/course_templates/264/labs/521604)
 - [BigQuery ML에서 분류 모델로 방문자 구매 예측하기](https://partner.cloudskillsboost.google/course_templates/627/labs/490568)
+
 ---
 
 1. Google Cloud에서 AI 및 머신러닝 소개
