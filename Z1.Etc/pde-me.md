@@ -6,7 +6,6 @@
     - [Cloud Dataproc에서 Apache Spark 작업 실행하기](https://partner.cloudskillsboost.google/course_templates/53/labs/522618) 
     - [Cloud Data Fusion 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
     - [Cloud Composer 소개 2.5](https://partner.cloudskillsboost.google/course_templates/53/labs/522655)
-
 -2nd
     - [스트리밍 데이터 처리: Pub/Sub에 스트리밍 데이터 게시](https://partner.cloudskillsboost.google/course_templates/52/labs/508360)
     - [Serverless Data Processing with Dataflow - Using Dataflow for Streaming Analytics](https://partner.cloudskillsboost.google/course_templates/229/labs/526229)
