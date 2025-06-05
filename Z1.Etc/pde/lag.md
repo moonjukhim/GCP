@@ -206,3 +206,22 @@ if __name__ == '__main__':
     while True:
         time.sleep(1)
 ```
+
+---
+
+```python
+pcollection | WindowInto(
+    SlidingWindows(60, 5),
+    trigger=AfterWatermark(
+        early=AfterProcessingTime(delay=30),
+        late=AfterCount(1)),
+    accumulation_mode=AccumulationMode.ACCUMULATING,
+    allowed_lateness=Duration(seconds=2*24*60*60))
+```
+
+- 실시간 스트리밍 데이터를 1분 단위로 분석하되,
+- 매 5초마다 새로운 결과를 내고,
+- 30초 지난 시점에 중간 결과를 빠르게 보여주고,
+- 늦게 들어온 데이터도 반영해서 결과를 업데이트하며,
+- 최대 2일 늦게 도착해도 결과에 반영하도록 하는 방식입니다.
+
