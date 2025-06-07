@@ -1,0 +1,2 @@
+- [Cloud Natural Language API: Qwik Start](https://partner.cloudskillsboost.google/focuses/13311?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46581089)
+- [Vertex AI: AutoML을 사용한 대출 위험 예측](https://partner.cloudskillsboost.google/focuses/33326?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46581606&_gl=1*5pay3*_up*MQ..*_ga*MjExOTIwMjgyMS4xNzQ5MTA1ODY4*_ga_2X30ZRBDSG*czE3NDkxMDU4NjckbzEkZzAkdDE3NDkxMDU4NjckajYwJGwwJGgw)
