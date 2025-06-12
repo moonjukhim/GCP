@@ -1,7 +1,14 @@
 ### Professional Machine Learning Engineer
 
+- [Cloud Data Fusion 2.5를 사용한 파이프라인 그래프 빌드 및 실행](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
 - [데이터 품질 개선](https://partner.cloudskillsboost.google/focuses/14244?parent=catalog)
 - [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
+
+- [Vertex AI에서의 TensorFlow 모델 학습 및 배포](https://partner.cloudskillsboost.google/course_templates/158/labs/460525)
+- [Vertex AI 모델 모니터링](https://partner.cloudskillsboost.google/focuses/36414?parent=catalog)
+
+
+
 
 ---
 
