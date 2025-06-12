@@ -1,5 +1,10 @@
 ### Professional Machine Learning Engineer
 
+- [데이터 품질 개선](https://partner.cloudskillsboost.google/focuses/14244?parent=catalog)
+- [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
+
+---
+
 1. Module 1  
     - Introduction to Linear Regression
     - Performing Advanced Feature Engineering
