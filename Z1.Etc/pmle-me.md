@@ -21,6 +21,7 @@ Build MLOps Pipelines using Vertex AI (과정)
  Using Vertex ML Metadata with Vertex AI Pipelines | N/A
 Build and Deploy Machine Learning Solutions on Vertex AI
  Vertex AutoML Vision으로 손상된 자동차 부품 식별 | OK
+
 ---
 
 1. Module 1  
