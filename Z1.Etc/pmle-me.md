@@ -4,6 +4,7 @@
 - [데이터 품질 개선](https://partner.cloudskillsboost.google/focuses/14244?parent=catalog)
 - [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
 
+- [Tune Gemini Model by using Supervised Fine-tuning](https://partner.cloudskillsboost.google/focuses/120421?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46873769)
 - [Vertex AI에서의 TensorFlow 모델 학습 및 배포](https://partner.cloudskillsboost.google/course_templates/158/labs/460525)
 - [Vertex AI 모델 모니터링](https://partner.cloudskillsboost.google/focuses/36414?parent=catalog)
 
