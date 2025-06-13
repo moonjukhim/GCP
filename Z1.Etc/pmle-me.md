@@ -12,7 +12,7 @@
 
 ---
 
-Vertex AI Pipelines: Qwik Start | OK
+Vertex AI Pipelines: Qwik Start | OK <br>
 Building End to End MLOps Pipelines | N/A
  Building an Image Classification ML Ops pipeline using Vertex AI | N/A
  Using Vertex ML Metadata with Vertex AI Pipelines | N/A
