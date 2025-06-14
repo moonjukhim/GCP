@@ -3,7 +3,7 @@
 - day1
     - [Cloud Data Fusion 2.5를 사용한 파이프라인 그래프 빌드 및 실행](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
     - [데이터 품질 개선](https://partner.cloudskillsboost.google/focuses/14244?parent=catalog)
-    - [Feature Engineering using Keras Preprocessing Layers]
+    - [Feature Engineering using Keras Preprocessing Layers] -> DataCatalog
     - [Classifying Images with a NN and DNN Model](https://partner.cloudskillsboost.google/focuses/42749?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46914017&_gl=1*iq40wq*_up*MQ..*_ga*MTY1MjYxMjcxNy4xNzQ5ODc5ODQy*_ga_2X30ZRBDSG*czE3NDk4Nzk4NDEkbzEkZzAkdDE3NDk4Nzk4NDEkajYwJGwwJGgw)
     - [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
 - day2
@@ -33,3 +33,8 @@
 3. Module 3
     - Cloud Dataprep을 사용하여 데이터 변환 파이프라인 만들기
     
+
+---
+
+- Gemini for Data Scientists and Analysts
+    - Gemini 지원을 활용해 데이터 분석하기
