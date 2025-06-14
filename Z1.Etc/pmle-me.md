@@ -3,6 +3,8 @@
 - [Cloud Data Fusion 2.5를 사용한 파이프라인 그래프 빌드 및 실행](https://partner.cloudskillsboost.google/course_templates/53/labs/522648)
 - [데이터 품질 개선](https://partner.cloudskillsboost.google/focuses/14244?parent=catalog)
 - [Vertex AI에서의 TensorFlow 모델 학습 및 배포](https://partner.cloudskillsboost.google/course_templates/158/labs/460525)
+- [Feature Engineering using Keras Preprocessing Layers]
+- [Classifying Images with a NN and DNN Model]
 - [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
 
 - [BigQuery로 RAG 애플리케이션 만들기](https://partner.cloudskillsboost.google/focuses/115683?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&locale=ko&parent=catalog&search_id=46895354)
