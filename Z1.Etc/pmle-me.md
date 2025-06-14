@@ -4,7 +4,7 @@
 - [데이터 품질 개선](https://partner.cloudskillsboost.google/focuses/14244?parent=catalog)
 - [Vertex AI에서의 TensorFlow 모델 학습 및 배포](https://partner.cloudskillsboost.google/course_templates/158/labs/460525)
 - [Feature Engineering using Keras Preprocessing Layers]
-- [Classifying Images with a NN and DNN Model]
+- [Classifying Images with a NN and DNN Model](https://partner.cloudskillsboost.google/focuses/42749?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46914017&_gl=1*iq40wq*_up*MQ..*_ga*MTY1MjYxMjcxNy4xNzQ5ODc5ODQy*_ga_2X30ZRBDSG*czE3NDk4Nzk4NDEkbzEkZzAkdDE3NDk4Nzk4NDEkajYwJGwwJGgw)
 - [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
 
 - [BigQuery로 RAG 애플리케이션 만들기](https://partner.cloudskillsboost.google/focuses/115683?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&locale=ko&parent=catalog&search_id=46895354)
