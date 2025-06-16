@@ -38,3 +38,11 @@
 
 - Gemini for Data Scientists and Analysts
     - Gemini 지원을 활용해 데이터 분석하기
+
+--- 
+
+##### Tune Gemini Model by using Supervised Fine-tuning
+
+```text
+How do I store a TensorFlow checkpoint on Google Cloud Storage while training?
+```
