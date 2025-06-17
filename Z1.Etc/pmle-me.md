@@ -15,7 +15,7 @@
 
 ---
 
-## 나중에 꼭 공부해볼거리!!!
+## 나중에 꼭 공부해 볼 거리!!!
 
 - LangChain
     - [Introduction to LangChain with Vertex AI](https://partner.cloudskillsboost.google/focuses/109470?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=47016399)
