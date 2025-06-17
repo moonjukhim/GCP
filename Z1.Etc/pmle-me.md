@@ -15,6 +15,20 @@
 
 ---
 
+## 나중에 꼭 공부해볼거리!!!
+
+- LangChain
+    - [Introduction to LangChain with Vertex AI](https://partner.cloudskillsboost.google/focuses/109470?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=47016399)
+    - [Getting Started with LangChain + Gemini](https://partner.cloudskillsboost.google/focuses/102978?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=47016440)
+    - [Orchestrate LLM solutions with LangChain](https://partner.cloudskillsboost.google/course_templates/916?catalog_rank=%7B%22rank%22%3A7%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&search_id=47016440)
+- Agentspace
+    - [Build an Agent with Agent Designer in Agentspace](https://partner.cloudskillsboost.google/focuses/124949?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Afalse%7D&parent=catalog)
+- GenAI
+    - [Gen AI Agents: Transform Your Organization](https://partner.cloudskillsboost.google/course_templates/1267?catalog_rank=%7B%22rank%22%3A8%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&search_id=47016511)
+    - [Deploy ADK agents to Agent Engine](https://partner.cloudskillsboost.google/focuses/124397?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=47016592)
+    - [Build multi-agent systems with ADK](https://partner.cloudskillsboost.google/focuses/124396?catalog_rank=%7B%22rank%22%3A4%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=47016607)
+
+---
 
 1. Module 1  
     - Introduction to Linear Regression
