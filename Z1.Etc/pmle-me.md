@@ -13,6 +13,7 @@
     - [Vertex AI 모델 모니터링](https://partner.cloudskillsboost.google/focuses/36414?parent=catalog)
     - [Vertex AI Pipelines: Qwik Start](https://partner.cloudskillsboost.google/focuses/22030?parent=catalog)
 
+### !!중요 : 가능하면 브라우저에서 언어를 영어로 바꾸고 진행하세요.
 
 ---
 
