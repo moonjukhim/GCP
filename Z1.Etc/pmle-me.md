@@ -8,6 +8,7 @@
     - [Vertex AI: 하이퍼파라미터 조정](https://partner.cloudskillsboost.google/course_templates/9/labs/531404)
 - day2
     - [BigQuery로 RAG 애플리케이션 만들기](https://partner.cloudskillsboost.google/focuses/115683?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&locale=ko&parent=catalog&search_id=46895354)
+    - [Vertex AI: Training and Serving a Custom Model](https://partner.cloudskillsboost.google/focuses/73259?catalog_rank=%7B%22rank%22%3A3%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=47050733)
     - [Tune Gemini Model by using Supervised Fine-tuning](https://partner.cloudskillsboost.google/focuses/120421?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=46873769)
     - [Vertex AI 모델 모니터링](https://partner.cloudskillsboost.google/focuses/36414?parent=catalog)
     - [Vertex AI Pipelines: Qwik Start](https://partner.cloudskillsboost.google/focuses/22030?parent=catalog)
