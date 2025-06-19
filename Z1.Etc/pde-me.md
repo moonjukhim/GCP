@@ -16,15 +16,20 @@
 
 ---
 
+### 나중에 공부해 볼 거리 !!
+
+---
+
+
 1. Google Cloud에서 AI 및 머신러닝 소개
-- Introduction to Linear Regression
-- Performing Advanced Feature Engineering in BQML
-- Introduction to AI and Machine Learning on Google Cloud
+    - Introduction to Linear Regression
+    - Performing Advanced Feature Engineering in BQML
+    - Introduction to AI and Machine Learning on Google Cloud
 
 2. 데이터 캡처 및 ML 모델 생성
-- Build an End-to-End Data Capture Pipeline using Document AI
-- Identify Damaged Car Parts with Vertex AutoML Vision
-- (필수!) Create ML Models with BigQuery ML
+    - Build an End-to-End Data Capture Pipeline using Document AI
+    - Identify Damaged Car Parts with Vertex AutoML Vision
+    - (필수!) Create ML Models with BigQuery ML
 
 3. 데이터 품질 향상 및 엔지니어링
 - Creating a Data Transformation Pipeline with Cloud Dataprep
