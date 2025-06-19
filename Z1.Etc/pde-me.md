@@ -18,6 +18,31 @@
 
 ### 나중에 공부해 볼 거리 !!
 
+    - Using BigQuery to do Analysis
+    - Loading Taxi Data into Google Cloud SQL 2.5
+    - Loading data into BigQuery
+    - Working with JSON and Array data in BigQuery 2.5
+    - Partitioned Tables in Google BigQuery
+    - Running Apache Spark jobs on Cloud Dataproc
+    - A Simple Dataflow Pipeline (Python) 2.5
+    - Serverless Data Analysis with Dataflow: A Simple Dataflow Pipeline (Java)
+    - MapReduce in Beam (Python) 2.5
+    - Serverless Data Analysis with Beam: MapReduce in Beam (Java)
+    - Serverless Data Analysis with Dataflow: Side Inputs (Python)
+    - Serverless Data Analysis with Dataflow: Side Inputs (Java)
+    - Building and Executing a Pipeline Graph with Data Fusion 2.5
+    - An Introduction to Cloud Composer 2.5
+    - Streaming Data Processing: Publish Streaming Data into PubSub
+    - Streaming Data Processing: Streaming Data Pipelines
+    - Streaming Data Processing: Streaming Analytics and Dashboards
+    - Streaming Data Processing: Streaming Data Pipelines into Bigtable
+    - Optimizing your BigQuery Queries for Performance 2.5
+    - Using the Natural Language API to classify unstructured text
+    - BigQuery in JupyterLab on Vertex AI 2.5
+    - Running Pipelines on Vertex AI 2.5
+    - Predict Bike Trip Duration with a Regression Model in BQML 2.5
+    - Movie Recommendations in BigQuery ML 2.5
+
 ---
 
 
