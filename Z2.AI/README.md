@@ -1,18 +1,18 @@
 # AI
 
-| 제목                                                           | 종류       | 난이도 |
+| 제목                                                           | 종류       | 난이도 | 확인 |
 |----------------------------------------------------------------|---|----|
-|Conversational Agent Topics|
-| Deploy ADK agents to Agent Engine |
-| Exporting Conversational Agents Logs to BigQuery for Analytics |
-| Create a Conversational Agent Playbook that connects to an unstructured data store tool |
+| Conversational Agent Topics                                                               |
+| Deploy ADK agents to Agent Engine                                                         |
+| Exporting Conversational Agents Logs to BigQuery for Analytics                            |
+| Create a Conversational Agent Playbook that connects to an unstructured data store tool   |
 | Introduction to CES and Conversational Agents |
 | Introduction to Building and Deploying an Agent with Reasoning Engine in Vertex AI |
 | Introduction to Agent Assist and its GenAI Capabilities |
 | Introduction to Agent Assist and its GenAI Capabilities |
 | Improve customer and agent satisfaction with Agent Assist: Challenge Lab |
 | Setting up Generative Knowledge Assist in the Agent Assist console |
-| Build multi-agent systems with ADK |
+| Build multi-agent systems with ADK                                                        | 실습 | 고급 | O |
 | Build an Agent with Agent Designer in Agentspace |
 | Basic Performance Measurement |
 | Deploy Multi-Agent Systems with Agent Development Kit (ADK) and Agent Engine |
