@@ -1,7 +1,7 @@
 # AI
 
-| 제목                                                           | 종류       | 난이도 | 확인 |
-|----------------------------------------------------------------|---|----|
+| 제목                                                                                       | 종류       | 난이도 | 확인 |
+|-------------------------------------------------------------------------------------------|--------|----|
 | Conversational Agent Topics                                                               |
 | Deploy ADK agents to Agent Engine                                                         |
 | Exporting Conversational Agents Logs to BigQuery for Analytics                            |
