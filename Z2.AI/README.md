@@ -1,7 +1,7 @@
 # AI
 
-| 제목 | 종류 | 난이도 |
-|-----------------------------|---|----|
+| 제목                                                           | 종류       | 난이도 |
+|----------------------------------------------------------------|---|----|
 |Conversational Agent Topics|
 | Deploy ADK agents to Agent Engine |
 | Exporting Conversational Agents Logs to BigQuery for Analytics |
@@ -80,6 +80,6 @@
 | Customer Engagement Suite with Google AI Architecture |
 | Extend Agentspace assistant capabilities |
 | Create media search and media recommendations applications with AI Applications |
-| Build search and recommendations applications with AI Applications |
-| Configure AI Applications to optimize search results | 과정 | Advanced |
+| Build search and recommendations applications with AI Applications | 과정 | 중급 |
+| Configure AI Applications to optimize search results | 과정 | 고급 |
 
