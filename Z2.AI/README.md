@@ -1,33 +1,32 @@
 # AI
 
-| 제목                                                                                       | 종류       | 난이도 | 확인 |
-|-------------------------------------------------------------------------------------------|--------|----|--- |
-| Conversational Agent Topics                                                               |
+| 제목                                                                                       | 종류 | 난이도 | 확인 |
+|-------------------------------------------------------------------------------------------|-----|----|--- |
+| Conversational Agent Topics                                                               |     |    |    |
 | Deploy ADK agents to Agent Engine                                                         |
 | Exporting Conversational Agents Logs to BigQuery for Analytics                            |
 | Create a Conversational Agent Playbook that connects to an unstructured data store tool   |
-| Introduction to CES and Conversational Agents |
-| Introduction to Building and Deploying an Agent with Reasoning Engine in Vertex AI |
-| Introduction to Agent Assist and its GenAI Capabilities |
-| Introduction to Agent Assist and its GenAI Capabilities |
-| Improve customer and agent satisfaction with Agent Assist: Challenge Lab |
-| Setting up Generative Knowledge Assist in the Agent Assist console |
+| Introduction to CES and Conversational Agents                                             |
+| Introduction to Building and Deploying an Agent with Reasoning Engine in Vertex AI        |
+| Introduction to Agent Assist and its GenAI Capabilities                                   |
+| Improve customer and agent satisfaction with Agent Assist: Challenge Lab                  |
+| Setting up Generative Knowledge Assist in the Agent Assist console                        |
 | Build multi-agent systems with ADK                                                        | 실습 | 고급 | O |
-| Build an Agent with Agent Designer in Agentspace |
-| Basic Performance Measurement |
-| Deploy Multi-Agent Systems with Agent Development Kit (ADK) and Agent Engine |
-| Webhook fundamentals |
-| Conversational Agents Quality Assurance and Deployment Lifecycle |
-| Secure your Conversational Agents Webhooks and Tools |
-| Advanced Webhook Concepts |
-| Agent Summarization (Custom) |
-| Building Complex Self-Service Experiences in Conversational Agents |
-| Virtual Agent Development in Dialogflow ES for Software Devs |
-| Improve customer and agent satisfaction with Agent Assist |
-| Conversation Design Fundamentals |
-| Evaluate ADK agent performance using the Vertex AI Generative AI Evaluation Service |
-| Gen AI Agents: Transform Your Organization |
-| Use Model Context Protocol (MCP) Tools with ADK Agents |
+| Build an Agent with Agent Designer in Agentspace                                          |
+| Basic Performance Measurement                                                             |
+| Deploy Multi-Agent Systems with Agent Development Kit (ADK) and Agent Engine              |
+| Webhook fundamentals                                                                      |
+| Conversational Agents Quality Assurance and Deployment Lifecycle                          |
+| Secure your Conversational Agents Webhooks and Tools                                      |
+| Advanced Webhook Concepts                                                                 |
+| Agent Summarization (Custom)                                                              |
+| Building Complex Self-Service Experiences in Conversational Agents                        |
+| Virtual Agent Development in Dialogflow ES for Software Devs                              |
+| Improve customer and agent satisfaction with Agent Assist                                 |
+| Conversation Design Fundamentals                                                          |
+| Evaluate ADK agent performance using the Vertex AI Generative AI Evaluation Service       |
+| Gen AI Agents: Transform Your Organization                                                |
+| Use Model Context Protocol (MCP) Tools with ADK Agents                                    |
 | Advanced Performance Measurement |
 | CCAI Operations and Implementation |
 | Conversational Agents: Contextual Intents |
