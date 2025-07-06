@@ -1,7 +1,8 @@
 # AI
 
-| Conversational Agent Topics |
-|-----------------------------|
+| 제목 | 종류 | 난이도 |
+|-----------------------------|---|----|
+|Conversational Agent Topics|
 | Deploy ADK agents to Agent Engine |
 | Exporting Conversational Agents Logs to BigQuery for Analytics |
 | Create a Conversational Agent Playbook that connects to an unstructured data store tool |
@@ -80,5 +81,5 @@
 | Extend Agentspace assistant capabilities |
 | Create media search and media recommendations applications with AI Applications |
 | Build search and recommendations applications with AI Applications |
-| Configure AI Applications to optimize search results |
+| Configure AI Applications to optimize search results | 과정 | Advanced |
 
