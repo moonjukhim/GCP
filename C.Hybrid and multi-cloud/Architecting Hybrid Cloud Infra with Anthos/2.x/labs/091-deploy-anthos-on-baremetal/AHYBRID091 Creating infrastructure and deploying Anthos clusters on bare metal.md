@@ -1,5 +1,10 @@
 ### Creating infrastructure and deploying Anthos clusters on bare metal
 
+1. Confirm your network setup
+2. Create your server infrastructure
+3. 
+
+
 #### Task 1. Confirm your network setup
 
 #### Task 2. Create your server infrastructure
@@ -10,26 +15,30 @@
 # configure environment variables with project id and zone
 export PROJECT_ID=$(gcloud config get-value project)
 export ZONE=us-central1-a
+
 # configure environment variable for machine type
 WS_MACHINE_TYPE=n1-standard-4
 CLUSTER_MACHINE_TYPE=n1-standard-4
+
 # configure environment variables for server names
 VM_PREFIX=abm
 VM_WS=$VM_PREFIX-ws
 VM_A_CP1=$VM_PREFIX-admin-cp1
 VM_U_CP1=$VM_PREFIX-user-cp1
 VM_U_W1=$VM_PREFIX-user-w1
+
 # create arrays of the server names
 declare -a VMs=("$VM_WS" "$VM_A_CP1" "$VM_U_CP1" "$VM_U_W1")
 declare -a ADMIN_CP_VMs=("$VM_A_CP1")
 declare -a USER_CP_VMs=("$VM_U_CP1")
 declare -a USER_WORKER_VMs=("$VM_U_W1")
 declare -a LB_VMs=("$VM_A_CP1" "$VM_U_CP1")
+
 # create an array to hold the IP addresses of the servers
 declare -a IPs=()
 ```
 
-2. GCE VM
+2. Build the GCE VM
 
 ```bash
 gcloud compute instances create $VM_WS \
@@ -106,7 +115,9 @@ assing appropriate network tags
  done
 ```
 
-diable UFW
+- Configure the required IAM Roles for the Compute Engine VMs
+- Configure the server OS as required for bare metal Anthos
+    - diable UFW
 
 ```bash
 for vm in "${VMs[@]}"
@@ -118,7 +129,7 @@ EOF
 done
 ```
 
-configure vxlan
+- configure vxlan
 
 ```bash
 i=2
@@ -158,7 +169,7 @@ do
 done
 ```
 
-configure network firewall rule
+- configure network firewall rule
 
 ```bash
 gcloud compute firewall-rules create abm-allow-cp \
