@@ -2,10 +2,14 @@
 
 1. Confirm your network setup
 2. Create your server infrastructure
-3. 
-
+3. Set up the admin workstation
+4. Create your admin cluster
+5. Understand the admin bootstrap process and learn to troubleshoot
+6. Sign in to your admin cluster
 
 #### Task 1. Confirm your network setup
+
+---
 
 #### Task 2. Create your server infrastructure
 
@@ -157,7 +161,7 @@ EOF
 done
 ```
 
-check vxlan Ips
+- check vxlan Ips
 
 ```bash
 i=2
@@ -177,13 +181,15 @@ gcloud compute firewall-rules create abm-allow-cp \
     --allow="UDP:6081,TCP:22,TCP:6444,TCP:2379-2380,TCP:10250-10252,TCP:4240" \
     --source-ranges="10.0.0.0/8" \
     --target-tags="cp"
-
+```
+```bash
 gcloud compute firewall-rules create abm-allow-worker \
     --network="anthos-network" \
     --allow="UDP:6081,TCP:22,TCP:10250,TCP:30000-32767,TCP:4240" \
     --source-ranges="10.0.0.0/8" \
     --target-tags="worker"
-
+```
+```bash
 gcloud compute firewall-rules create abm-allow-lb \
     --network="anthos-network" \
     --allow="UDP:6081,TCP:22,TCP:443,TCP:7946,UDP:7496,TCP:4240" \
@@ -194,13 +200,16 @@ gcloud compute firewall-rules create allow-gfe-to-lb \
     --allow="TCP:443" \
     --source-ranges="10.0.0.0/8,130.211.0.0/22,35.191.0.0/16" \
     --target-tags="lb"
-
+```
+```bash
 gcloud compute firewall-rules create abm-allow-multi \
     --network="anthos-network" \
     --allow="TCP:22,TCP:443" \
     --source-tags="admin" \
     --target-tags="user"
 ```
+
+---
 
 #### 3. Set up the admin workstation
 
@@ -245,7 +254,7 @@ snap remove google-cloud-sdk
 curl https://sdk.cloud.google.com | bash
 ```
 
-restart shell
+- restart shell
 
 ```bash
 # restart your shell
@@ -262,7 +271,7 @@ gcloud components install kubectl
 kubectl config view
 ```
 
-bmctl
+- bmctl
 
 ```bash
 mkdir baremetal && cd baremetal
@@ -272,7 +281,7 @@ mv bmctl /usr/local/sbin/
 bmctl version
 ```
 
-docker
+- docker
 
 ```bash
 cd ~
@@ -282,23 +291,10 @@ sh get-docker.sh
 docker version
 ```
 
-configure server to allow SSH from admin workstation
+- configure server to allow SSH from admin workstation
 
 ```bash
 ssh-keygen -t rsa
-```
-
-```bash
-VM_PREFIX=abm
-VM_WS=$VM_PREFIX-ws
-VM_A_CP1=$VM_PREFIX-admin-cp1
-VM_U_CP1=$VM_PREFIX-user-cp1
-VM_U_W1=$VM_PREFIX-user-w1
-declare -a VMs=("$VM_WS" "$VM_A_CP1" "$VM_U_CP1" "$VM_U_W1")
-for vm in "${VMs[@]:1}"
-do
-    ssh-copy-id -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa.pub root@$vm
-done
 ```
 
 ```bash
@@ -320,6 +316,8 @@ ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 ```
 
+---
+
 #### Task 4. Create your admin cluster
 
 Create the config file
@@ -337,11 +335,86 @@ Create the config file
  declare -a LB_VMs=("$VM_A_CP1" "$VM_U_CP1")
 ```
 
+만약 실패할 경우 명령어를 다시 실행!
+
 ```bash
 cd ~/baremetal
 bmctl create config -c abm-admin-cluster   --enable-apis --create-service-accounts --project-id=$PROJECT_ID
 ```
 
+- Check that the service accounts
+    - anthos-baremetal-cloud-ops@
+    - anthos-baremetal-connect@
+    - anthos-baremetal-gcr@
+    - anthos-baremetal-register@
+
 ```bash
 ls bmctl-workspace/.sa-keys/
+```
+
+- Edit the configuration file
+
+```bash
+cat bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+```
+
+```bash
+sed -r -i "s|sshPrivateKeyPath: <path to SSH private key, used for node access>|sshPrivateKeyPath: $(echo $SSH_PRIVATE_KEY)|g" bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+sed -r -i "s|type: hybrid|type: admin|g" bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+sed -r -i "s|- address: <Machine 1 IP>|- address: $(echo $LB_CONTROLL_PLANE_NODE)|g" bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+sed -r -i "s|controlPlaneVIP: 10.0.0.8|controlPlaneVIP: $(echo $LB_CONTROLL_PLANE_VIP)|g" bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+```
+
+```bash
+head -n -11 bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml > temp_file && mv temp_file bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+```
+
+```bash
+cat bmctl-workspace/abm-admin-cluster/abm-admin-cluster.yaml
+```
+
+- Create the admin cluster
+
+```bash
+bmctl create cluster -c abm-admin-cluster
+```
+
+#### Task 5. Understand the admin bootstrap process and learn to troubleshoot
+
+```bash
+export LATEST_ADMIN_FOLDER=$(ls -d bmctl-workspace/abm-admin-cluster/log/create* -t  | head -n 1)
+cat $LATEST_ADMIN_FOLDER/create-cluster.log
+```
+
+```bash
+ls $LATEST_ADMIN_FOLDER
+cat $LATEST_ADMIN_FOLDER/10.200.0.3
+```
+
+```bash
+export LATEST_PREFLIGHT_FOLDER=$(ls -d bmctl-workspace/abm-admin-cluster/log/preflight* -t  | head -n 1)
+ls $LATEST_PREFLIGHT_FOLDER
+```
+
+```bash
+cat $LATEST_PREFLIGHT_FOLDER/node-network
+```
+
+#### Task 6. Sign in to your admin cluster
+
+```bash
+export KUBECONFIG=$KUBECONFIG:~/baremetal/bmctl-workspace/abm-admin-cluster/abm-admin-cluster-kubeconfig
+
+kubectx admin=.
+kubectl get nodes
+```
+
+```bash
+kubectl create serviceaccount -n kube-system admin-user
+kubectl create clusterrolebinding admin-user-binding \
+    --clusterrole cluster-admin --serviceaccount kube-system:admin-user
+```
+
+```bash
+kubectl create token admin-user -n kube-system 
 ```
