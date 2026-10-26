@@ -13,6 +13,7 @@ Day 2 Lecture: Alpha Evolve
 Day 3 Lecture: More reliable autoraters
 Day 3 Lecture: Design & Optimization of Coding Agents
 Day 3 Lecture: Cost/token Estimation, Analysis & Optimization
+---
 Day 4 Overall Architecture
 Day 4 Identity Architecture
 Day 4 API integration and Federated connector Auth Flow
