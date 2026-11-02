@@ -22,6 +22,8 @@ Day 4 Network Architecture & Security
 
 ---
 
+## Labs
+
 [PLS] Enable Student Lecture Notes
 [FDE] Build Enterprise Agents  (Running)
 [FDE] Agent Identity Foundations: Challenge Lab
