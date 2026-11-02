@@ -18,3 +18,16 @@ Day 4 Overall Architecture
 Day 4 Identity Architecture
 Day 4 API integration and Federated connector Auth Flow
 Day 4 Network Architecture & Security
+
+
+---
+
+[PLS] Enable Student Lecture Notes
+[FDE] Build Enterprise Agents  (Running)
+[FDE] Agent Identity Foundations: Challenge Lab
+[FDE]: Secure AI Agents: Zero-Trust Perimeters and Inline Governance
+[FDE] Observe and Secure a Multi-Agent System: Challenge Lab
+[FDE] Hillclimbing with Autoraters: Challenge Lab
+[FDE] Coding Agent Hill Climbing: Challenge Lab
+[FDE] Cost/token Estimation, Analysis, and Optimization: Challenge Lab
+[FDE] Add Google Drive with Sensitive Data Protection to Gemini Enterprise: Challenge Lab
